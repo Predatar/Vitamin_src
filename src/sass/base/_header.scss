@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ff7d4e;
+    background: $color-main-orange;
     border-radius: 100px;
     font-family: 'Effra';
     font-style: normal;
@@ -44,6 +44,8 @@
 }
 @media (max-width: 768px) {
   .header {
+    border-bottom: 1px solid #c0c9d1;
+
     &__burger-menu {
       display: flex;
       flex-direction: column;
