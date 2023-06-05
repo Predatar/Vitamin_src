@@ -120,6 +120,8 @@ body {
     background: $color-bg;
     border-radius: 12px;
 
+    cursor: pointer;
+
     span {
       width: 142px;
       font-family: 'Effra';
@@ -222,7 +224,7 @@ body {
 
 .form-regular__btn,
 .form-wholesale__btn {
-  margin-top: 5px;
+  margin-top: 6px;
   height: 65px;
   display: flex;
   align-items: center;
