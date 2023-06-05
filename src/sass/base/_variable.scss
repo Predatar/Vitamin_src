@@ -1,15 +1,33 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  text-decoration: none;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
+$color-main-dark: #343434;
+$color-main-orange: #ff7d4e;
+$color-red: #d32d2c;
+$color-goods_purple: #9c91e0;
+$color-goods_purple-text: #6b5ebb;
+$color-goods_mint: #94D6BE;
+$color-goods_mint-text: #6BB0A4;
+$color-goods_pink: #DA91E0;
+$color-goods_pink-text: #DA91E0;
+$color-goods_blue: #91CAF2;
+$color-goods_blue-text: #5F9DCA;
+$color-goods_orange: #F2B385;
+$color-goods_orange-text: #F2B385;
+$color-goods_green: #A5B3FF;
+$color-goods_green-text: #A5B3FF;
+$color-goods_red: #E8939D;
+$color-goods_red-text: #E6463B;
 
 $z-index--1: -1; // Для элементов под потоком
 $z-index-1: 1; // Для наползающих элементов в общем потоке
