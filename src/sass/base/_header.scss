@@ -25,6 +25,44 @@
   }
   &__burger-menu {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+      border-radius: 2px;
+      transition: transform 0.3s ease-in-out;
+      &:first-child {
+        transform-origin: top;
+      }
+      &:last-child {
+        transform-origin: bottom;
+      }
+    }
+
+    &.active {
+      span {
+        &:first-child {
+          transform: translateY(6px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: translateY(-6px) rotate(-45deg);
+        }
+      }
+    }
   }
   &__quiz {
     width: 154px;
@@ -45,25 +83,11 @@
 @media (max-width: 768px) {
   .header {
     border-bottom: 1px solid #c0c9d1;
+    padding: 30px 30px 20px 30px;
 
     &__burger-menu {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 30px;
-      height: 20px;
-      cursor: pointer;
-
-      span {
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: #333;
-        border-radius: 2px;
-      }
     }
-
     &__logo {
       text-align: center;
     }
@@ -76,6 +100,28 @@
   }
 }
 @media (max-width: 425px) {
+  .header {
+    padding: 15px 0px 15px 0px;
+
+    &__burger-menu {
+      margin: 0 0px 0px 24px;
+      height: 18px;
+      width: 24px;
+    }
+    &__logo-img {
+      height: 40px;
+      width: 33.6px;
+      padding-right: 2px;
+    }
+    &__cart {
+      margin: 3px 25px 0 0;
+    }
+  }
 }
 @media (max-width: 320px) {
+  .header {
+    &__logo-img {
+      padding: 0;
+    }
+  }
 }
