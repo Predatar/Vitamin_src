@@ -4,7 +4,6 @@
 body {
   background: $color-bg;
 }
-
 .header {
   margin-top: 30px;
   width: 100%;
@@ -17,13 +16,13 @@ body {
   }
 }
 .main {
-  margin-top: 83px;
+  margin-top: 210px;
   width: 100%;
   display: flex;
   justify-content: center;
 
   &__container {
-    padding: 60px 119px;
+    padding: 60px 238px;
     width: 920px;
     background: $color-white;
   }
@@ -38,6 +37,7 @@ body {
     font-size: 26px;
     line-height: 31px;
     text-align: center;
+    color: $color-black;
   }
 
   &__subtitle {
@@ -47,91 +47,16 @@ body {
     font-size: 16px;
     line-height: 28px;
     text-align: center;
-  }
-
-  &__divider {
-    margin-top: 40px;
-    font-family: 'Effra';
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
     color: $color-black;
-
-    &::before,
-    &::after {
-      content: '';
-      width: calc(241px * 100% / 682px);
-      height: 1px;
-      background: $color-border-one;
-
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &::before {
-      left: 0px;
-    }
-
-    &::after {
-      right: 0px;
-    }
-  }
-
-  &__auth {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__auth-item {
-    padding-left: 21px;
-    width: 206px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    background: $color-bg;
-    border-radius: 12px;
-
-    cursor: pointer;
-
-    span {
-      width: 142px;
-      font-family: 'Effra';
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-      color: $color-black;
-    }
-  }
-
-  &__img-google {
-    margin-right: 5px;
-    width: 22px;
-    height: 21.87px;
-  }
-
-  &__img-apple {
-    margin-right: 6px;
-    width: 20px;
-    height: 25px;
-  }
-
-  &__img-facebook {
-    margin-right: 4px;
-    height: 23.85px;
-    width: 24px;
   }
 }
+
 .form {
   margin: 0 auto;
   margin-top: 22px;
   width: 444px;
 
-  &__input-email,
-  &__input-password {
+  &__input {
     padding-left: 24px;
     width: 100%;
     height: 56px;
@@ -150,30 +75,9 @@ body {
     }
   }
 
-  &__password {
-    margin-top: 15px;
-    display: flex;
-  }
-
-  &__link {
-    height: 20px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 24px;
-
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    text-align: center;
-    color: $color-black;
-    opacity: 0.5;
-  }
-
   &__btn {
     margin: 0 auto;
-    margin-top: 21px;
+    margin-top: 20px;
     width: 270px;
     height: 65px;
     display: flex;
@@ -200,8 +104,9 @@ body {
     }
   }
 }
+
 .footer {
-  margin: 83px 0 40px;
+  margin: 226px 0 40px;
   &__create {
     font-family: 'Open Sans';
     font-weight: 400;
@@ -218,6 +123,7 @@ body {
 
 @media (max-width: 930px) {
   .main {
+    margin-top: 100px;
     padding: 0 25px;
     &__container {
       padding: 60px 0;
@@ -228,6 +134,9 @@ body {
       width: 652px;
     }
   }
+  .footer {
+    margin-top: 116px;
+  }
 }
 @media (max-width: 768px) {
   .main {
@@ -236,43 +145,11 @@ body {
     &__wrapper {
       width: 100%;
     }
-
-    &__divider {
-      &::before,
-      &::after {
-        width: 82px;
-      }
-      &::before {
-        left: 20px;
-      }
-
-      &::after {
-        right: 20px;
-      }
-    }
-
-    &__auth {
-      align-items: center;
-      flex-direction: column;
-      gap: 10px;
-    }
-    &__auth-item {
-      padding-left: 0;
-      width: 325px;
-      justify-content: center;
-    }
-
-    &__img-google,
-    &__img-apple,
-    &__img-facebook {
-      margin-right: 5px;
-    }
   }
   .footer {
     margin: 40px 0;
   }
 }
-
 @media (max-width: 520px) {
   body {
     padding: 0 20px;
@@ -304,38 +181,10 @@ body {
     &__container {
       padding: 0;
     }
-    &__divider {
-      font-size: 16px;
-      line-height: 19px;
-
-      &::before {
-        left: 0px;
-      }
-
-      &::after {
-        right: 0px;
-      }
-    }
-
-    &__auth-item {
-      width: 100%;
-      height: 56px;
-
-      span {
-        padding-right: 28px;
-        width: 267px;
-        font-size: 16px;
-        line-height: 19px;
-      }
-    }
   }
   .form {
     margin-top: 20px;
     width: 100%;
-
-    &__password {
-      margin-top: 10px;
-    }
 
     &__btn {
       margin-top: 20px;
@@ -347,33 +196,12 @@ body {
     }
   }
   .footer {
-    margin: 50px auto 40px;
-    padding-top: 40px;
+    margin: 20px auto 40px;
     width: 100%;
-    border-top: 1px solid $color-border-one;
 
     &__create {
       font-size: 14px;
       line-height: 19px;
     }
-  }
-}
-
-@media (max-width: 340px) {
-  .main {
-    &__divider {
-      &::before,
-      &::after {
-        width: 55px;
-      }
-    }
-    &__auth-item {
-      span {
-        width: 210px;
-      }
-    }
-  }
-  .footer {
-    width: 280px;
   }
 }
