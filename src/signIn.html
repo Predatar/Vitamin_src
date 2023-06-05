@@ -27,11 +27,11 @@
                 </div>
                 <form class="form">
                     <input type="email" name="email" id="email" class="form__input-email" required placeholder="Email"
-                        pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+                        pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/gm">
                     <div class="form__password">
                         <input type="password" name="password" id="password" class="form__input-password" required
-                            placeholder="Password">
-                        <a href="#" class="form__link">Forgot password?</a>
+                            placeholder="Password" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm">
+                        <a href="@html/pass-recovery.html" class="form__link">Forgot password?</a>
                     </div>
                     <button class="form__btn">Sign in</button>
                 </form>
