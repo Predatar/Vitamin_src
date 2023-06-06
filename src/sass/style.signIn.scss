@@ -63,7 +63,7 @@ body {
       content: '';
       width: calc(241px * 100% / 682px);
       height: 1px;
-      background: $color-border;
+      background: $color-border-one;
 
       position: absolute;
       top: 50%;
@@ -93,6 +93,8 @@ body {
     align-items: center;
     background: $color-bg;
     border-radius: 12px;
+
+    cursor: pointer;
 
     span {
       width: 142px;
@@ -279,7 +281,7 @@ body {
   .header {
     margin-top: 23px;
     padding-bottom: 35px;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid $color-border-one;
 
     &__logo {
       width: 30px;
@@ -348,7 +350,7 @@ body {
     margin: 50px auto 40px;
     padding-top: 40px;
     width: 100%;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid $color-border-one;
 
     &__create {
       font-size: 14px;
