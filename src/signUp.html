@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Vitamin</title>
     @@include('html/head.html', {})
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.signUp.min.css">
 </head>
 
@@ -60,6 +61,7 @@
                         <form class="form-regular">
                             <input type="email" name="regularEmail" id="regularEmail" class="form-regular__input"
                                 placeholder="Email" required>
+                                <div class="warning-regular"></div>
                             <input type="text" name="regularFirst" id="regularFirst" class="form-regular__input"
                                 placeholder="First Name" required>
                             <input type="text" name="regularLast" id="regularLast" class="form-regular__input"
@@ -102,6 +104,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
     <script src="js/script.signUp.js"></script>
 </body>
 
