@@ -198,12 +198,12 @@ body {
   width: 444px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .form-regular__input,
 .form-wholesale__input,
 .form-wholesale__input-file {
+  margin-top: 15px;
   padding-left: 24px;
   width: 100%;
   height: 56px;
@@ -222,9 +222,20 @@ body {
   }
 }
 
+.form-regular__input,
+.form-wholesale__input {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &_invalid {
+    border: 1px solid $color-red;
+  }
+}
+
 .form-regular__btn,
 .form-wholesale__btn {
-  margin-top: 6px;
+  margin-top: 22px;
   height: 65px;
   display: flex;
   align-items: center;
@@ -332,6 +343,15 @@ body {
     color: $color-black;
     opacity: 0.3;
   }
+}
+
+.warning {
+  height: auto;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-main-orange;
 }
 
 .footer {
