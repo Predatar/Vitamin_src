@@ -227,10 +227,10 @@ body {
   &:first-child {
     margin-top: 0;
   }
+}
 
-  &_invalid {
-    border: 1px solid $color-red;
-  }
+.form__input_invalid {
+  border: 1px solid $color-red;
 }
 
 .form-regular__btn,
@@ -315,10 +315,10 @@ body {
     line-height: 25px;
     color: $color-black;
     opacity: 0.3;
+  }
 
-    &_active {
-      opacity: 1;
-    }
+  &__input-file-text_active {
+    opacity: 1;
   }
 
   &__input-file-text2 {
