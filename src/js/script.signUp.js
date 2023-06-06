@@ -93,38 +93,58 @@ document.addEventListener('DOMContentLoaded', () => {
   const regularFirstName = document.getElementsByName('regularFirst');
   const regularLastName = document.getElementsByName('regularLast');
   const regularPass = document.getElementsByName('regularPass');
-  const warningRegular = document.querySelectorAll('.warning-regular');
+  const warning = document.querySelectorAll('.warning');
 
-  const validateInput = (event, index, regExp, property, className) => {
+  const validateInput = (event, index, regExp, property, className, text) => {
     console.log(regExp);
     if (event.target.value.match(regExp)) {
       event.target.classList.remove(className);
       newUser[property] = event.target.value;
-      warningRegular[index].style.color = 'green';
-      warningRegular[index].innerHTML = 'Correctly';
+      warning[index].style.color = 'green';
+      warning[index].innerHTML = 'Correctly';
     } else {
       if (event.target.value == '') {
         event.target.classList.remove(className);
-        warningRegular[index].innerHTML = '';
+        warning[index].innerHTML = '';
       } else {
         event.target.classList.add(className);
-        warningRegular[index].style.color = 'red';
-        warningRegular[index].innerHTML = 'Please enter a valid email address';
+        warning[index].style.color = 'red';
+        warning[index].innerHTML = text;
       }
     }
   };
 
   regularEmail[0].addEventListener('input', e => {
-    validateInput(e, 0, /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'email', 'form-regular__input_invalid');
+    validateInput(
+      e,
+      0,
+      /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
+      'email',
+      'form-regular__input_invalid',
+      'Please enter a valid email address'
+    );
+  });
+  regularFirstName[0].addEventListener('input', e => {
+    validateInput(e, 1, /^[a-zA-Z ]+$/, 'firstName', 'form-regular__input_invalid', 'Only letters can be entered');
+  });
+  regularLastName[0].addEventListener('input', e => {
+    validateInput(e, 2, /^[a-zA-Z ]+$/, 'lastName', 'form-regular__input_invalid', 'Only letters can be entered');
+  });
+  regularPass[0].addEventListener('input', e => {
+    validateInput(
+      e,
+      3,
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+      'password',
+      'form-regular__input_invalid',
+      'The password must be longer than 8 characters'
+    );
   });
 
   regularForm.addEventListener('submit', e => {
     e.preventDefault();
 
     newUser.customer = 'regular';
-    newUser.email = regularEmail[0].value;
-    newUser.firstName = regularFirstName[0].value;
-    newUser.lastName = regularLastName[0].value;
     newUser.password = regularPass[0].value;
 
     createUser();
