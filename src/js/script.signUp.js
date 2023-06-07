@@ -1,3 +1,19 @@
+Array.prototype.includesAll = function (props) {
+  let validate = 0;
+
+  this.forEach(elem => {
+    if (elem == props) {
+      ++validate;
+    }
+  });
+
+  if (validate == this.length) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   // * Switch tabs
 
@@ -111,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeBtn = (select, btnClass) => {
     let warningValidate = [];
     const btn = document.querySelector(btnClass);
+    console.log(btn);
 
     if (select) {
       for (let i = 0; i < 4; i++) {
@@ -124,13 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('disabled', '');
       }
     } else {
-      const warningValidate = [];
-      const btn = document.querySelector(btnClass);
-
       for (let i = 4; i < warning.length; i++) {
         warningValidate.push(warning[i].innerHTML);
       }
-      console.log(warningValidate);
       if (warningValidate.includesAll('Correctly')) {
         btn.classList.remove('form-wholesale__btn_disable');
         btn.removeAttribute('disabled');
@@ -204,15 +217,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   wholesaleEmail[0].addEventListener('input', e => {
     validateInput(e, 4, /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'email', 'Please enter a valid email address');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleFirstName[0].addEventListener('input', e => {
     validateInput(e, 5, /^[a-zA-Z ]+$/, 'firstName', 'Only letters can be entered');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleLastName[0].addEventListener('input', e => {
     validateInput(e, 6, /^[a-zA-Z ]+$/, 'lastName', 'Only letters can be entered');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesalePass[0].addEventListener('input', e => {
     validateInput(
@@ -222,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'password',
       'The password must be longer than 8 characters'
     );
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleFile[0].addEventListener('change', ({ target }) => {
     wholesaleFileText.forEach(elem => {
@@ -245,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         warning[8].innerHTML = 'Download a pdf file';
       }
     }
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
 
   wholesaleForm.addEventListener('submit', e => {
