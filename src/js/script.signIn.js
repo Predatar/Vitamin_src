@@ -60,12 +60,44 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const loginUser = async () => {
-    if (/* !!sessionStorage.getItem('userId') */ 0) {
+    if (!!sessionStorage.getItem('userId')) {
       await fetch(
         `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
           'userId'
         )}.json`
-      );
+      ).then(response => {
+        if (response.status == 200) {
+          response.json().then(data => {
+            console.log(data);
+            if (data.email == userLogin.email) {
+              if (data.password == userLogin.password) {
+                sessionStorage.setItem('isLogined', 'true');
+                Swal.fire({
+                  title: 'Authorisation completed!',
+                  icon: 'success',
+                  confirmButtonColor: '#FF7D4E'
+                }).then(() => {
+                  document.location.href = 'personal-cabinet.html';
+                });
+              } else {
+                Swal.fire({
+                  title: "Password doesn't match",
+                  icon: 'warning',
+                  confirmButtonColor: '#FF7D4E'
+                });
+              }
+            } else {
+              Swal.fire({
+                title: "Email doesn't match",
+                icon: 'warning',
+                confirmButtonColor: '#FF7D4E'
+              });
+            }
+          });
+        } else {
+          console.log(response.status);
+        }
+      });
     } else {
       const allUsers = [];
       await fetch(`https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users.json`).then(response => {
@@ -81,6 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
               const index = Object.values(allUsers).indexOf(userLogin.email);
 
               if (Object.values(data)[index].password === userLogin.password) {
+                let i = 0;
+
+                for (const key in data) {
+                  if (Object.hasOwnProperty.call(data, key)) {
+                    if (i == index) {
+                      sessionStorage.setItem('userId', key);
+                    }
+                    ++i;
+                  }
+                }
+
                 sessionStorage.setItem('isLogined', 'true');
                 Swal.fire({
                   title: 'Authorisation completed!',
@@ -154,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   socialBtn.addEventListener('click', () => {
     if (warning[0].innerHTML == 'Correctly') {
-        loginUser();
+      loginUser();
     } else {
       Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
     }
