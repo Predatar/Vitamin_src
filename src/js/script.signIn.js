@@ -113,6 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
               const index = Object.values(allUsers).indexOf(userLogin.email);
 
               if (Object.values(data)[index].password === userLogin.password) {
+                let i = 0;
+
+                for (const key in data) {
+                  if (Object.hasOwnProperty.call(data, key)) {
+                    if (i == index) {
+                      sessionStorage.setItem('userId', key);
+                    }
+                    ++i;
+                  }
+                }
+
                 sessionStorage.setItem('isLogined', 'true');
                 Swal.fire({
                   title: 'Authorisation completed!',
