@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // * Register data and action
 
   const newUser = {
-    customer: undefined, // string
-    social: undefined, // boolean
-    email: undefined, // string
-    firstName: undefined, // string
-    lastName: undefined, // string
-    password: undefined, // string
-    permission: undefined // boolean
+    customer: '', // string
+    social: false, // boolean
+    email: '', // string
+    firstName: '', // string
+    lastName: '', // string
+    password: '', // string
+    permission: false // boolean
   };
 
   const createUser = async () => {
@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
               })
                 .then(response => {
                   if (response.status == 200) {
-                    response.json().then(data => sessionStorage.setItem('userId', data.name));
                     Swal.fire({
                       title: 'Registration successful, log in to your account',
                       icon: 'success',
@@ -132,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < 4; i++) {
         warningValidate.push(warning[i].innerHTML);
       }
-      console.log(warningValidate);
       if (warningValidate.includesAll('Correctly')) {
         btn.classList.remove('form-wholesale__btn_disable');
         btn.removeAttribute('disabled');
@@ -200,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     newUser.customer = 'regular';
 
     if (warningValidate.includesAll('Correctly')) {
-      console.log('true');
       createUser();
     } else {
       Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
@@ -250,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
-      newUser.permission = true;
+      newUser.permission = target.filer[0].name;
       warning[8].style.color = 'green';
       warning[8].innerHTML = 'Correctly';
     } else {
@@ -277,10 +274,35 @@ document.addEventListener('DOMContentLoaded', () => {
     newUser.customer = 'wholesale';
 
     if (warningValidate.includesAll('Correctly')) {
-      console.log('true');
       createUser();
     } else {
       Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+    }
+  });
+
+  // * Social registration
+
+  const socialBtn = document.querySelector('.main__auth-item');
+
+  socialBtn.addEventListener('click', () => {
+    if (!switcherTab[1].classList.contains('main__switch_active')) {
+      if (warning[0].innerHTML == 'Correctly') {
+        newUser.customer = 'regular';
+        newUser.social = true;
+        newUser.password = '';
+        createUser();
+      } else {
+        Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+      }
+    } else {
+      if (warning[4].innerHTML == 'Correctly') {
+        newUser.customer = 'wholesale';
+        newUser.social = true;
+        newUser.password = '';
+        createUser();
+      } else {
+        Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+      }
     }
   });
 });
