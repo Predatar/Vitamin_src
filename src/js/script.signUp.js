@@ -1,19 +1,3 @@
-Array.prototype.includesAll = function (props) {
-  let validate = 0;
-
-  this.forEach(elem => {
-    if (elem == props) {
-      ++validate;
-    }
-  });
-
-  if (validate == this.length) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
 document.addEventListener('DOMContentLoaded', () => {
   // * Switch tabs
 
@@ -47,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firstName: '', // string
     lastName: '', // string
     password: '', // string
-    permission: false // boolean
+    permission: '' // string
   };
 
   const createUser = async () => {
@@ -76,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
               })
                 .then(response => {
                   if (response.status == 200) {
+                    response.json().then(data => sessionStorage.setItem('userId', data.name));
                     Swal.fire({
                       title: 'Registration successful, log in to your account',
                       icon: 'success',
@@ -247,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
-      newUser.permission = target.filer[0].name;
+      newUser.permission = target.files[0].name;
       warning[8].style.color = 'green';
       warning[8].innerHTML = 'Correctly';
     } else {
