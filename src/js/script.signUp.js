@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firstName: '', // string
     lastName: '', // string
     password: '', // string
-    permission: '' // string
+    permission: undefined // string
   };
 
   const createUser = async () => {
@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newUser.customer = 'wholesale';
         newUser.social = true;
         newUser.password = undefined;
+        newUser.permission = ''
         createUser();
       } else {
         Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });

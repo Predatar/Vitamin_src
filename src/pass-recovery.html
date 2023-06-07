@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pass recovery - Vitamin</title>
     @@include('html/head.html', {})
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.pass-recovery.min.css">
 </head>
 
@@ -27,7 +28,8 @@
                 </div>
                 <form class="form">
                     <input type="email" name="email" id="email" class="form__input" placeholder="Email">
-                    <button class="form__btn">Recover</button>
+                    <div class="warning"></div>
+                    <button class="form__btn form__btn_disable" disabled>Recover</button>
                 </form>
             </div>
         </div>
@@ -37,6 +39,9 @@
             Remember your password? <a href="@html/signIn.html" class="footer__link">Back to login</a>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/script.pass-recovery.js"></script>
 </body>
 
 </html>
