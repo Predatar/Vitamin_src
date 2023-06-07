@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.classList.add('form-wholesale__input-file-text_active');
     });
 
-    if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
+    if (target.files[0].name.match(/^.+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
       newUser.permission = target.files[0].name;
       warning[8].style.color = 'green';

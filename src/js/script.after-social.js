@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fileText.innerHTML = target.files[0].name;
     fileText.classList.add('form-wholesale__input-file-text1_active');
 
-    if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
+    if (target.files[0].name.match(/^.+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
       permission = target.files[0].name;
       warning[0].style.color = 'green';
