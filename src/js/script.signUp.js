@@ -78,11 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
                   if (response.status == 200) {
                     response.json().then(data => sessionStorage.setItem('userId', data.name));
                     Swal.fire({
-                      title: 'Registration successful, log in to your account',
+                      title: 'Registration successful',
                       icon: 'success',
                       confirmButtonColor: '#FF7D4E'
                     }).then(() => {
-                      document.location.href = 'signIn.html';
+                      if (newUser.social) {
+                        document.location.href = 'after-social.html';
+                      } else {
+                        document.location.href = 'signIn.html';
+                      }
                     });
                   } else {
                     Swal.fire({
@@ -127,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const activeBtn = (select, btnClass) => {
     let warningValidate = [];
     const btn = document.querySelector(btnClass);
-    console.log(btn);
 
     if (select) {
       for (let i = 0; i < 4; i++) {
@@ -297,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newUser.customer = 'wholesale';
         newUser.social = true;
         newUser.password = undefined;
-        newUser.permission = ''
+        newUser.permission = '';
         createUser();
       } else {
         Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });

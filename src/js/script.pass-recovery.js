@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const passRecoveryForm = document.querySelector('.form');
   let recoveryEmail;
 
-  const validateInput = (event, index, regExp, property, text) => {
+  const validateInput = (event, index, regExp, text) => {
     if (event.target.value.match(regExp)) {
       event.target.classList.remove('form__input_invalid');
       recoveryEmail = event.target.value;
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   passRecoveryEmail.addEventListener('input', e => {
-    validateInput(e, 0, /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'email', 'Please enter a valid email address');
+    validateInput(e, 0, /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'Please enter a valid email address');
     activeBtn();
   });
 
