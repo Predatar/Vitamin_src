@@ -150,6 +150,10 @@ body {
     }
   }
 
+  &__input_invalid {
+    border: 1px solid $color-red;
+  }
+
   &__password {
     margin-top: 15px;
     display: flex;
@@ -198,8 +202,27 @@ body {
       background: $color-white;
       color: $color-black;
     }
+
+    &_disable {
+      background: $color-gray;
+      border-color: $color-gray;
+      &:hover {
+        background: $color-gray;
+        color: $color-white;
+      }
+    }
   }
 }
+
+.warning {
+  height: auto;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-main-orange;
+}
+
 .footer {
   margin: 83px 0 40px;
   &__create {
