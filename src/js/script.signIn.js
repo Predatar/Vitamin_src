@@ -147,4 +147,16 @@ document.addEventListener('DOMContentLoaded', () => {
       Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
     }
   });
+
+  // * Social authorisation
+
+  const socialBtn = document.querySelector('.main__auth-item');
+
+  socialBtn.addEventListener('click', () => {
+    if (warning[0].innerHTML == 'Correctly') {
+        loginUser();
+    } else {
+      Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+    }
+  });
 });

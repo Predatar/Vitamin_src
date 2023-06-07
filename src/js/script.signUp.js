@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (warning[0].innerHTML == 'Correctly') {
         newUser.customer = 'regular';
         newUser.social = true;
-        newUser.password = '';
+        newUser.password = undefined;
         createUser();
       } else {
         Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (warning[4].innerHTML == 'Correctly') {
         newUser.customer = 'wholesale';
         newUser.social = true;
-        newUser.password = '';
+        newUser.password = undefined;
         createUser();
       } else {
         Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
