@@ -100,40 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             }
 
-            if (Object.values(allUsers).includes(userLogin.email)) {
-              const index = Object.values(allUsers).indexOf(userLogin.email);
+            if (Object.values(allUsers).includes(recoveryEmail)) {
+              const index = Object.values(allUsers).indexOf(recoveryEmail);
 
               Swal.fire({
                 title: 'Your password',
                 text: Object.values(data)[index].password,
                 showCancelButton: true,
                 confirmButtonText: 'Copy',
+                confirmButtonColor: '#FF7D4E',
                 cancelButtonText: 'Ok'
               }).then(result => {
                 if (result.isConfirmed) {
+                  console.log(Object.values(data)[index].password);
                   navigator.clipboard.writeText(Object.values(data)[index].password);
-                  Swal.fire('Password added to clipboard!', '', 'success').then(() => {
+                  Swal.fire({
+                    title: 'Password added to clipboard!',
+                    icon: 'success',
+                    confirmButtonColor: '#FF7D4E'
+                  }).then(() => {
                     document.location.href = 'signIn.html';
                   });
                 }
               });
-
-              if (Object.values(data)[index].password === userLogin.password) {
-                sessionStorage.setItem('isLogined', 'true');
-                Swal.fire({
-                  title: 'Authorisation completed!',
-                  icon: 'success',
-                  confirmButtonColor: '#FF7D4E'
-                }).then(() => {
-                  document.location.href = 'personal-cabinet.html';
-                });
-              } else {
-                Swal.fire({
-                  title: 'Wrong password',
-                  icon: 'warning',
-                  confirmButtonColor: '#FF7D4E'
-                });
-              }
             } else {
               Swal.fire({
                 title: 'User with this email is not registered',

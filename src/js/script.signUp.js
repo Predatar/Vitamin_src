@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.classList.add('form-wholesale__input-file-text_active');
     });
 
-    if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
+    if (target.files[0].name.match(/^.+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
       newUser.permission = target.files[0].name;
       warning[8].style.color = 'green';
@@ -290,7 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (warning[0].innerHTML == 'Correctly') {
         newUser.customer = 'regular';
         newUser.social = true;
-        newUser.password = undefined;
         createUser();
       } else {
         Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
@@ -299,7 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (warning[4].innerHTML == 'Correctly') {
         newUser.customer = 'wholesale';
         newUser.social = true;
-        newUser.password = undefined;
         newUser.permission = '';
         createUser();
       } else {
