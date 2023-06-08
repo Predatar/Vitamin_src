@@ -6,19 +6,19 @@ body {
   overflow-x: hidden;
 }
 .main {
-  padding-top: 150px;
 }
 .vitamins {
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: $z-index-1;
+  height: 960px;
 
   &__text {
     flex-basis: 50%;
     padding: 0px 0 0 202px;
     // top: -25px;
-    top: -31px;
+    top: -6px;
   }
   &__paragraph-1 {
     margin-bottom: 36px;
@@ -30,6 +30,7 @@ body {
     font-size: 56px;
     line-height: 68px;
     color: #000000;
+    z-index: $z-index-2;
     .color-word {
       color: $color-main-orange;
     }
@@ -45,6 +46,7 @@ body {
     line-height: 163.42%;
 
     color: #808080;
+    z-index: $z-index-2;
   }
 
   &__quiz {
@@ -66,6 +68,7 @@ body {
     text-align: center;
 
     color: #ffffff;
+    z-index: $z-index-2;
   }
 
   &__link {
@@ -80,6 +83,7 @@ body {
     line-height: 24px;
     position: relative;
     color: $color-main-orange;
+    z-index: $z-index-2;
   }
 
   &__link-arrow {
@@ -91,19 +95,20 @@ body {
     height: 16px;
     background-image: url(../img/index/arrow-1.png);
     background-size: cover;
+    z-index: $z-index-2;
   }
 
   &__image {
     z-index: $z-index--1;
     flex-basis: 50%;
     background: #f9f9f9;
-    padding-top: 103px;
+    padding-top: 148px;
+    height: 100%;
   }
   &__image-item {
     object-fit: none;
     // top: 30px;
     // right: 153px;
     // width: 1094px;
-    // height: 850px;
   }
 }
