@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   icon: 'success',
                   confirmButtonColor: '#FF7D4E'
                 }).then(() => {
-                  document.location.href = 'personal-cabinet.html';
+                  document.location.href = 'profile.html';
                 });
               } else {
                 Swal.fire({
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   icon: 'success',
                   confirmButtonColor: '#FF7D4E'
                 }).then(() => {
-                  document.location.href = 'personal-cabinet.html';
+                  document.location.href = 'profile.html';
                 });
               } else {
                 Swal.fire({
