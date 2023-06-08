@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
       listItem.push(list[i]);
     }
 
+    // todo переделать на свои классы где будет имя анимации чтобы потом правильно адаптировать
+
     const switchTab = index => {
       tabs.forEach(elem => {
         elem.classList.contains('tabs__tab_active')
@@ -46,31 +48,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // * Toast script
+  //* Sign out
 
   {
-    const showToast = () => {
-      const toast = document.querySelector('.toast');
+    const signOut = document.querySelector('.aside__list-item_sign-out');
 
-      const show = () => {
-        toast.classList.add('toast_show', 'animate__animated', 'animate__fadeInDown');
-      };
+    signOut.addEventListener('click', () => {
+      sessionStorage.removeItem('userId');
+      sessionStorage.removeItem('isLogined');
+      document.location.href = 'signIn.html';
+    });
+  }
 
-      const hide = () => {
-        toast.classList.remove('animate__fadeInDown');
-        toast.classList.add('animate__fadeOutUp');
-      };
+  // * Toast script
 
-      const deleteClass = () => {
-        toast.classList.remove('toast_show', 'animate__animated', 'animate__fadeOutUp');
-      };
+  const showToast = () => {
+    const toast = document.querySelector('.toast');
 
-      show();
-      setTimeout(() => {
-        hide();
-        setTimeout(deleteClass, 500);
-      }, 3000);
+    const show = () => {
+      toast.classList.add('toast_show', 'animate__animated', 'animate__fadeInDown');
     };
+
+    const hide = () => {
+      toast.classList.remove('animate__fadeInDown');
+      toast.classList.add('animate__fadeOutUp');
+    };
+
+    const deleteClass = () => {
+      toast.classList.remove('toast_show', 'animate__animated', 'animate__fadeOutUp');
+    };
+
+    show();
+    setTimeout(() => {
+      hide();
+      setTimeout(deleteClass, 500);
+    }, 3000);
+  };
+
+  // * Payment
+
+  {
+    const cardNumber = document.querySelector('.payment__card');
+    const expiration = document.querySelector('.payment__expitation');
+    const cvc = document.querySelector('.payment__cvc');
+    const btn = document.querySelector('.payment__btn');
+
+    const cardNumberInput = new Cleave(cardNumber, {
+      creditCard: true
+    });
+
+    const expirationInput = new Cleave(expiration, {
+      date: true,
+      datePattern: ['m', 'y']
+    });
+
+    const cvcInput = new Cleave(cvc, {
+      numericOnly: true,
+      blocks: [3]
+    });
+
+    const activeBtn = () => {
+      if (cardNumber.value.length >= 16 && expiration.value.length == 5 && cvc.value.length == 3) {
+        btn.classList.remove('payment__btn_disable');
+        btn.removeAttribute('disabled');
+      } else {
+        btn.classList.add('payment__btn_disable');
+        btn.setAttribute('disabled', '');
+      }
+    };
+
+    const addPayment = async () => {
+      await fetch(
+        `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
+          'userId'
+        )}.json`,
+        {
+          method: 'PATCH',
+          headers: { 'Content-type': 'application/json; charset=UTF-8' },
+          body: JSON.stringify({
+            cardNumber: cardNumber.value,
+            cardExpiration: expiration.value,
+            cardCVC: cvc.value
+          })
+        }
+      ).then(response => {
+        if (response.status == 200) {
+          response.json().then(data => {
+            showToast();
+          });
+        } else {
+          console.log(response.status);
+        }
+      });
+    };
+
+    cardNumber.addEventListener('change', activeBtn);
+    expiration.addEventListener('change', activeBtn);
+    cvc.addEventListener('change', activeBtn);
+
+    const paymentForm = document.querySelector('.payment__form');
+
+    paymentForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      addPayment();
+    });
   }
 
   // * Change password

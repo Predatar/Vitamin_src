@@ -3,6 +3,10 @@
 
 @import 'base/header';
 
+body {
+  overflow-x: hidden;
+}
+
 .main {
   padding: 110px 0 100px;
 
@@ -58,4 +62,5 @@
 @import 'block/profile/aside';
 @import 'block/profile/tabs';
 
+@import 'block/profile/payment';
 @import 'block/profile/change-password';
