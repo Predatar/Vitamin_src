@@ -1,0 +1,21 @@
+.aside {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__list-item {
+    font-family: 'Effra';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 320%;
+
+    &_active {
+        font-weight: 700;
+    }
+
+    &_sign-out {
+    }
+  }
+}
