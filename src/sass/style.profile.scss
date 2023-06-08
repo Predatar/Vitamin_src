@@ -4,14 +4,23 @@
 @import 'base/header';
 
 .main {
-  padding: 40px 0 100px;
-  border-top: 1px solid #ededed;
-  display: flex;
-  justify-content: center;
+  padding: 110px 0 100px;
+
+  &__wrapper {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ededed;
+  }
 
   &__container {
     width: 1394px;
+    display: flex;
+    gap: 138px;
   }
 }
 
 @import 'block/profile/aside';
+@import 'block/profile/tabs';
+
+@import 'block/profile/change-password';
