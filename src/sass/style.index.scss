@@ -3,5 +3,93 @@
 @import 'base/header';
 
 body {
-  //   overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.vitamins {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    margin: 0 0 0 202px;
+    // top: -25px;
+    top: -6px;
+  }
+  &__paragraph-1 {
+    margin-bottom: 36px;
+    width: 660px;
+    height: 203px;
+    font-family: 'Effra';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 68px;
+    color: #000000;
+    .color-word {
+      color: $color-main-orange;
+    }
+  }
+
+  &__paragraph-2 {
+    width: 490px;
+    height: 67px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 163.42%;
+
+    color: #808080;
+  }
+
+  &__quiz {
+    padding: 20px;
+    display: inline-block;
+    width: 260px;
+    height: 74px;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-goods_purple-text;
+    border-radius: 100px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 163.42%;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 135px;
+    height: 25px;
+    font-family: 'Effra';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+  }
+
+  &__link-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 20px;
+    background-image: url('@img/index/arrow-1.png');
+    background-size: cover;
+  }
+
+  &__image {
+    // Стили для блока с картинкой
+
+    &__image-item {
+      // Стили для изображения
+    }
+  }
 }
