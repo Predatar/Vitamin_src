@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ).then(response => {
       if (response.status == 200) {
         response.json().then(data => {
-          console.log(data);
           Swal.fire({
             title: 'You are successfully registered',
             icon: 'success',

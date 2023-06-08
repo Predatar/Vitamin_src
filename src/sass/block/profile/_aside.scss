@@ -1,21 +1,30 @@
 .aside {
   &__list {
+    margin-top: 22px;
+    width: 217px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 43.5px;
   }
 
   &__list-item {
     font-family: 'Effra';
     font-weight: 400;
     font-size: 22px;
-    line-height: 320%;
+
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+      font-weight: 700;
+    }
 
     &_active {
-        font-weight: 700;
+      font-weight: 700;
     }
 
     &_sign-out {
+      color: $color-red;
     }
   }
 }

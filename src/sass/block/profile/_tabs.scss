@@ -1,0 +1,17 @@
+.tabs {
+  &__tab {
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+
+    &_active {
+      opacity: 1;
+      position: relative;
+      z-index: 0;
+    }
+  }
+}
+
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 0.4s;
+}
