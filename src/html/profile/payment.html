@@ -1,0 +1,23 @@
+<div class="payment">
+	<div class="payment__title">
+		Payment methods
+	</div>
+	<form class="payment__form" id="paymentForm">
+		<div class="payment__wrapper1">
+			<label for="cardNumber"> Card Number</label>
+			<input type="text" name="cardNumber" id="cardNumber" class="payment__card">
+			<div class="payment__img">
+				<img src="@icons/profile/payment.svg" alt="payment">
+			</div>
+			<label for="expiration">Expiration</label>
+			<input type="text" name="expiration" id="expiration" class="payment__expitation">
+		</div>
+		<div class="payment__wrapper2">
+			<div class="payment__divider">
+			</div>
+			<label for="cvc">CVC</label>
+			<input type="text" name="cvc" id="cvc" class="payment__cvc" max="3">
+		</div>
+	</form>
+	<button form="paymentForm" class="payment__btn payment__btn_disable" disabled>Save</button>
+</div>
