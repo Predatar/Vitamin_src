@@ -7,4 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sidebar.classList.toggle('open');
   });
+
+  // * Profile link
+
+  const profileLink = document.querySelector('.header__profile');
+
+  const switchLink = () => {
+    if (!!sessionStorage.getItem('isLogined')) {
+      profileLink.setAttribute('href', 'profile.html');
+    } else {
+      profileLink.setAttribute('href', 'signIn.html');
+    }
+  };
+
+  switchLink();
 });
