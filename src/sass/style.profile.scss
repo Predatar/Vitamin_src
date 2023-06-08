@@ -3,12 +3,9 @@
 
 @import 'base/header';
 
-body {
-  overflow-x: hidden;
-}
-
 .main {
   padding: 110px 0 100px;
+  overflow: hidden;
 
   &__wrapper {
     padding-top: 40px;
