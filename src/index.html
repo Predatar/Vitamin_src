@@ -11,7 +11,35 @@
 
   <body>
     @@include('html/header.html', {})
-    <div class="title">Hello</div>
+    <main class="main">
+      <section class="vitamins">
+        <div class="vitamins__text">
+          <p class="vitamins__paragraph-1">
+            Find out what <span class="color-word">vitamins </span> your body needs right now.
+          </p>
+          <p class="vitamins__paragraph-2">
+            Answer a few simple questions and automatically get a personalazed list of vitamins in minutes
+          </p>
+          <div class="vitamins__quiz">Take the quiz</div>
+          <a class="vitamins__link" href="#"
+            >Go to the shop
+            <span class="vitamins__link-arrow"></span>
+          </a>
+        </div>
+        <div class="vitamins__image">
+          <img class="vitamins__image-item" src="@img/index/img_vitamins_1.png" alt="Изображение" />
+        </div>
+        <!-- <svg width="158" height="158" viewBox="0 0 158 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M129 -3.84172e-06C129 71.2447 71.2447 129 7.69978e-07 129" stroke="#FFCA78" stroke-width="58" />
+        </svg> -->
+      </section>
+      <section class="make-easy"></section>
+      <section class="about-yourself"></section>
+      <section class="products"></section>
+      <section class="reviews"></section>
+      <section class="get-started"></section>
+    </main>
+    @@include('html/footer.html', {})
   </body>
 
   <script src="js/script.header.js"></script>
