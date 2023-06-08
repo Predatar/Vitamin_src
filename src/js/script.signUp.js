@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // * Register data and action
 
   const newUser = {
-    customer: undefined, // string
-    social: undefined, // boolean
-    email: undefined, // string
-    firstName: undefined, // string
-    lastName: undefined, // string
-    password: undefined, // string
-    permission: undefined // boolean
+    customer: '', // string
+    social: false, // boolean
+    email: '', // string
+    firstName: '', // string
+    lastName: '', // string
+    password: '', // string
+    permission: undefined // string
   };
 
   const createUser = async () => {
@@ -78,11 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
                   if (response.status == 200) {
                     response.json().then(data => sessionStorage.setItem('userId', data.name));
                     Swal.fire({
-                      title: 'Registration successful, log in to your account',
+                      title: 'Registration successful',
                       icon: 'success',
                       confirmButtonColor: '#FF7D4E'
                     }).then(() => {
-                      document.location.href = 'signIn.html';
+                      if (newUser.social) {
+                        document.location.href = 'after-social.html';
+                      } else {
+                        document.location.href = 'signIn.html';
+                      }
                     });
                   } else {
                     Swal.fire({
@@ -132,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < 4; i++) {
         warningValidate.push(warning[i].innerHTML);
       }
-      console.log(warningValidate);
       if (warningValidate.includesAll('Correctly')) {
         btn.classList.remove('form-wholesale__btn_disable');
         btn.removeAttribute('disabled');
@@ -141,13 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('disabled', '');
       }
     } else {
-      const warningValidate = [];
-      const btn = document.querySelector(btnClass);
-
       for (let i = 4; i < warning.length; i++) {
         warningValidate.push(warning[i].innerHTML);
       }
-      console.log(warningValidate);
       if (warningValidate.includesAll('Correctly')) {
         btn.classList.remove('form-wholesale__btn_disable');
         btn.removeAttribute('disabled');
@@ -200,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
     newUser.customer = 'regular';
 
     if (warningValidate.includesAll('Correctly')) {
-      console.log('true');
       createUser();
     } else {
       Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
@@ -222,15 +220,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   wholesaleEmail[0].addEventListener('input', e => {
     validateInput(e, 4, /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, 'email', 'Please enter a valid email address');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleFirstName[0].addEventListener('input', e => {
     validateInput(e, 5, /^[a-zA-Z ]+$/, 'firstName', 'Only letters can be entered');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleLastName[0].addEventListener('input', e => {
     validateInput(e, 6, /^[a-zA-Z ]+$/, 'lastName', 'Only letters can be entered');
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesalePass[0].addEventListener('input', e => {
     validateInput(
@@ -240,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'password',
       'The password must be longer than 8 characters'
     );
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
   wholesaleFile[0].addEventListener('change', ({ target }) => {
     wholesaleFileText.forEach(elem => {
@@ -248,9 +246,9 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.classList.add('form-wholesale__input-file-text_active');
     });
 
-    if (target.files[0].name.match(/^[a-zA-Z ]+\.pdf$/)) {
+    if (target.files[0].name.match(/^.+\.pdf$/)) {
       target.classList.remove('form__input_invalid');
-      newUser.permission = true;
+      newUser.permission = target.files[0].name;
       warning[8].style.color = 'green';
       warning[8].innerHTML = 'Correctly';
     } else {
@@ -263,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         warning[8].innerHTML = 'Download a pdf file';
       }
     }
-    activeBtn(0, '.form-wholedale__btn');
+    activeBtn(0, '.form-wholesale__btn');
   });
 
   wholesaleForm.addEventListener('submit', e => {
@@ -277,10 +275,36 @@ document.addEventListener('DOMContentLoaded', () => {
     newUser.customer = 'wholesale';
 
     if (warningValidate.includesAll('Correctly')) {
-      console.log('true');
       createUser();
     } else {
       Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+    }
+  });
+
+  // * Social registration
+
+  const socialBtn = document.querySelector('.main__auth-item');
+
+  socialBtn.addEventListener('click', () => {
+    if (!switcherTab[1].classList.contains('main__switch_active')) {
+      if (warning[0].innerHTML == 'Correctly') {
+        newUser.customer = 'regular';
+        newUser.social = true;
+        newUser.password = undefined;
+        createUser();
+      } else {
+        Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+      }
+    } else {
+      if (warning[4].innerHTML == 'Correctly') {
+        newUser.customer = 'wholesale';
+        newUser.social = true;
+        newUser.password = undefined;
+        newUser.permission = '';
+        createUser();
+      } else {
+        Swal.fire({ title: 'Enter the mail correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
+      }
     }
   });
 });

@@ -102,7 +102,25 @@ body {
       background: $color-white;
       color: $color-black;
     }
+
+    &_disable {
+      background: $color-gray;
+      border-color: $color-gray;
+      &:hover {
+        background: $color-gray;
+        color: $color-white;
+      }
+    }
   }
+}
+
+.warning {
+  height: auto;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-main-orange;
 }
 
 .footer {

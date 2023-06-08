@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pass recovery - Vitamin</title>
+    <title>After Sign up with social - Vitamin</title>
     @@include('html/head.html', {})
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css">
-    <link rel="stylesheet" href="css/style.pass-recovery.min.css">
+    <link rel="stylesheet" href="css/style.after-social.min.css">
 </head>
 
 <body>
@@ -21,27 +21,32 @@
         <div class="main__container">
             <div class="main__wrapper">
                 <div class="main__title">
-                    Recover password
+                    Wholesale purchase permission
                 </div>
                 <div class="main__subtitle">
-                    Please enter your email:
+                    Please attach file to continue
                 </div>
                 <form class="form">
-                    <input type="email" name="email" id="email" class="form__input" placeholder="Email">
+                    <div class="form-wholesale__input-file">
+                        <div class="form-wholesale__input-file-text1">Permission</div>
+                        <input type="file" name="wholesaleFile" id="wholesaleFile" class="form-wholesale__input"
+                            accept="application/pdf">
+                        <label for="wholesaleFile">Upload</label>
+                    </div>
                     <div class="warning"></div>
-                    <button class="form__btn form__btn_disable" disabled>Recover</button>
+                    <button class="form__btn form__btn_disable" disabled>Create my account</button>
                 </form>
             </div>
         </div>
     </main>
     <footer class="footer">
         <div class="footer__create">
-            Remember your password? <a href="@html/signIn.html" class="footer__link">Back to login</a>
+            Don't have an account? <a href="@html/signUp.html" class="footer__link">Create one</a>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
-    <script src="js/script.pass-recovery.js"></script>
+    <script src="js/script.after-social.js"></script>
 </body>
 
 </html>
