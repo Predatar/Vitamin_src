@@ -20,6 +20,41 @@
   }
 }
 
+.toast {
+  padding: 0 50px 0 40px;
+  width: 336px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #a2c94f;
+  border-radius: 12px;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-white;
+
+  position: absolute;
+  top: 27px;
+  left: calc(100% / 2 - (336px / 2));
+  z-index: $z-index--1;
+
+  opacity: 0;
+
+  &_show {
+    opacity: 1;
+    z-index: $z-index-5;
+  }
+
+  .animate__animated.animate__fadeInDown,
+  .animate__animated.animate__fadeOutUp {
+    --animate-duration: 0.4s;
+  }
+}
+
 @import 'block/profile/aside';
 @import 'block/profile/tabs';
 
