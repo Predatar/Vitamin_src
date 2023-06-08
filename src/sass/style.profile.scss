@@ -1,0 +1,17 @@
+@import 'base/variable';
+@import 'base/fonts';
+
+@import 'base/header';
+
+.main {
+  padding: 40px 0 100px;
+  border-top: 1px solid #ededed;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 1394px;
+  }
+}
+
+@import 'block/profile/aside';
