@@ -7,26 +7,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Vitamin</title>
     @@include('html/head.html', {})
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.profile.min.css">
 </head>
 
 <body>
+    <div class="toast">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M20 1.50892L7.28471 14L0 6.84375L1.536 5.33483L7.28471 10.9822L18.464 0L20 1.50892Z" fill="white" />
+        </svg>
+        Changes successfully saved
+    </div>
     @@include('html/header.html', {})
     <main class="main">
-        <div class="main__container">
-            <aside class="aside">
-                <div class="aside__list">
-                    <div class="aside__list-item aside__list-item_active">Subscriptions</div>
-                    <div class="aside__list-item">Orders</div>
-                    <div class="aside__list-item">Account Overview</div>
-                    <div class="aside__list-item">Payment methods</div>
-                    <div class="aside__list-item">Change Password</div>
-                    <div class="aside__list-item aside__list-item_sign-out">Sign out</div>
+        <div class="main__wrapper">
+            <div class="main__container">
+                <aside class="aside">
+                    <div class="aside__list">
+                        <div class="aside__list-item aside__list-item_active">Subscriptions</div>
+                        <div class="aside__list-item">Orders</div>
+                        <div class="aside__list-item">Account Overview</div>
+                        <div class="aside__list-item">Payment methods</div>
+                        <div class="aside__list-item">Change Password</div>
+                        <div class="aside__list-item aside__list-item_sign-out">Sign out</div>
+                    </div>
+                </aside>
+                <div class="tabs">
+                    <div class="tabs__tab tabs__tab_active">
+                        @@include('html/profile/subscriptions.html', {})
+                    </div>
+                    <div class="tabs__tab">
+                        @@include('html/profile/orders.html', {})
+                    </div>
+                    <div class="tabs__tab">
+                        @@include('html/profile/account.html', {})
+                    </div>
+                    <div class="tabs__tab">
+                        @@include('html/profile/payment.html', {})
+                    </div>
+                    <div class="tabs__tab">
+                        @@include('html/profile/change-password.html', {})
+                    </div>
                 </div>
-            </aside>
+            </div>
         </div>
     </main>
     @@include('html/footer.html', {})
+
+    <script src="js/script.header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+    <script src="js/script.profile.js"></script>
 </body>
 
 </html>
