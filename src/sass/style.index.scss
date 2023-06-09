@@ -1,6 +1,7 @@
 @import 'base/variable';
 @import 'base/fonts';
 @import 'base/header';
+@import 'base/footer';
 
 body {
   overflow-x: hidden;
@@ -194,19 +195,32 @@ svg {
       display: flex;
       position: absolute;
       align-items: flex-end;
-      &-item {
+
+      &-item-1 {
         position: absolute;
-        width: 334px;
-        height: 306px;
+        width: 289px;
+        height: 305px;
         &:nth-child(1) {
+          top: 103px;
         }
+      }
+      &-item-2 {
+        position: absolute;
         &:nth-child(2) {
+          right: 83px;
+          top: 61px;
         }
+      }
+      &-item-3 {
+        position: absolute;
         &:nth-child(3) {
+          right: 0px;
+          top: 18px;
         }
       }
     }
   }
+
   &__text {
     padding: 357px 123px 0 202px;
     font-family: 'Effra';
@@ -721,6 +735,7 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 
   &__img {
     width: 96.6px;
