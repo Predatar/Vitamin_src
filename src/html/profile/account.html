@@ -1,7 +1,7 @@
 <div class="account">
 	<div class="account__wrapper">
 		<div class="account__title">
-
+			Account Overview
 		</div>
 		<div class="account__customer">
 			Regular customer
@@ -46,6 +46,16 @@
 			<label for="phone">Phone Number</label>
 			<input type="text" name="phone" id="phone" class="account__phone">
 		</div>
+		<div class="account__input-wrapper account__wholesale">
+			<label for="phone">Wholesale purchase permission</label>
+			<div class="account__input-file">
+				<div class="account__input-file-text1">Wholesale purchase permission</div>
+				<div class="account__input-file-text2">Permission</div>
+				<input type="file" name="wholesaleFile" id="wholesaleFile" class="account__file" accept="application/pdf">
+				<label for="wholesaleFile">Upload</label>
+			</div>
+		</div>
+
 	</form>
-	<button form="accountForm"></button>
+	<button form="accountForm" class="account__btn account__btn_disable" disabled>Save</button>
 </div>
