@@ -38,7 +38,7 @@
   line-height: 22px;
   color: $color-white;
 
-  position: absolute;
+  position: fixed;
   top: 27px;
   left: calc(100% / 2 - (336px / 2));
   z-index: $z-index--1;
@@ -62,3 +62,5 @@
 @import 'block/profile/account';
 @import 'block/profile/payment';
 @import 'block/profile/change-password';
+
+@import 'base/footer';
