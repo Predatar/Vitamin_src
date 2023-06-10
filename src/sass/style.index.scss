@@ -381,18 +381,22 @@ svg {
   &__swiper {
     margin: 151px 0 0 203px;
     display: flex;
-    width: 50%;
-    overflow: hidden;
+    width: 800px;
+    overflow: visible;
     z-index: $z-index-2;
+    // @media (max-width: 1700px) {
+    //   margin: 151px 0 0 3%;
+    //   width: 100%;
+    // }
   }
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
+    gap: 33px;
   }
 
   &__slide-1,
   &__slide-2 {
-    margin-right: 32px;
     flex-shrink: 0;
     width: 400px;
     height: 494px;
@@ -530,6 +534,33 @@ svg {
       background-size: cover;
     }
   }
+  @media (max-width: 1550px) {
+    height: 830px;
+    &__information {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 825px;
+      &__text {
+        margin: 100px 100px;
+      }
+      &__choose {
+        width: auto;
+        height: auto;
+      }
+      &__description {
+        width: 630px;
+        height: auto;
+      }
+    }
+    &__swiper {
+      margin: 490px auto;
+      width: 57%;
+    }
+    br {
+      display: none;
+    }
+  }
 }
 
 .hapy-dais {
@@ -575,11 +606,17 @@ svg {
     height: 416px;
     z-index: $z-index-2;
   }
+  @media (max-width: 1550px) {
+    &__img {
+      top: -10px;
+    }
+  }
 }
 
 .reviews {
   &__wrapper {
-    margin: 63px 203px;
+    width: 1393px;
+    margin: 63px auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -592,6 +629,7 @@ svg {
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
+    gap: 32px;
   }
   &__slide-1,
   &__slide-2,
@@ -600,7 +638,6 @@ svg {
     height: 360px;
     background: #faf8f6;
     border-radius: 16px;
-    margin-right: 32px;
     padding: 40px 20px 0 30px;
   }
   &__slide-3 {
