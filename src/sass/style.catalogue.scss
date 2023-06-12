@@ -1,0 +1,16 @@
+@import 'base/variable';
+@import 'base/fonts';
+
+@import 'base/header';
+
+.main {
+  padding-top: 128px;
+  &__container {
+  }
+}
+.swiper-slide {
+  width: 1369px;
+}
+
+@import 'block/catalogue/poster';
+@import 'base/footer';

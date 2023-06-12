@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // TODO asdasd
+
   // * Toast script
 
   const showToast = () => {
