@@ -35,7 +35,6 @@ $color-border-one: #f2f2f2;
 $color-border-two: #e6e6e6;
 $color-gray: #c4bdb6;
 
-
 $z-index--1: -1; // Для элементов под потоком
 $z-index-1: 1; // Для наползающих элементов в общем потоке
 $z-index-2: 2; // Для наползающих элементов в общем потоке
@@ -43,3 +42,38 @@ $z-index-3: 3; // Для header
 $z-index-4: 4; // Для корзины
 $z-index-5: 5; // Для модалок
 $z-index-6: 6; // Элементы перекрывающие всё
+
+.dietary {
+  color: $color-goods_purple-text;
+  background: $color-goods_purple;
+}
+
+.minerals {
+  color: $color-goods_mint-text;
+  background: $color-goods_mint;
+}
+
+.prenatal {
+  color: $color-goods_pink-text;
+  background: $color-goods_pink;
+}
+
+.relief {
+  color: $color-goods_blue-text;
+  background: $color-goods_blue;
+}
+
+.antioxidants {
+  color: $color-goods_orange-text;
+  background: $color-goods_orange;
+}
+
+.loss {
+  color: $color-goods_green-text;
+  background: $color-goods_green;
+}
+
+.probiotics {
+  color: $color-goods_red-text;
+  background: $color-goods_red;
+}

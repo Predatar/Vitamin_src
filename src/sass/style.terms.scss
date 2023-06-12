@@ -1,0 +1,119 @@
+@import 'base/variable';
+@import 'base/fonts';
+
+@import 'base/header';
+
+.main {
+  padding: 110px 0 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
+
+  &__container {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ededed;
+
+    @media (max-width: 768px) {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: none;
+    }
+
+    @media (max-width: 340px) {
+      padding-right: 21px;
+    }
+  }
+
+  &__wrapper {
+    width: 681px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    color: $color-black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__descr {
+    margin-top: 36px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-black;
+    opacity: 0.5;
+
+    @media (max-width: 768px) {
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 65px;
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    color: $color-black;
+
+    @media (max-width: 768px) {
+      margin-top: 61px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__list {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (max-width: 768px) {
+      margin: 30px 0;
+      gap: 25px;
+    }
+  }
+
+  &__list-item {
+    padding-left: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: $color-main-orange;
+
+      @media (max-width: 768px) {
+        width: 20px;
+        top: 11px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 40px;
+    }
+  }
+}
+
+@import 'base/footer';

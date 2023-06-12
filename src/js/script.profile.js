@@ -48,18 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //* Sign out
-
-  {
-    const signOut = document.querySelector('.aside__list-item_sign-out');
-
-    signOut.addEventListener('click', () => {
-      sessionStorage.removeItem('userId');
-      sessionStorage.removeItem('isLogined');
-      document.location.href = 'signIn.html';
-    });
-  }
-
   // * Toast script
 
   const showToast = () => {
@@ -84,6 +72,30 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(deleteClass, 500);
     }, 3000);
   };
+
+  // * Subscriptions
+
+  // * Orders
+
+  const ordersDropDownBtn = document.querySelector('.orders__drop-down');
+  const ordersListItem = document.querySelector('.orders__list-item');
+
+  const initialHeight = '110px';
+  let ordersListItemIterator = 1;
+
+  const handleClick = () => {
+    ordersDropDownBtn.classList.toggle('orders__drop-down_active');
+    /* ordersListItem.classList.toggle('orders__list-item_active'); */
+    if (ordersListItemIterator) {
+      ordersListItem.style.height = ordersListItem.scrollHeight + 'px';
+      ordersListItemIterator = 0;
+    } else {
+      ordersListItem.style.height = initialHeight;
+      ordersListItemIterator = 1;
+    }
+  };
+
+  ordersDropDownBtn.addEventListener('click', handleClick);
 
   // * Account
 
@@ -417,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   {
     const cardNumber = document.querySelector('.payment__card');
-    const expiration = document.querySelector('.payment__expitation');
+    const expiration = document.querySelector('.payment__expiration');
     const cvc = document.querySelector('.payment__cvc');
     const btn = document.querySelector('.payment__btn');
 
@@ -445,6 +457,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    const getPaymentInfo = async () => {
+      await fetch(
+        `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
+          'userId'
+        )}.json`
+      ).then(response => {
+        if ((response.status = 200)) {
+          response.json().then(data => {
+            if (data.cardNumber) {
+              cardNumber.value = data.cardNumber;
+            }
+            if (data.cardExpiration) {
+              expiration.value = data.cardExpiration;
+            }
+            if (data.cardCVC) {
+              cvc.value = data.cardCVC;
+            }
+            activeBtn();
+          });
+        } else {
+          console.log(response.status);
+        }
+      });
+    };
+
+    getPaymentInfo();
+
     const addPayment = async () => {
       await fetch(
         `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
@@ -463,6 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.status == 200) {
           response.json().then(data => {
             showToast();
+            getPaymentInfo();
           });
         } else {
           console.log(response.status);
@@ -617,6 +657,18 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
       }
+    });
+  }
+
+  //* Sign out
+
+  {
+    const signOut = document.querySelector('.aside__list-item_sign-out');
+
+    signOut.addEventListener('click', () => {
+      sessionStorage.removeItem('userId');
+      sessionStorage.removeItem('isLogined');
+      document.location.href = 'signIn.html';
     });
   }
 });
