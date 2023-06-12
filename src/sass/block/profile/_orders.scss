@@ -40,6 +40,15 @@
     line-height: 25px;
     color: $color-black;
     opacity: 0.5;
+
+    span {
+      padding-left: 5px;
+      display: none;
+      &::before {
+        content: '•';
+        padding-right: 5px;
+      }
+    }
   }
 
   &__number {
@@ -57,6 +66,11 @@
     font-size: 18px;
     line-height: 25px;
     color: $color-black;
+  }
+
+  &__drop-down {
+    display: none;
+    cursor: pointer;
   }
 
   &__container {
@@ -78,7 +92,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
 
     border-radius: 8px;
 
@@ -103,7 +116,6 @@
 
   &__name {
     margin-top: 5px;
-    padding-right: 10px;
 
     font-family: 'Effra';
     font-weight: 400;
@@ -145,7 +157,7 @@
     color: $color-black;
 
     span {
-			margin-bottom: 3px;
+      margin-bottom: 3px;
       font-family: 'Open Sans';
       font-weight: 400;
       font-size: 18px;
@@ -179,6 +191,146 @@
     &:hover {
       background: $color-white;
       color: $color-black;
+    }
+  }
+}
+
+@media (max-width: 838px) {
+  .orders {
+    &__item {
+      width: 100%;
+    }
+    &__item-container {
+      width: 260px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .orders {
+    &__list-item {
+      padding: 30px 20px;
+      height: 110px;
+      overflow: hidden;
+    }
+
+    &__case1 {
+      padding-right: 4px;
+      align-items: center;
+    }
+
+    &__date {
+      font-size: 14px;
+      line-height: 19px;
+      span {
+        display: inline;
+      }
+    }
+
+    &__delivery {
+      display: none;
+    }
+
+    &__number {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__drop-down {
+      display: block;
+    }
+
+    &__item {
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    &__item-container {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .orders {
+    &__item-container {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .orders {
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &__wrapper {
+      margin-top: 29px;
+    }
+
+    &__list {
+      gap: 15px;
+    }
+
+    &__container {
+      margin-top: 30px;
+      gap: 15px;
+    }
+
+    &__img {
+      width: 100px;
+      height: 120px;
+    }
+
+    &__item-container {
+      padding-top: 0;
+      width: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__tag {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__name {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__price {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__divider {
+      margin: 39px 0 28px;
+    }
+
+    &__amount {
+      font-size: 16px;
+      line-height: 22px;
+
+      span {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .orders {
+    &__item-container {
+      width: 121px;
+    }
+    &__btn {
+      width: 120px;
     }
   }
 }

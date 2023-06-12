@@ -81,12 +81,13 @@
   }
 
   &__input-container {
-    width: 206px;
+    width: calc(206px * 100% / 444px);
     display: flex;
     flex-direction: column;
   }
 
   &__state {
+    margin-top: 5px;
     padding: 0 24px;
     width: 100%;
     height: 56px;
@@ -328,4 +329,96 @@
   font-size: 12px;
   line-height: 16px;
   color: $color-main-orange;
+}
+
+@media (max-width: 1226px) {
+  .account {
+    &__wrapper {
+      width: 100%;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__input-wrapper {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1135px) {
+  .account {
+    &__input-wrapper {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 935px) {
+  .account {
+    &__form {
+      gap: 31px 20px;
+    }
+    &__input-wrapper {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 845px) {
+  .account {
+    &__form {
+      gap: 31px 10px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .account {
+    &__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    &__customer {
+      padding-top: 10px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__form {
+      margin-top: 30px;
+      gap: 26px;
+    }
+    &__input-wrapper {
+      width: 100%;
+      label {
+        padding-left: 1px;
+      }
+    }
+
+    &__input-container {
+      width: 159px;
+    }
+
+    &__btn {
+      margin-top: 36px;
+      margin-left: 0;
+      width: 100%;
+
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+@media (max-width: 360px) {
+    .account {
+      &__input-container {
+        width: 131px;
+      }
+    }
 }

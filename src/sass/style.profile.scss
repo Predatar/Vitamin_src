@@ -12,12 +12,61 @@
     display: flex;
     justify-content: center;
     border-top: 1px solid #ededed;
+
+    @media (max-width: 1440px) {
+      padding: 40px 23px 0;
+    }
+
+    @media (max-width: 845px) {
+      padding: 0 20px;
+      border: none;
+    }
   }
 
   &__container {
     width: 1394px;
     display: flex;
     gap: 138px;
+
+    &_subscriptions {
+      @media (max-width: 1135px) {
+        gap: 50px;
+      }
+      @media (max-width: 838px) {
+        gap: 20px;
+      }
+    }
+
+    &__orders {
+      @media (max-width: 935px) {
+        gap: 40px;
+      }
+
+      @media (max-width: 838px) {
+        gap: 20px;
+      }
+    }
+
+    &_account {
+      @media (max-width: 1324px) {
+        gap: 40px;
+      }
+      @media (max-width: 935px) {
+        gap: 0px;
+      }
+    }
+
+    &_payment {
+      @media (max-width: 1072px) {
+        gap: 40px;
+      }
+    }
+
+    &_password {
+      @media (max-width: 845px) {
+        gap: 50px;
+      }
+    }
   }
 }
 

@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   {
     const cardNumber = document.querySelector('.payment__card');
-    const expiration = document.querySelector('.payment__expitation');
+    const expiration = document.querySelector('.payment__expiration');
     const cvc = document.querySelector('.payment__cvc');
     const btn = document.querySelector('.payment__btn');
 
