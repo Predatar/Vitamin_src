@@ -445,6 +445,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    const getPaymentInfo = async () => {
+      await fetch(
+        `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
+          'userId'
+        )}.json`
+      ).then(response => {
+        if ((response.status = 200)) {
+          response.json().then(data => {
+            if (data.cardNumber) {
+              cardNumber.value = data.cardNumber;
+            }
+            if (data.cardExpiration) {
+              expiration.value = data.cardExpiration;
+            }
+            if (data.cardCVC) {
+              cvc.value = data.cardCVC;
+            }
+          });
+        } else {
+          console.log(response.status);
+        }
+      });
+    };
+
+    getPaymentInfo();
+
     const addPayment = async () => {
       await fetch(
         `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
@@ -463,6 +489,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (response.status == 200) {
           response.json().then(data => {
             showToast();
+            getPaymentInfo();
           });
         } else {
           console.log(response.status);
