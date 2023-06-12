@@ -48,18 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  //* Sign out
-
-  {
-    const signOut = document.querySelector('.aside__list-item_sign-out');
-
-    signOut.addEventListener('click', () => {
-      sessionStorage.removeItem('userId');
-      sessionStorage.removeItem('isLogined');
-      document.location.href = 'signIn.html';
-    });
-  }
-
   // * Toast script
 
   const showToast = () => {
@@ -462,6 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.cardCVC) {
               cvc.value = data.cardCVC;
             }
+            activeBtn();
           });
         } else {
           console.log(response.status);
@@ -644,6 +633,18 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         Swal.fire({ title: 'Fill in all the fields correctly', icon: 'warning', confirmButtonColor: '#FF7D4E' });
       }
+    });
+  }
+
+  //* Sign out
+
+  {
+    const signOut = document.querySelector('.aside__list-item_sign-out');
+
+    signOut.addEventListener('click', () => {
+      sessionStorage.removeItem('userId');
+      sessionStorage.removeItem('isLogined');
+      document.location.href = 'signIn.html';
     });
   }
 });
