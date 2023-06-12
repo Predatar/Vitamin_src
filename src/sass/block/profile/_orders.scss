@@ -71,6 +71,11 @@
   &__drop-down {
     display: none;
     cursor: pointer;
+    transition: all 0.2s;
+
+    &_active {
+      transform: rotate(-180deg);
+    }
   }
 
   &__container {
@@ -212,6 +217,7 @@
       padding: 30px 20px;
       height: 110px;
       overflow: hidden;
+      transition: height 0.4s ease-in;
     }
 
     &__case1 {
