@@ -73,6 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   };
 
+  // * Subscriptions
+
+  // * Orders
+
+  const ordersDropDownBtn = document.querySelector('.orders__drop-down');
+  const ordersListItem = document.querySelector('.orders__list-item');
+
+  const initialHeight = '110px';
+  let ordersListItemIterator = 1;
+
+  const handleClick = () => {
+    ordersDropDownBtn.classList.toggle('orders__drop-down_active');
+    /* ordersListItem.classList.toggle('orders__list-item_active'); */
+    if (ordersListItemIterator) {
+      ordersListItem.style.height = ordersListItem.scrollHeight + 'px';
+      ordersListItemIterator = 0;
+    } else {
+      ordersListItem.style.height = initialHeight;
+      ordersListItemIterator = 1;
+    }
+  };
+
+  ordersDropDownBtn.addEventListener('click', handleClick);
+
   // * Account
 
   {
@@ -405,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   {
     const cardNumber = document.querySelector('.payment__card');
-    const expiration = document.querySelector('.payment__expitation');
+    const expiration = document.querySelector('.payment__expiration');
     const cvc = document.querySelector('.payment__cvc');
     const btn = document.querySelector('.payment__btn');
 
