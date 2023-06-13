@@ -1,6 +1,6 @@
 .vitamins {
   max-width: 1039px;
-
+  flex-grow: 1;
   &__group {
     display: flex;
     flex-wrap: wrap;
@@ -12,9 +12,14 @@
 
     background: $color-bg;
     border-radius: 16px;
-		box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
     overflow: hidden;
+
+    &_hide {
+      display: none;
+    }
   }
 
   &__img {
@@ -38,6 +43,7 @@
 
   &__name {
     margin-top: 12px;
+    height: 49px;
     font-family: 'Effra';
     font-weight: 400;
     font-size: 20px;
@@ -46,7 +52,7 @@
   }
 
   &__price {
-    margin-top: 39px;
+    margin-top: 15px;
     font-family: 'Open Sans';
     font-weight: 700;
     font-size: 20px;
