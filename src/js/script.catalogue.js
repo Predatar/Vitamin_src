@@ -37,11 +37,16 @@ const getTag = tag => {
   }
 };
 
-const appendVitamins = (dataId, tag, imgName, name, price) => {
+const appendVitamins = (dataId, tag, imgName, name, price, sale) => {
   const vitaminsItem = document.createElement('a');
   vitaminsItem.classList.add('vitamins__item');
   vitaminsItem.setAttribute('data-id', dataId);
   vitaminsItem.setAttribute('data-filter', tag);
+
+  if (sale) {
+    vitaminsItem.setAttribute('data-sale', 'sale');
+  }
+
   vitaminsItem.href = '#';
   vitaminsItem.addEventListener('click', () => {
     localStorage.setItem('item-id', dataId);
@@ -64,7 +69,24 @@ const appendVitamins = (dataId, tag, imgName, name, price) => {
 
   const vitaminsPrice = document.createElement('div');
   vitaminsPrice.classList.add('vitamins__price');
-  vitaminsPrice.innerHTML = '$' + price;
+
+  const vitaminsPriceSpan = document.createElement('span');
+  vitaminsPriceSpan.innerHTML = '$' + price;
+
+  if (sale) {
+    const vitaminsSale = document.createElement('span');
+    let newPrice = price * ((100 - sale) / 100);
+    vitaminsSale.innerHTML = '$' + newPrice.toFixed(2);
+    vitaminsSale.style.color = '#D32D2C';
+    vitaminsSale.style.marginLeft = '12px';
+
+    vitaminsPriceSpan.style.textDecorationLine = 'line-through';
+
+    vitaminsPrice.append(vitaminsPriceSpan);
+    vitaminsPrice.append(vitaminsSale);
+  } else {
+    vitaminsPrice.append(vitaminsPriceSpan);
+  }
 
   vitaminsInfo.append(vitaminsTag);
   vitaminsInfo.append(vitaminsName);
@@ -72,6 +94,14 @@ const appendVitamins = (dataId, tag, imgName, name, price) => {
 
   vitaminsItem.append(vitaminsImg);
   vitaminsItem.append(vitaminsInfo);
+
+  if (sale) {
+    const vitaminSale = document.createElement('div');
+    vitaminSale.classList.add('vitamins__sale');
+    vitaminSale.innerHTML = '-' + sale + '%';
+
+    vitaminsItem.append(vitaminSale);
+  }
 
   vitaminsGroup.append(vitaminsItem);
 };
@@ -82,7 +112,7 @@ const appendVitamins = (dataId, tag, imgName, name, price) => {
       response.json().then(data => {
         for (const key in data) {
           if (Object.hasOwnProperty.call(data, key)) {
-            appendVitamins(key, data[key].tag, data[key].imgName, data[key].name, data[key].price);
+            appendVitamins(key, data[key].tag, data[key].imgName, data[key].name, data[key].price, data[key].sale);
           }
         }
       });
@@ -100,6 +130,14 @@ const addFilter = filter => {
   if (filter == '*') {
     for (let i = 0; i < vitaminsItemCollection.length; i++) {
       vitaminsItemCollection[i].classList.remove('vitamins__item_hide');
+    }
+  } else if (filter == 'sale') {
+    for (let i = 0; i < vitaminsItemCollection.length; i++) {
+      if (vitaminsItemCollection[i].getAttribute('data-sale') != filter) {
+        vitaminsItemCollection[i].classList.add('vitamins__item_hide');
+      } else {
+        vitaminsItemCollection[i].classList.remove('vitamins__item_hide');
+      }
     }
   } else {
     for (let i = 0; i < vitaminsItemCollection.length; i++) {
