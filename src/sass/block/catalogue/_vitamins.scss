@@ -1,6 +1,7 @@
 .vitamins {
   max-width: 1039px;
   flex-grow: 1;
+
   &__group {
     display: flex;
     flex-wrap: wrap;
@@ -58,5 +59,26 @@
     font-size: 20px;
     line-height: 27px;
     color: $color-black;
+  }
+
+  &__sale {
+    width: 51px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-red;
+    border-radius: 4px;
+
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-white;
+
+    position: absolute;
+    top: 32px;
+    right: 30px;
   }
 }
