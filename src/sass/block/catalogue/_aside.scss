@@ -1,0 +1,33 @@
+.filter {
+  margin-top: 30px;
+  width: 206px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  &__list-item {
+    font-family: 'Effra';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: $color-black;
+
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-main-orange;
+    }
+
+    &_sale {
+      color: $color-red;
+    }
+		
+    &_active {
+      color: $color-main-orange;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import 'base/variable';
+@import 'base/fonts';
+
+@import 'base/header';
+
+.main {
+  padding-top: 128px;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+
+  &__container {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 1396px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@import 'block/catalogue/poster';
+@import 'block/catalogue/aside';
+@import 'block/catalogue/vitamins';
+@import 'base/footer';

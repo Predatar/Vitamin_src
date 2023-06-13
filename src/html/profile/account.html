@@ -10,15 +10,18 @@
 	<form class="account__form" id="accountForm">
 		<div class="account__input-wrapper">
 			<label for="firstName">First Name</label>
-			<input type="text" name="firstName" id="firstName" class="account__first-name">
+			<input type="text" name="firstName" id="firstName" class="account__first-name" required>
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper">
 			<label for="lastName">Last Name</label>
-			<input type="text" name="lastName" id="lastName" class="account__last-name">
+			<input type="text" name="lastName" id="lastName" class="account__last-name" required>
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper">
 			<label for="address1">Address Line 1</label>
-			<input type="text" name="address1" id="address1" class="account__address1">
+			<input type="text" name="address1" id="address1" class="account__address1" required>
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper">
 			<label for="address2">Address Line 2</label>
@@ -26,25 +29,44 @@
 		</div>
 		<div class="account__input-wrapper">
 			<label for="city">City</label>
-			<input type="text" name="city" id="city" class="account__city">
+			<input type="text" name="city" id="city" class="account__city" required>
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper">
 			<div class="account__input-container">
 				<label for="state">State / Province</label>
-				<input type="text" name="state" id="state" class="account__state">
+				<div class="account__state">
+					<div class="account__state-selected">
+						--
+						<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd"
+								d="M14.8788 1.46376L13.4339 3.6646e-07L7.43942 6.07249L1.44495 -6.31608e-08L-3.2942e-07 1.46376L7.43942 9L14.8788 1.46376Z"
+								fill="black" />
+						</svg>
+					</div>
+					<div class="account__state-list">
+						<div class="account__state-list-item">NY</div>
+						<div class="account__state-list-item">KH</div>
+						<div class="account__state-list-item">OD</div>
+					</div>
+				</div>
+				<div class="warningAccount"></div>
 			</div>
 			<div class="account__input-container">
 				<label for="zip">ZIP / Postal Code</label>
-				<input type="text" name="zip" id="zip" class="account__zip">
+				<input type="text" name="zip" id="zip" class="account__zip" required>
+				<div class="warningAccount"></div>
 			</div>
 		</div>
 		<div class="account__input-wrapper">
 			<label for="email">Email</label>
-			<input type="text" name="email" id="email" class="account__email">
+			<input type="email" name="email" id="email" class="account__email" required>
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper">
 			<label for="phone">Phone Number</label>
-			<input type="text" name="phone" id="phone" class="account__phone">
+			<input type="text" name="phone" id="phone" class="account__phone" required max="12">
+			<div class="warningAccount"></div>
 		</div>
 		<div class="account__input-wrapper account__wholesale">
 			<label for="phone">Wholesale purchase permission</label>
@@ -52,7 +74,7 @@
 				<div class="account__input-file-text1">Wholesale purchase permission</div>
 				<div class="account__input-file-text2">Permission</div>
 				<input type="file" name="wholesaleFile" id="wholesaleFile" class="account__file" accept="application/pdf">
-				<label for="wholesaleFile">Upload</label>
+				<label for="wholesaleFile">Update</label>
 			</div>
 		</div>
 
