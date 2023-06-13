@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Product catalogue - Vitamin</title>
 	@@include('html/head.html', {})
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.catalogue.min.css">
 </head>
 
@@ -16,12 +16,32 @@
 	<div class="main">
 		@@include('html/catalogue/poster.html', {})
 
-		<div class="main__container"></div>
+		<div class="main__container">
+			<aside class="filter">
+				<div class="filter__list">
+					<div class="filter__list-item filter__list-item_active" data-filter="*">All categories</div>
+					<div class="filter__list-item" data-filter="dietary">Vitamins & Dietary Supplements</div>
+					<div class="filter__list-item" data-filter="loss">Weight Loss</div>
+					<div class="filter__list-item" data-filter="minerals">Minerals</div>
+					<div class="filter__list-item" data-filter="antioxidants">Antioxidants</div>
+					<div class="filter__list-item" data-filter="probiotics">Probiotics</div>
+					<div class="filter__list-item" data-filter="relief">Pain Relief</div>
+					<div class="filter__list-item" data-filter="prenatal">Prenatal Vitamins</div>
+					<div class="filter__list-item filter__list-item_sale" data-filter=".sale">Sale%</div>
+				</div>
+			</aside>
+			<div class="vitamins">
+				<div class="vitamins__group">
+					
+				</div>
+			</div>
+		</div>
 	</div>
 
 	@@include('html/footer.html', {})
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-	<script src="js/script.catalogue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js" defer></script>
+	<script src="js/script.header.js"></script>
+	<script src="js/script.catalogue.js" defer></script>
 	<!-- TODO сделать снипеты для select -->
 </body>
 
