@@ -91,7 +91,8 @@
 }
 @media (max-width: 425px) {
   .header {
-    padding: 15px 0px 15px 0px;
+    height: 70px;
+    padding: 0px;
 
     &__burger-menu {
       margin: 0 0px 0px 24px;
