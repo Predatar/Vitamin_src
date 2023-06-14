@@ -164,3 +164,15 @@ filterList.forEach((elem, index) => {
     toggleActiveClassForFilterList(index);
   });
 });
+
+// * Reviews
+
+const reviewsSlider = new Swiper('.reviews__slider', {
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+  breakpoints: {
+    1400: {
+      enable: false
+    }
+  }
+});

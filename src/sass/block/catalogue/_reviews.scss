@@ -1,0 +1,70 @@
+.reviews {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 1396px;
+
+  &__caption {
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-black;
+  }
+
+  &__slider {
+    margin-top: 50px;
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slide {
+    padding: 40px 30px 30px;
+    width: 444px;
+
+    background: $color-bg;
+    opacity: 1;
+  }
+
+  &__stars {
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black;
+  }
+
+  &__descr {
+    margin-top: 20px;
+    height: 111px;
+
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color-black;
+  }
+
+  &__account {
+    margin-top: 50px;
+    display: flex;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__name {
+    margin-left: 15px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-black;
+  }
+}
