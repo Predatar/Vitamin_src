@@ -8,7 +8,6 @@
 
   &__section {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex: 1;
     flex-direction: column;
@@ -52,21 +51,26 @@
   }
 
   &__list {
-    list-style-type: none;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 250.1%;
-    /* or 35px */
-
-    color: #000000;
-
-    opacity: 0.5;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px 20px;
   }
   &__item {
     text-decoration: none;
     color: inherit;
+    &-shop {
+      width: 140px;
+      list-style-type: none;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+
+      color: #000000;
+      opacity: 0.5;
+    }
   }
 
   &__shop-list {
@@ -80,88 +84,3 @@
     }
   }
 }
-
-///////2
-// .footer {
-//   display: flex;
-//   justify-content: space-evenly;
-//   align-items: center;
-//   background-color: #f2f2f2;
-//   padding: 20px;
-//   height: 350px;
-
-//   &__section--logo {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     top: -36px;
-//     left: -52px;
-//   }
-//   &__logo {
-//     width: 85.5px;
-//     height: 99px;
-//     margin: 54px 27px 60px 0;
-//   }
-//   &__description {
-//     width: 170px;
-//     height: 32px;
-//     font-family: 'Open Sans';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 12px;
-//     line-height: 16px;
-
-//     color: #000000;
-//     opacity: 0.3;
-//     padding: 0 0 0 27px;
-//   }
-
-//   &__section--shop {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex: 1;
-//     flex-direction: column;
-//   }
-
-//   &__section--information {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex: 1;
-//     flex-direction: column;
-//   }
-
-//   &__section--contact {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex: 1;
-//     flex-direction: column;
-//   }
-//   &__title {
-//     font-family: 'Effra';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 18px;
-//     line-height: 250.1%;
-//     /* or 45px */
-
-//     color: #000000;
-//   }
-//   &__list {
-//     list-style-type: none;
-//     font-family: 'Open Sans';
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 250.1%;
-//     /* or 35px */
-
-//     color: #000000;
-
-//     opacity: 0.5;
-//   }
-// }
-/////////////
