@@ -4,8 +4,7 @@
 @import 'base/header';
 
 .main {
-  padding-top: 128px;
-  padding-bottom: 100px;
+  padding: 128px 0 100px;
   overflow-x: hidden;
 
   &__container {
@@ -20,4 +19,6 @@
 @import 'block/catalogue/poster';
 @import 'block/catalogue/aside';
 @import 'block/catalogue/vitamins';
+@import 'block/catalogue/promo';
+@import 'block/catalogue/reviews';
 @import 'base/footer';
