@@ -3,11 +3,19 @@
 const posterSlider = new Swiper('.poster__slider', {
   slidesPerView: 'auto',
   loop: true,
-  spaceBetween: 50,
-  centeredSlides: true,
+  grabCursor: true,
   navigation: {
     nextEl: '.poster__slider-btn-next',
     prevEl: '.poster__slider-btn-prev'
+  },
+  pagination: {
+    el: '.poster__slider-pagination'
+  },
+  breakpoints: {
+    1024: {
+      spaceBetween: 50,
+      centeredSlides: true
+    }
   }
 });
 
@@ -42,12 +50,11 @@ const appendVitamins = (dataId, tag, imgName, name, price, sale) => {
   vitaminsItem.classList.add('vitamins__item');
   vitaminsItem.setAttribute('data-id', dataId);
   vitaminsItem.setAttribute('data-filter', tag);
+  vitaminsItem.href = 'product-card.html';
 
   if (sale) {
     vitaminsItem.setAttribute('data-sale', 'sale');
   }
-
-  vitaminsItem.href = '#';
   vitaminsItem.addEventListener('click', () => {
     localStorage.setItem('item-id', dataId);
   });
@@ -122,6 +129,23 @@ const appendVitamins = (dataId, tag, imgName, name, price, sale) => {
   });
 })();
 
+window.addEventListener('resize', e => {
+  if (e.target.innerWidth < 550) {
+    vitaminsGroup.style.height = '880px';
+  }
+  if (e.target.innerWidth < 360) {
+    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 14 + 'px';
+  }
+});
+if (window.innerWidth < 550) {
+  vitaminsGroup.style.height = '880px';
+}
+if (window.innerWidth < 360) {
+  setTimeout(() => {
+    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 14 + 'px';
+  }, 200);
+}
+
 // * Filter
 
 const filterList = document.querySelectorAll('.filter__list-item');
@@ -169,10 +193,14 @@ filterList.forEach((elem, index) => {
 
 const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 'auto',
-  spaceBetween: 32,
+  spaceBetween: 10,
   breakpoints: {
-    1400: {
-      enable: false
+    1024: {
+      grabCursor: true,
+      spaceBetween: 32
+    },
+    1440: {
+      grabCursor: false
     }
   }
 });
