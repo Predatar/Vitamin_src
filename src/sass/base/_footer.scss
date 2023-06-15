@@ -25,7 +25,7 @@
   }
 
   &__description {
-    width: 124px;
+    // width: 124px;
     height: 32px;
     font-family: 'Open Sans';
     font-style: normal;
@@ -51,7 +51,7 @@
   }
 
   &__list {
-    height: 170px;
+    // height: 170px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -61,7 +61,7 @@
     text-decoration: none;
     color: inherit;
     &-shop {
-      width: 140px;
+      // width: 140px;
       list-style-type: none;
       font-family: 'Open Sans';
       font-style: normal;
