@@ -1,0 +1,449 @@
+@import 'base/variable';
+@import 'base/fonts';
+@import 'base/header';
+@import 'base/footer';
+
+.main {
+  padding: 112px 0 100px;
+  overflow-x: hidden;
+}
+.svg-1,
+.svg-2,
+.svg-3 {
+  z-index: $z-index--1;
+  position: absolute;
+}
+.svg-1 {
+  left: 55%;
+  top: -21.8%;
+  z-index: $z-index-2;
+}
+.svg-2 {
+  right: 0%;
+  top: 42.2%;
+}
+.svg-3 {
+  right: 26.8%;
+  top: 107.3%;
+  z-index: $z-index-2;
+}
+
+.info {
+  padding: 68px 202px 0 202px;
+  border-top: 1px solid #0000002d;
+  @media (max-width: 768px) {
+    border: none;
+  }
+  &__text {
+    width: 920px;
+    @media (max-width: 1200px) {
+      width: auto;
+    }
+
+    &-1 {
+      //   width: 682px;
+      //   height: 121px;
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 60px;
+
+      color: #000000;
+      margin-bottom: 61px;
+    }
+    &-2 {
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 31px;
+
+      color: #000000;
+    }
+    &-3 {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+
+      color: #000000;
+      margin: 23px 1px 0px 2px;
+    }
+  }
+}
+
+.product {
+  padding-bottom: 50px;
+  margin: 87px 142px;
+  background: #faf8f6;
+  border-radius: 16px;
+
+  &__title {
+    font-family: 'Effra';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+
+    color: #000000;
+    padding: 60px 0 50px 60px;
+    z-index: $z-index-2;
+  }
+  &__grop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+    padding: 0px 60px;
+    @media (max-width: 1799px) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0px 30px;
+    }
+    @media (max-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0px 30px;
+    }
+  }
+  &__item-1,
+  &__item-2,
+  &__item-3,
+  &__item-4 {
+    width: 325px;
+    height: 479px;
+    background: #ffffff;
+    border-radius: 16px;
+    @media (max-width: 1799px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__img {
+    padding: 66px 70px 0;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__info-1,
+  &__info-2,
+  &__info-3,
+  &__info-4 {
+    padding: 48px 30px 30px;
+  }
+  &__tag {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: $color-goods_purple-text;
+    &-m {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-goods_mint;
+    }
+  }
+  &__name {
+    margin-top: 14px;
+    height: 49px;
+    font-family: 'Effra';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: $color-black;
+  }
+  &__price {
+    margin-top: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: $color-black;
+  }
+  &__button {
+    padding: 4px 0 0 0;
+    margin: 51px 0 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 330px;
+    height: 65px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 163.42%;
+    border-radius: 100px;
+    background-color: $color-main-orange;
+    color: #ffffff;
+
+    transition: all 0.2s;
+    @media (max-width: 1799px) {
+      margin: 50px 0 0 200px;
+    }
+  }
+  @media (max-width: 1024px) {
+    margin: 87px 0;
+    &__title {
+      margin-left: 100px;
+    }
+    &__button {
+      margin: 51px 0 0 60px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__grop {
+      padding: 0 20px;
+    }
+    &__title {
+      margin-left: 0px;
+    }
+    &__img {
+      padding: 25px 50px 0;
+    }
+    &__item-1,
+    &__item-2,
+    &__item-3,
+    &__item-4 {
+      width: 230px;
+      height: 370px;
+    }
+    &__info-1,
+    &__info-2,
+    &__info-3,
+    &__info-4 {
+      padding: 40px 10px 10px;
+    }
+    &__name {
+      margin-bottom: 20px;
+    }
+  }
+}
+// @media (max-width: 768px) {
+//   .product {
+//     &__group {
+//       // Стили для контейнера "product"
+//     }
+
+//     &__button {
+//       position: fixed;
+//       bottom: 20px; // Начальное положение кнопки (прикреплена к нижней части экрана)
+
+//       &--absolute {
+//         position: absolute;
+//         bottom: 20px; // Отступ от нижней границы контейнера
+//       }
+//     }
+//   }
+/////////////////////////
+//   .product {
+//     &__grop {
+//       position: relative;
+//       min-height: calc(100vh - 65px);
+//     }
+
+//     &__button {
+//       position: fixed;
+//       bottom: 20px;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       margin: 51px 0 0 0;
+//       z-index: $z-index-2;
+//     }
+//   }
+// }
+@media (max-width: 540px) {
+  .header {
+    &__cart {
+      margin: 6px 25px 0 0;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .info {
+    padding: 8px 20px 0 20px;
+    &__text {
+      &-1 {
+        width: 227px;
+        height: 87px;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 30px;
+      }
+      &-2 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      &-3 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 19px 1px 0 0px;
+      }
+    }
+  }
+  .product {
+    margin: 62px 0;
+
+    &__title {
+      margin-left: 0px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 60px 0 30px 20px;
+    }
+    &__grop {
+      padding: 0 20px;
+      grid-gap: 16px;
+    }
+    &__item-1,
+    &__item-2,
+    &__item-3,
+    &__item-4 {
+      width: 160px;
+      height: 279px;
+    }
+    &__img {
+      padding: 23px 34px 0;
+    }
+    &__info-1,
+    &__info-2,
+    &__info-3,
+    &__info-4 {
+      padding: 12px 15px 10px;
+    }
+    &__tag {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__name {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 10px;
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__button {
+      width: 335px;
+      height: 56px;
+      margin: 30px 20px;
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+
+      text-align: center;
+
+      color: #ffffff;
+      padding: 0px 0px 2px 2px;
+    }
+  }
+}
+@media (max-width: 370px) {
+  .info {
+    padding: 8px 20px 0 20px;
+    &__text {
+      &-1 {
+        width: 172px;
+        height: 87px;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 30px;
+      }
+      &-2 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      &-3 {
+        width: 279px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 19px 1px 0 1px;
+      }
+    }
+  }
+  .product {
+    margin: 62px 0;
+
+    &__title {
+      margin-left: 0px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 61px 0 31px 20px;
+    }
+    &__grop {
+      padding: 0 20px;
+      grid-gap: 15px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-1,
+    &__item-2,
+    &__item-3,
+    &__item-4 {
+      width: 280px;
+      height: 405px;
+    }
+    &__img {
+      padding: 50px 55px 0;
+    }
+    &__info-1,
+    &__info-2,
+    &__info-3,
+    &__info-4 {
+      padding: 38px 20px 10px;
+    }
+    &__tag {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__name {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+    &__price {
+      margin-top: 5px;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__button {
+      width: 279px;
+      height: 56px;
+      margin: 30px 20px;
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+
+      text-align: center;
+
+      color: #ffffff;
+      padding: 0px 0px 2px 2px;
+    }
+  }
+}
