@@ -20,10 +20,19 @@ svg {
 .svg-2 {
   left: 90.6%;
   top: 17.8%;
+  @media (max-width: 1440px) {
+    right: 10%;
+    left: auto;
+  }
 }
 .svg-3 {
   left: 60.5%;
   top: 22.8%;
+  @media (max-width: 1440px) {
+    right: 10%;
+    width: 25%;
+    left: auto;
+  }
 }
 .svg-4 {
   left: 42.2%;
@@ -71,8 +80,13 @@ svg {
   &__text {
     flex-basis: 50%;
     padding: 0px 0 0 202px;
-    // top: -25px;
     top: -6px;
+    @media (max-width: 1550px) {
+      padding: 0px 0 0 70px;
+    }
+    @media (max-width: 1200px) {
+      padding: 0px 0 0 20px;
+    }
   }
   &__paragraph-1 {
     margin-bottom: 36px;
@@ -85,6 +99,10 @@ svg {
     line-height: 68px;
     color: #000000;
     z-index: $z-index-2;
+    @media (max-width: 1024px) {
+      width: auto;
+      margin-bottom: 75px;
+    }
     .color-word {
       color: $color-main-orange;
     }
@@ -101,6 +119,9 @@ svg {
 
     color: #808080;
     z-index: $z-index-2;
+    @media (max-width: 1024px) {
+      width: auto;
+    }
   }
 
   &__quiz {
@@ -138,6 +159,9 @@ svg {
     position: relative;
     color: $color-main-orange;
     z-index: $z-index-2;
+    @media (max-width: 900px) {
+      margin: 10px;
+    }
   }
 
   &__link-arrow {
@@ -157,6 +181,9 @@ svg {
     background: #f9f9f9;
     padding-top: 148px;
     height: 100%;
+    @media (max-width: 1550px) {
+      padding-top: 0px;
+    }
   }
   &__image-item {
     object-fit: none;
@@ -164,6 +191,12 @@ svg {
     // top: 30px;
     // right: 153px;
     // width: 1094px;
+    @media (max-width: 1440px) {
+      object-fit: contain;
+      margin-top: 190px;
+      height: 60%;
+      width: 100%;
+    }
   }
 }
 
@@ -173,6 +206,9 @@ svg {
   justify-content: space-between;
   z-index: $z-index-1;
   margin-bottom: 400px;
+  @media (max-width: 1024px) {
+    margin-bottom: 230px;
+  }
 
   &__left {
     height: 960px;
@@ -189,6 +225,16 @@ svg {
     bottom: -172px;
     right: 168px;
     z-index: $z-index-2;
+    @media (max-width: 1440px) {
+      right: 30px;
+    }
+    @media (max-width: 1200px) {
+      right: -50%;
+    }
+    @media (max-width: 1024px) {
+      bottom: -110px;
+      width: 550px;
+    }
     &__groop {
       width: 530px;
       height: 450px;
@@ -230,6 +276,12 @@ svg {
     line-height: 68px;
     z-index: $z-index-2;
     color: #ffffff;
+    @media (max-width: 1440px) {
+      padding: 50% 10px 0 55px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
   }
   &__right {
     height: 960px;
@@ -239,6 +291,10 @@ svg {
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: stretch;
+    @media (max-width: 1200px) {
+      height: 780px;
+      justify-content: flex-start;
+    }
 
     .group-1,
     .group-2,
@@ -246,6 +302,10 @@ svg {
       display: flex;
       align-items: center;
       flex-direction: row;
+      @media (max-width: 1200px) {
+        padding: 10px 10px;
+        margin: 0 0 70px 0;
+      }
 
       &__text {
         width: 444px;
@@ -256,6 +316,10 @@ svg {
         font-size: 30px;
         line-height: 36px;
         color: #000000;
+        @media (max-width: 1024px) {
+          font-size: 25px;
+          width: auto;
+        }
       }
     }
     .pills {
@@ -265,6 +329,15 @@ svg {
       right: 35.8%;
       top: 89.5%;
       z-index: $z-index-1;
+      @media (max-width: 1440px) {
+        right: 8.8%;
+      }
+      @media (max-width: 1200px) {
+        right: 0%;
+      }
+      @media (max-width: 1024px) {
+        top: 80.5%;
+      }
     }
   }
   .group-1 {
@@ -275,6 +348,11 @@ svg {
       margin-right: 90px;
       height: 84px;
       width: 103px;
+      @media (max-width: 1024px) {
+        margin-right: 50px;
+        height: 70px;
+        width: 90px;
+      }
     }
     &__text {
       margin-bottom: 1px;
@@ -287,6 +365,11 @@ svg {
       margin-right: 96.96px;
       width: 87.04px;
       height: 97px;
+      @media (max-width: 1024px) {
+        margin-right: 60px;
+        height: 85px;
+        width: 80px;
+      }
     }
   }
   .group-3 {
@@ -295,6 +378,11 @@ svg {
       margin-right: 95.84px;
       width: 91px;
       height: 113px;
+      @media (max-width: 1024px) {
+        margin-right: 60px;
+        height: 85px;
+        width: 80px;
+      }
     }
     &__text {
       margin-bottom: 8px;
@@ -308,6 +396,9 @@ svg {
   align-items: center;
   justify-content: center;
   padding: 120px 200px 0px 200px;
+  @media (max-width: 900px) {
+    padding: 120px 100px 0 100px;
+  }
   &__img {
     max-width: 50%;
   }
@@ -326,6 +417,7 @@ svg {
       text-align: center;
 
       color: #000000;
+      z-index: 3;
     }
     &__text-2 {
       padding: 30px 57px 8px 58px;
@@ -339,6 +431,9 @@ svg {
       text-align: center;
 
       color: #808080;
+      @media (max-width: 900px) {
+        width: auto;
+      }
     }
     &__button {
       margin-top: 81px;
@@ -384,10 +479,10 @@ svg {
     width: 800px;
     overflow: visible;
     z-index: $z-index-2;
-    // @media (max-width: 1700px) {
-    //   margin: 151px 0 0 3%;
-    //   width: 100%;
-    // }
+    @media (max-width: 1024px) {
+      margin: 450px auto;
+      width: 70%;
+    }
   }
   &__swiper-wrapper {
     display: flex;
@@ -459,7 +554,6 @@ svg {
       font-weight: 400;
       font-size: 16px;
       line-height: 163.42%;
-      /* or 26px */
 
       color: #ffffff;
       opacity: 0.7;
@@ -472,8 +566,6 @@ svg {
     position: absolute;
     width: 900px;
     height: 825px;
-    // background-color: $color-goods_orange;
-
     background-color: rgba(233, 148, 120, 1);
 
     &__text {
@@ -555,10 +647,15 @@ svg {
     }
     &__swiper {
       margin: 490px auto;
-      width: 57%;
+      width: 50%;
     }
     br {
       display: none;
+    }
+    @media (max-width: 1024px) {
+      &__information {
+        width: 100%;
+      }
     }
   }
 }
@@ -566,9 +663,16 @@ svg {
 .hapy-dais {
   display: flex;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    display: inline;
+  }
   &__info {
     margin: 30px 0 0 201px;
     width: 50%;
+    @media (max-width: 900px) {
+      width: auto;
+      margin: 30px 100px 0px 100px;
+    }
     &__img {
       width: 86px;
       height: 97.73px;
@@ -584,6 +688,9 @@ svg {
 
       color: #000000;
       margin: 40px 0 0 2px;
+      @media (max-width: 900px) {
+        width: auto;
+      }
     }
     &__text-2 {
       width: 670px;
@@ -597,6 +704,9 @@ svg {
 
       color: #808080;
       margin: 31px 0 0 2px;
+      @media (max-width: 900px) {
+        width: auto;
+      }
     }
   }
   &__img {
@@ -605,6 +715,9 @@ svg {
     width: 444px;
     height: 416px;
     z-index: $z-index-2;
+    @media (max-width: 1400px) {
+      display: none;
+    }
   }
   @media (max-width: 1550px) {
     &__img {
@@ -620,6 +733,9 @@ svg {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media (max-width: 1440px) {
+      width: 100%;
+    }
   }
   &__swiper {
     display: flex;
@@ -794,6 +910,7 @@ svg {
       text-align: center;
 
       color: #000000;
+      z-index: 3;
     }
     &__text-2 {
       width: 918px;
@@ -808,6 +925,10 @@ svg {
       text-align: center;
       color: #808080;
       margin-top: 39px;
+      z-index: $z-index-2;
+      @media (max-width: 900px) {
+        width: auto;
+      }
     }
     &__button {
       margin-top: 46px;

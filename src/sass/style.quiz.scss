@@ -1,0 +1,87 @@
+@import 'base/variable';
+@import 'base/fonts';
+@import 'base/header';
+@import 'base/footer';
+
+.main {
+}
+.quiz {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  &__left {
+    width: 50%;
+    background-color: $color-goods_purple-text;
+    display: flex;
+    justify-content: center;
+
+    &-logo {
+      cursor: pointer;
+      position: absolute;
+      width: 42px;
+      height: 50px;
+      left: 30px;
+      top: 35px;
+    }
+    &-back {
+      cursor: pointer;
+      left: 35px;
+      bottom: 30px;
+      position: absolute;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: #ffffff;
+
+      img {
+        width: 10px;
+        height: 15px;
+        margin-right: 10px;
+      }
+    }
+    &-questions {
+      width: 496px;
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 77px;
+
+      color: #ffffff;
+      justify-content: space-evenly;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  }
+
+  &__right {
+    width: 50%;
+    background-color: $color-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .quiz__right-form {
+      text-align: center;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      input {
+        width: 200px;
+        padding: 5px;
+      }
+
+      button {
+        padding: 5px 10px;
+      }
+    }
+  }
+}

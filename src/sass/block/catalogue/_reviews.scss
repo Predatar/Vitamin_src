@@ -4,6 +4,9 @@
   width: 1396px;
 
   &__caption {
+    margin-left: -2px;
+    width: 446px;
+
     font-family: 'Effra';
     font-weight: 500;
     font-size: 30px;
@@ -19,10 +22,11 @@
   }
 
   &__slide {
-    padding: 40px 30px 30px;
+    padding: 40px 34px 30px 30px;
     width: 444px;
 
     background: $color-bg;
+    border-radius: 16px;
     opacity: 1;
   }
 
@@ -30,7 +34,7 @@
   }
 
   &__title {
-    margin-top: 20px;
+    margin-top: 17px;
     font-family: 'Effra';
     font-weight: 500;
     font-size: 20px;
@@ -39,7 +43,7 @@
   }
 
   &__descr {
-    margin-top: 20px;
+    margin-top: 15px;
     height: 111px;
 
     font-family: 'Open Sans';
@@ -50,8 +54,9 @@
   }
 
   &__account {
-    margin-top: 50px;
+    margin-top: 53px;
     display: flex;
+    align-items: center;
   }
 
   &__avatar {
@@ -67,4 +72,61 @@
     line-height: 22px;
     color: $color-black;
   }
+}
+
+@media (max-width: 1439px) {
+  .reviews {
+    width: 920px;
+  }
+}
+
+@media (max-width: 950px) {
+  .reviews {
+    width: 444px;
+  }
+}
+@media (max-width: 474px) {
+  .reviews {
+    margin-top: 60px;
+    padding-left: 20px;
+    width: 100%;
+    &__caption {
+      margin-left: 0;
+      width: 272px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__slider {
+      margin-top: 30px;
+    }
+    &__slide {
+      padding: 30px 20px 20px;
+      width: 335px;
+    }
+
+    &__title {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__descr {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__account {
+      margin-top: 83px;
+    }
+    &__name {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+    .reviews {
+      &__slide {
+        width: 280px;
+      }
+    }
 }
