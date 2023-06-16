@@ -3,6 +3,52 @@
 
 @import 'base/header';
 
+.main {
+  padding-bottom: 100px;
+  
+  &__container {
+    display: flex;
+    height: 2342px;
+  }
 
+  &__wrapper {
+    padding-top: 168px;
+    padding-bottom: 100px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 608px;
+    height: 562px;
+
+    position: sticky;
+    top: 168px;
+  }
+
+  &__back {
+    width: 124px;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-black;
+
+    position: relative;
+    z-index: $z-index-3;
+
+    svg {
+      margin-right: 15px;
+    }
+  }
+
+  
+}
+
+@import 'block/product-card/item';
 
 @import 'base/footer';

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,147 @@
 	@@include('html/head.html', {})
 	<link rel="stylesheet" href="css/style.product-card.min.css">
 </head>
+
 <body>
 	@@include('html/header.html', {})
 
-	
+	<main class="main">
+		<div class="main__container">
+			<div class="main__wrapper">
+				<div class="main__img">
+				</div>
+			</div>
+			<div class="item__info">
+				<a href="@html/catalogue.html" class="main__back">
+					<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M7.53624 15L9 13.5433L2.92751 7.5L9 1.45672L7.53624 0L0 7.5L7.53624 15Z" fill="black" />
+					</svg>
+					Back to shop
+				</a>
+				<div class="item__tag">
+
+				</div>
+				<div class="item__name">
+
+				</div>
+				<div class="item__divider">
+
+				</div>
+				<div class="item__count">
+					<div class="item__count-img">
+
+					</div>
+					<div class="item__count-wrapper">
+						<div class="item__amount"></div>
+						<div class="item__package"></div>
+					</div>
+					<div class="item__minus item__minus_disable">
+						<svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="12" height="2" fill="black" />
+						</svg>
+					</div>
+					<div class="item__counter">1</div>
+					<div class="item__plus">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="black" />
+						</svg>
+					</div>
+				</div>
+				<div class="item__buy">
+					<div class="item__subscriptions">
+						<div class="item__subscriptions-text">
+							Autoship this item every
+							<div class="item__select">
+								<div class="item__selected">30 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M10 0.975838L9.02886 5.59011e-07L5 4.04832L0.971145 4.34387e-07L-2.19613e-07 0.975838L5 6L10 0.975838Z"
+											fill="black" />
+									</svg>
+								</div>
+								<div class="item__list">
+									<div class="item__list-item item__list-item_active">30</div>
+									<div class="item__list-item">40</div>
+									<div class="item__list-item">60</div>
+								</div>
+							</div>
+							days
+						</div>
+						<div class="item__subscriptions-btn">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</div>
+					</div>
+					<div class="item__buy-wrapper">
+						<div class="item__price">
+
+						</div>
+						<div class="item__btn">
+							Add to cart
+						</div>
+					</div>
+				</div>
+				<div class="item__descr">
+					<div class="item__descr-title">
+						Description
+					</div>
+					<div class="item__descr-text">
+						500-C Methoxyflavone is a synergistic formula that features a specialized complex of bioflavonoids combined
+						with vitamin C.*
+						<div class="item__descr-list">
+							<div class="item__descr-list-item">Citrus bioflavonoid complex</div>
+							<div class="item__descr-list-item">Provides potent antioxidant protection and supports healthy immune
+								system function*</div>
+							<div class="item__descr-list-item">Supports healthy collagen production, the main component of connective
+								tissue*</div>
+							<div class="item__descr-list-item">This product is non-GMO, gluten free, and vegetarian</div>
+						</div>
+					</div>
+				</div>
+				<div class="item__important">
+					<div class="item__important-title">Important information</div>
+					<div class="item__important-list">
+						<div class="item__important-list-item">
+							<div class="item__important-point">Safety information</div>
+							<div class="item__important-descr">Keep out of the reach of children.</div>
+						</div>
+						<div class="item__important-list-item">
+							<div class="item__important-point">Indications</div>
+							<div class="item__important-descr">Deficient or weak Immune System Function</div>
+						</div>
+						<div class="item__important-list-item">
+							<div class="item__important-point">Ingredients</div>
+							<div class="item__important-descr">Vitamin C (as ascorbic acid), Citrus Bioflavonoid Complex [standardized
+								to 45% (225 mg) bioflavonoids: hesperidin and other naturally occurring phenolic compounds]. Other
+								Ingredients: Cellulose, silica, stearic acid (vegetable), croscarmellose sodium, magnesium stearate
+								(vegetable), and coating (hypromellose, medium chain triglycerides, and hydroxypropylcellulose).</div>
+						</div>
+						<div class="item__important-list-item">
+							<div class="item__important-point">Directions</div>
+							<div class="item__important-descr">Take one tablet daily or as directed by your healthcare practitioner.
+							</div>
+						</div>
+						<div class="item__important-list-item">
+							<div class="item__important-point">Legal Disclaimer</div>
+							<div class="item__important-descr">*These statements have not been evaluated by the Food and Drug
+								Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+								<br><br>
+								Statements regarding dietary supplements have not been evaluated by the FDA and are not intended to
+								diagnose, treat, cure, or prevent any disease or health condition.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
 	@@include('html/footer.html', {})
+
+	<script src="js/script.header.js" defer></script>
+	<script src="js/script.product-card.js" defer></script>
 </body>
+
 </html>
