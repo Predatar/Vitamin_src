@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
-  var button = document.querySelector('.product__button');
-  var container = document.querySelector('.product__group');
-  var footer = document.querySelector('.footer');
+  var button = document.querySelector('.product__button-2');
+  var container = document.querySelector('.main');
+  //   var footer = document.querySelector('.footer');
 
   var containerRect = container.getBoundingClientRect();
   var buttonRect = button.getBoundingClientRect();
@@ -31,3 +31,5 @@ window.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', adjustButtonPosition);
   window.addEventListener('scroll', adjustButtonPosition);
 });
+/////при скроле скролл топ .
+///высота продутов 1926
