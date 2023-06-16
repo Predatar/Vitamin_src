@@ -56,7 +56,7 @@ const appendVitamins = (dataId, tag, imgName, name, price, sale) => {
     vitaminsItem.setAttribute('data-sale', 'sale');
   }
   vitaminsItem.addEventListener('click', () => {
-    localStorage.setItem('item-id', dataId);
+    sessionStorage.setItem('itemId', dataId);
   });
 
   const vitaminsImg = document.createElement('div');
@@ -134,7 +134,7 @@ window.addEventListener('resize', e => {
     vitaminsGroup.style.height = '880px';
   }
   if (e.target.innerWidth < 360) {
-    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 14 + 'px';
+    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 'px';
   }
 });
 if (window.innerWidth < 550) {
@@ -142,7 +142,7 @@ if (window.innerWidth < 550) {
 }
 if (window.innerWidth < 360) {
   setTimeout(() => {
-    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 14 + 'px';
+    vitaminsGroup.style.height = vitaminsItemCollection[0].clientHeight * 4 + 45 + 'px';
   }, 200);
 }
 
