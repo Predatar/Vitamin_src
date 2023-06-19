@@ -1,6 +1,6 @@
 .recommendations {
   margin: 0 auto;
-	margin-top: 100px;
+  margin-top: 100px;
   width: 1396px;
 
   &__title {
@@ -14,14 +14,15 @@
   &__container {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
   }
 
   &__item {
-		width: 325px;
+    width: 325px;
     background: $color-bg;
     border-radius: 16px;
-		overflow: hidden;
+    overflow: hidden;
   }
 
   &__img {
@@ -42,7 +43,7 @@
 
   &__name {
     margin-top: 12px;
-		height: 49px;
+    height: 49px;
     font-family: 'Effra';
     font-weight: 400;
     font-size: 20px;
@@ -57,5 +58,67 @@
     font-size: 20px;
     line-height: 27px;
     color: $color-black;
+  }
+}
+
+@media (max-width: 1440px) {
+  .recommendations {
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .recommendations {
+    margin-top: 59px;
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__container {
+      margin-top: 28px;
+      gap: 15px;
+    }
+    &__item {
+      width: 160px;
+      height: 279px;
+      border-radius: 8px;
+    }
+    &__img {
+      padding: 10px 15px 0;
+    }
+    &__info {
+      padding: 10px 15px 20px;
+    }
+    &__tag {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__name {
+      height: 39px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__price {
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .recommendations {
+    &__item {
+      width: 100%;
+      height: auto;
+    }
+    &__img {
+      padding: 30px 20px 0;
+    }
+    &__info {
+      padding: 30px 20px 20px;
+    }
   }
 }

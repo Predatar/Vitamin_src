@@ -192,3 +192,18 @@ itemListItems.forEach((elem, index) => {
     switchSubscriptionsDay(index);
   });
 });
+
+// * Switch text
+
+const itemSubscriptionsText = document.querySelector('.item__subscriptions-text');
+
+window.addEventListener('resize', e => {
+  if (e.target.innerWidth < 608) {
+    itemSubscriptionsText.childNodes[0].textContent = 'Deliver every';
+  } else {
+    itemSubscriptionsText.childNodes[0].textContent = 'Autoship this item every';
+  }
+});
+if (window.innerWidth < 608) {
+  itemSubscriptionsText.childNodes[0].textContent = 'Deliver every';
+}
