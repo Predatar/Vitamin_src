@@ -26,10 +26,12 @@
   &__actions {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   &__profile,
   &__cart {
+    cursor: pointer;
     margin: 3px 36px 0px 0px;
   }
 
