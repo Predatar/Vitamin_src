@@ -148,7 +148,10 @@ if (window.innerWidth < 360) {
 
 // * Filter
 
-const filterList = document.querySelectorAll('.filter__list-item');
+const filter = document.querySelector('.filter');
+const filterSelected = document.querySelector('.filter__selected');
+const filterList = document.querySelector('.filter__list');
+const filterListItem = document.querySelectorAll('.filter__list-item');
 
 const addFilter = filter => {
   if (filter == '*') {
@@ -175,18 +178,51 @@ const addFilter = filter => {
 };
 
 const toggleActiveClassForFilterList = index => {
-  filterList.forEach(elem => {
+  filterListItem.forEach(elem => {
     elem.classList.contains('filter__list-item_active') ? elem.classList.remove('filter__list-item_active') : null;
-    filterList[index].classList.add('filter__list-item_active');
+    filterListItem[index].classList.add('filter__list-item_active');
   });
-  filterList[index].classList.add('filter__list-item_active');
-  addFilter(filterList[index].getAttribute('data-filter'));
+  filterListItem[index].classList.add('filter__list-item_active');
+  addFilter(filterListItem[index].getAttribute('data-filter'));
 };
 
-filterList.forEach((elem, index) => {
+const switchSelecter = index => {
+  filterSelected.childNodes[0].textContent = filterListItem[index].textContent;
+};
+
+filter.addEventListener('click', e => {
+  filterList.classList.toggle('filter__list_show');
+});
+
+filterListItem.forEach((elem, index) => {
   elem.addEventListener('click', e => {
     toggleActiveClassForFilterList(index);
+    switchSelecter(index);
   });
+});
+
+// * View more
+
+const viewMoreBtn = document.querySelector('.vitamins__btn');
+
+let viewMoreBtnHeight;
+
+const toggleActiveClassForViewMoreBtn = () => {
+  viewMoreBtn.classList.toggle('vitamins__btn_active');
+  viewMoreBtn.classList.contains('vitamins__btn_active')
+    ? (viewMoreBtn.childNodes[0].textContent = 'View less')
+    : (viewMoreBtn.childNodes[0].textContent = 'View more');
+
+  if (viewMoreBtn.classList.contains('vitamins__btn_active')) {
+    viewMoreBtnHeight = vitaminsGroup.style.height;
+    vitaminsGroup.style.height = vitaminsGroup.scrollHeight + 'px';
+  } else {
+    vitaminsGroup.style.height = viewMoreBtnHeight;
+  }
+};
+
+viewMoreBtn.addEventListener('click', e => {
+  toggleActiveClassForViewMoreBtn();
 });
 
 // * Reviews

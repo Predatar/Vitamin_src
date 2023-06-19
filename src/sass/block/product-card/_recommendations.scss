@@ -1,0 +1,61 @@
+.recommendations {
+  margin: 0 auto;
+	margin-top: 100px;
+  width: 1396px;
+
+  &__title {
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-black;
+  }
+
+  &__container {
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__item {
+		width: 325px;
+    background: $color-bg;
+    border-radius: 16px;
+		overflow: hidden;
+  }
+
+  &__img {
+    padding: 40px 30px 0;
+  }
+
+  &__info {
+    padding: 37px 30px 30px;
+  }
+
+  &__tag {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    background: transparent;
+  }
+
+  &__name {
+    margin-top: 12px;
+		height: 49px;
+    font-family: 'Effra';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black;
+  }
+
+  &__price {
+    margin-top: 17px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: $color-black;
+  }
+}
