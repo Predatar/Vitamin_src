@@ -5,7 +5,6 @@
 
 .main {
   padding: 112px 0 100px;
-  overflow-x: hidden;
 }
 .svg-1,
 .svg-2,
@@ -16,7 +15,11 @@
 .svg-1 {
   left: 55%;
   top: -21.8%;
-  z-index: $z-index-2;
+  z-index: $z-index-1;
+  @media (max-width: 540px) {
+    left: auto;
+    right: 0%;
+  }
 }
 .svg-2 {
   right: 0%;
@@ -33,6 +36,7 @@
   border-top: 1px solid #0000002d;
   @media (max-width: 768px) {
     border: none;
+    padding: 68px 101px 0 101px;
   }
   &__text {
     width: 920px;
@@ -41,6 +45,7 @@
     }
 
     &-1 {
+      width: 611px;
       //   width: 682px;
       //   height: 121px;
       font-family: 'Effra';
@@ -51,6 +56,10 @@
 
       color: #000000;
       margin-bottom: 61px;
+      z-index: $z-index-2;
+      @media (max-width: 1200px) {
+        width: auto;
+      }
     }
     &-2 {
       font-family: 'Effra';
@@ -228,39 +237,7 @@
     }
   }
 }
-// @media (max-width: 768px) {
-//   .product {
-//     &__group {
-//       // Стили для контейнера "product"
-//     }
 
-//     &__button {
-//       position: fixed;
-//       bottom: 20px; // Начальное положение кнопки (прикреплена к нижней части экрана)
-
-//       &--absolute {
-//         position: absolute;
-//         bottom: 20px; // Отступ от нижней границы контейнера
-//       }
-//     }
-//   }
-/////////////////////////
-//   .product {
-//     &__grop {
-//       position: relative;
-//       min-height: calc(100vh - 65px);
-//     }
-
-//     &__button {
-//       position: fixed;
-//       bottom: 20px;
-//       left: 50%;
-//       transform: translateX(-50%);
-//       margin: 51px 0 0 0;
-//       z-index: $z-index-2;
-//     }
-//   }
-// }
 @media (max-width: 540px) {
   .header {
     &__cart {
@@ -339,6 +316,7 @@
       line-height: 22px;
     }
     &__button {
+      display: none;
       width: 335px;
       height: 56px;
       margin: 30px 20px;
@@ -347,12 +325,39 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 19px;
+      position: sticky;
+      bottom: 20px;
 
       text-align: center;
 
       color: #ffffff;
       padding: 0px 0px 2px 2px;
     }
+  }
+  .product__button-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: all 0.2s;
+    width: 279px;
+    height: 56px;
+    margin: 30px 20px;
+    font-family: 'Effra';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    position: sticky;
+    bottom: 20px;
+    background-color: $color-main-orange;
+
+    text-align: center;
+
+    color: #ffffff;
+    padding: 0px 0px 2px 2px;
+    z-index: $z-index-6;
   }
 }
 @media (max-width: 370px) {
