@@ -12,10 +12,43 @@
     flex: 1;
     flex-direction: column;
     margin-right: 20px;
+    &-shop {
+      padding-bottom: 10px;
+
+      width: 236px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+    &-information {
+      padding-bottom: 7px;
+    }
 
     &:last-child {
       margin-right: 0;
     }
+  }
+  &__section-contact {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 10px 190px 100px 0px;
+  }
+
+  .facebook {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+  }
+  .instagram {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
   }
 
   &__logo {
@@ -40,6 +73,7 @@
   }
 
   &__title {
+    // margin: 48px 197px 13px 0px;
     font-family: 'Effra';
     font-style: normal;
     font-weight: 400;
@@ -56,7 +90,20 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 15px 20px;
+    &-shop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
   }
+  // .footer__list-shop {
+  //   width: 236px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-end;
+  //   flex-wrap: wrap;
+  //   align-items: stretch;
+  // }
   &__item {
     text-decoration: none;
     color: inherit;
@@ -71,6 +118,28 @@
       color: #000000;
       opacity: 0.5;
     }
+    &-information {
+      list-style-type: none;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+
+      color: #000000;
+      opacity: 0.5;
+    }
+    &-contact {
+      display: flex;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+
+      color: #000000;
+
+      opacity: 0.5;
+    }
   }
 
   &__shop-list {
@@ -82,5 +151,10 @@
       margin-bottom: 5px;
       flex-basis: calc(50% - 5px);
     }
+  }
+}
+@media (max-width: 1024px) {
+  .footer {
+    display: none;
   }
 }
