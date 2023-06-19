@@ -17,6 +17,9 @@
 			<div class="main__wrapper">
 				<div class="main__img">
 				</div>
+				<div class="main__bg-img">
+					<img src="@icons/product-card/ellipse-bg.svg" alt="ellipse-bg">
+				</div>
 			</div>
 			<div class="item__info">
 				<a href="@html/catalogue.html" class="main__back">
@@ -39,20 +42,22 @@
 					<div class="item__count-img">
 
 					</div>
-					<div class="item__count-wrapper">
-						<div class="item__amount"></div>
-						<div class="item__package"></div>
-					</div>
-					<div class="item__minus item__minus_disable">
-						<svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="12" height="2" fill="black" />
-						</svg>
-					</div>
-					<div class="item__counter">1</div>
-					<div class="item__plus">
-						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="black" />
-						</svg>
+					<div class="item__count-container">
+						<div class="item__count-wrapper">
+							<div class="item__amount"></div>
+							<div class="item__package"></div>
+						</div>
+						<div class="item__minus item__minus_disable">
+							<svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="12" height="2" fill="black" />
+							</svg>
+						</div>
+						<div class="item__counter">1</div>
+						<div class="item__plus">
+							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7 0H5V5H0V7H5V12H7V7H12V5H7V0Z" fill="black" />
+							</svg>
+						</div>
 					</div>
 				</div>
 				<div class="item__buy">
@@ -137,15 +142,63 @@
 								Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
 								<br><br>
 								Statements regarding dietary supplements have not been evaluated by the FDA and are not intended to
-								diagnose, treat, cure, or prevent any disease or health condition.</div>
+								diagnose, treat, cure, or prevent any disease or health condition.
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="recommendations">
+			<div class="recommendations__title">
+				You may also like
+			</div>
+			<div class="recommendations__container">
+				<div class="recommendations__item">
+					<div class="recommendations__img dietary">
+						<img src="@img/vitamins/vitamin1.png" alt="vitamin">
+					</div>
+					<div class="recommendations__info">
+						<div class="recommendations__tag dietary">Vitamins & Dietary Supplements</div>
+						<div class="recommendations__name">Ortho Molecular Products Orthomega 820</div>
+						<div class="recommendations__price">$61.98</div>
+					</div>
+				</div>
+				<div class="recommendations__item">
+					<div class="recommendations__img dietary">
+						<img src="@img/vitamins/vitamin2.png" alt="vitamin">
+					</div>
+					<div class="recommendations__info">
+						<div class="recommendations__tag dietary">Vitamins & Dietary Supplements</div>
+						<div class="recommendations__name">Metagenics - 500-C Methoxyflavone</div>
+						<div class="recommendations__price">$61.98</div>
+					</div>
+				</div>
+				<div class="recommendations__item">
+					<div class="recommendations__img dietary">
+						<img src="@img/vitamins/vitamin3.png" alt="vitamin">
+					</div>
+					<div class="recommendations__info">
+						<div class="recommendations__tag dietary">Vitamins & Dietary Supplements</div>
+						<div class="recommendations__name">Ortho Molecular - Vitamin D</div>
+						<div class="recommendations__price">$61.98</div>
+					</div>
+				</div>
+				<div class="recommendations__item">
+					<div class="recommendations__img dietary">
+						<img src="@img/vitamins/vitamin4.png" alt="vitamin">
+					</div>
+					<div class="recommendations__info">
+						<div class="recommendations__tag dietary">Vitamins & Dietary Supplements</div>
+						<div class="recommendations__name">Ortho Molecular - Vitamin K2</div>
+						<div class="recommendations__price">$61.98</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 
-	@@include('html/footer.html', {})
+	<!-- @@include('html/footer.html', {}) -->
 
 	<script src="js/script.header.js" defer></script>
 	<script src="js/script.product-card.js" defer></script>
