@@ -505,15 +505,20 @@ body {
 
   .form-regular,
   .form-wholesale {
-    gap: 10px;
+    gap: 0;
   }
 
   .form-regular__btn,
   .form-wholesale__btn {
-    margin-top: 10px;
+    margin-top: 20px;
     height: 56px;
     font-size: 16px;
     line-height: 19px;
+  }
+  .form-regular__input,
+  .form-wholesale__input,
+  .form-wholesale__input-file {
+    margin-top: 10px;
   }
 
   .form-wholesale {
@@ -524,6 +529,7 @@ body {
       display: block;
     }
     &__info {
+      margin-top: 10px;
       display: block;
     }
   }

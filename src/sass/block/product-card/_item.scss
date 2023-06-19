@@ -1,9 +1,10 @@
 .item {
   &__info {
-    padding: 44px 202px 0 135px;
-    width: 50%;
+    margin-left: 135px;
+    padding: 44px 0 0 0;
+    width: 563px;
 
-    border-bottom: 1px solid $color-border-one;
+    
   }
 
   &__tag {

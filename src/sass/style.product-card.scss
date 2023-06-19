@@ -5,10 +5,11 @@
 
 .main {
   padding-bottom: 100px;
-  
+
   &__container {
     display: flex;
     height: 2342px;
+    border-bottom: 1px solid $color-border-one;
   }
 
   &__wrapper {
@@ -28,6 +29,12 @@
     top: 168px;
   }
 
+  &__bg-img {
+    position: absolute;
+    top: 35px;
+    right: 0;
+  }
+
   &__back {
     width: 124px;
     display: flex;
@@ -45,10 +52,9 @@
       margin-right: 15px;
     }
   }
-
-  
 }
 
 @import 'block/product-card/item';
+@import 'block/product-card/recommendations';
 
 @import 'base/footer';
