@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.email == userLogin.email) {
               if (data.password == userLogin.password) {
                 sessionStorage.setItem('isLogined', 'true');
+                sessionStorage.setItem('customer', data.customer);
                 Swal.fire({
                   title: 'Authorisation completed!',
                   icon: 'success',
@@ -119,12 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
                   if (Object.hasOwnProperty.call(data, key)) {
                     if (i == index) {
                       sessionStorage.setItem('userId', key);
+                      sessionStorage.setItem('customer', data[key].customer);
                     }
                     ++i;
                   }
                 }
 
                 sessionStorage.setItem('isLogined', 'true');
+
                 Swal.fire({
                   title: 'Authorisation completed!',
                   icon: 'success',
