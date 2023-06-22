@@ -573,16 +573,16 @@ svg {
       margin: 450px auto;
       width: 70%;
     }
-    @media (max-width: 690px) {
-      margin: 470px auto;
-      width: 80%;
+    @media (max-width: 736px) {
+      margin: 450px 0 0px 20px;
+      width: 100%;
     }
   }
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
     gap: 33px;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__slide-1,
@@ -847,7 +847,7 @@ svg {
   &__swiper {
     display: flex;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
   }
   &__swiper-wrapper {
     display: flex;
