@@ -1,0 +1,130 @@
+.bill {
+  margin-top: 68px;
+
+  width: 444px;
+  height: auto;
+
+  &__container {
+    padding: 40px 40px 38px;
+
+    border-radius: 16px;
+    border: 1px solid $color-border-two;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+  }
+
+  &__name {
+    width: 190px;
+    font-family: 'Effra';
+    font-size: 16px;
+    color: $color-black;
+  }
+
+  &__price {
+    width: 64px;
+
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: $color-black;
+    text-align: right;
+  }
+
+  &__divider {
+    margin: 40px 0;
+
+    width: 100%;
+    height: 1px;
+    background: $color-border-one;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__subtotal,
+  &__shipping,
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__subtotal-text,
+  &__shipping-text,
+  &__subtotal-price,
+  &__shipping-price,
+  &__total-text,
+  &__total-price {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: $color-black;
+  }
+
+  &__total-text,
+  &__total-price {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__btn {
+    margin-top: 35px;
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-main-orange;
+    border: 1px solid $color-main-orange;
+    border-radius: 100px;
+
+    font-family: 'Effra';
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-white;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    &:hover {
+      background: $color-white;
+      color: $color-black;
+    }
+
+    &_disable {
+      background: $color-gray;
+      border-color: $color-gray;
+      &:hover {
+        background: $color-gray;
+        color: $color-white;
+      }
+    }
+  }
+}
