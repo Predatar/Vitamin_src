@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ordering - Vitamins</title>
+	@@include('html/head.html', {})
+	<link rel="stylesheet" href="css/style.ordering.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<a href="@html/index.html" class="header__logo">
+			<img src="@icons/logo.svg" alt="logo" />
+		</a>
+	</header>
+	<main class="main">
+		<div class="main__container">
+			<form class="main__form" id="mainForm">
+				@@include('html/ordering/delivery.html', {})
+				@@include('html/ordering/biling.html', {})
+			</form>
+			@@include('html/ordering/bill.html', {})
+		</div>
+
+	</main>
+	<footer class="footer">
+		<div class="footer__policy">
+			<a href="@html/terms.html" class="footer__link">Return Policy</a>
+			<a href="@html/terms.html" class="footer__link">Privacy Policy</a>
+			<a href="@html/terms.html" class="footer__link">Terms & Conditions</a>
+		</div>
+		<div class="footer__img">
+			<img src="@img/ordering/payment.png" alt="payment">
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/addons/cleave-phone.us.js" defer></script>
+	<script src="js/script.ordering.js" defer></script>
+</body>
+
+</html>
