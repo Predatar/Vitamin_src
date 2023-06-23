@@ -28,8 +28,6 @@
     display: flex;
     gap: 138px;
 
-    // TODO сделать переключение адаптации
-
     &_subscriptions {
       @media (max-width: 1135px) {
         gap: 50px;
@@ -39,7 +37,7 @@
       }
     }
 
-    &__orders {
+    &_orders {
       @media (max-width: 935px) {
         gap: 40px;
       }

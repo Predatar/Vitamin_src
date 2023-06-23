@@ -289,7 +289,26 @@ const priceShipping = 9.2;
 const vitamins = JSON.parse(sessionStorage.getItem('vitamins'));
 
 const setTotalPrice = price => {
-  priceTotal.innerHTML = '$' + (price + priceShipping);
+  const totalPrice = price + priceShipping;
+  priceTotal.innerHTML = '$' + totalPrice.toFixed(2);
+};
+
+const setPrice = elem => {
+  if (elem.sale) {
+    const newPrice = elem.price * ((100 - elem.sale) / 100);
+    return `<div class="bill__price">
+      <div class="bill__price_old">
+        $${elem.price}
+      </div>
+      <div class="bill__price_new">
+        $${newPrice.toFixed(2)}
+      </div>
+    </div>`;
+  } else {
+    return `<div class="bill__price">
+          $${elem.price}
+				</div>`;
+  }
 };
 
 const setItems = () => {
@@ -298,21 +317,25 @@ const setItems = () => {
   vitamins.forEach(elem => {
     billList.innerHTML += `
 	<div class="bill__list-item">
-				<div class="bill__img prenatal">
-				<picture><source srcset="img/vitamins/${elem.imgName}.webp" type="image/webp"><img src="img/vitamins/${elem.imgName}.png" alt="vitamins"></picture>
+				<div class="bill__img ${elem.tag}">
+				<picture><source srcset="img/vitamins/${elem.imgName}.webp" type="image/webp"><img src="img/vitamins/${
+      elem.imgName
+    }.png" alt="vitamins"></picture>
 				</div>
 				<div class="bill__name">
 					${elem.count} x ${elem.name}
 				</div>
-				<div class="bill__price">
-					$${elem.price}
-				</div>
+        ${setPrice(elem)}
 			</div>
 	`;
-    price += +elem.price;
+    if (elem.sale) {
+      price += elem.price * ((100 - elem.sale) / 100) * +elem.count;
+    } else {
+      price += +elem.price * +elem.count;
+    }
   });
 
-  priceSubtotal.innerHTML = '$' + price;
+  priceSubtotal.innerHTML = '$' + price.toFixed(2);
 
   setTotalPrice(price);
 };
@@ -354,8 +377,10 @@ const deliveryForm = document.querySelector('.main__form');
 const orders = {
   date: `${new Date().getDate()} ${getMonth(new Date().getMonth())} ${new Date().getFullYear()}`,
   shippig: 'Shipping',
-  vitamins: [...vitamins]
+  vitamins: [...vitamins],
+  price: priceTotal.innerHTML
 };
+const subscriptions = [];
 
 const setOrders = async () => {
   await fetch(
@@ -365,19 +390,43 @@ const setOrders = async () => {
     { method: 'POST', headers: { 'Content-type': 'application/json; charset=UTF-8' }, body: JSON.stringify(orders) }
   ).then(response => {
     if (response.status == 200) {
-      response.json().then((document.location.href = 'order-placed.html'));
     } else {
       console.log(response.status);
     }
   });
 };
 
-// TODO Сделать скрипт на добавление подписок
+const setSubscriptions = () => {
+  vitamins.forEach(elem => {
+    if (elem.delivery) {
+      subscriptions.push(elem);
+    }
+  });
+
+  if (subscriptions.length) {
+    subscriptions.forEach(async elem => {
+      await fetch(
+        `https://vitamin-9645d-default-rtdb.europe-west1.firebasedatabase.app/users/${sessionStorage.getItem(
+          'userId'
+        )}/subscriptions.json`,
+        { method: 'POST', headers: { 'Content-type': 'application/json; charset=UTF-8' }, body: JSON.stringify(elem) }
+      ).then(response => {
+        if ((response.status = 200)) {
+          response.json().then((document.location.href = 'order-placed.html'));
+        } else {
+          console.log(response.status);
+        }
+      });
+    });
+  }
+};
 
 deliveryForm.addEventListener('submit', e => {
   e.preventDefault();
   if (sessionStorage.getItem('isLogined')) {
     updateAccountInfo();
     setOrders();
+    setSubscriptions();
   }
+  sessionStorage.removeItem('vitamins');
 });

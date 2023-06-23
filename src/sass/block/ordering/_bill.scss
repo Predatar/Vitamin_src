@@ -50,6 +50,17 @@
     font-size: 16px;
     color: $color-black;
     text-align: right;
+
+    &_old {
+      font-size: 12px;
+      color: #000;
+      text-align: right;
+      text-decoration-line: line-through;
+    }
+    &_new {
+      font-size: 16px;
+      color: $color-red;
+    }
   }
 
   &__divider {
