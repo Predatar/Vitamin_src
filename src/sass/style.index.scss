@@ -573,16 +573,16 @@ svg {
       margin: 450px auto;
       // width: 70%;
     }
-    @media (max-width: 690px) {
-      margin: 470px auto;
-      // width: 80%;
+    @media (max-width: 736px) {
+      margin: 450px 0 0px 20px;
+      width: 100%;
     }
   }
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
     gap: 33px;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__slide-1,
@@ -833,7 +833,163 @@ svg {
   }
 }
 
-@import 'block/index/reviews';
+.reviews {
+  &__wrapper {
+    width: 1393px;
+    margin: 63px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media (max-width: 1440px) {
+      width: 100%;
+    }
+  }
+  &__swiper {
+    display: flex;
+    width: 100%;
+    // overflow: hidden;
+  }
+  &__swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 32px;
+  }
+  &__slide-1,
+  &__slide-2,
+  &__slide-3 {
+    width: 444px;
+    height: 360px;
+    background: #faf8f6;
+    border-radius: 16px;
+    padding: 40px 20px 0 30px;
+  }
+  &__slide-3 {
+    padding: 40px 20px 0 30px;
+  }
+  &__img {
+    padding-left: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 18px;
+      height: 20px;
+      margin-right: 7px;
+    }
+  }
+  &__text {
+    padding: 15px 0 0 0;
+
+    &__short {
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #000000;
+    }
+    &__deployed {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      /* or 175% */
+
+      color: #000000;
+      padding: 15px 0 0 0;
+    }
+  }
+  &__text-3 {
+    padding: 15px 0 0 2px;
+
+    &__short {
+      font-family: 'Effra';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #000000;
+    }
+    &__deployed {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      /* or 175% */
+
+      color: #000000;
+      padding: 15px 0 0 0;
+    }
+  }
+
+  &__account-1 {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+
+    &__img {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+    }
+    &__name {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: #000000;
+    }
+  }
+  &__account-2 {
+    display: flex;
+    align-items: center;
+    padding-top: 52px;
+
+    &__img {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+    }
+    &__name {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: #000000;
+    }
+  }
+  &__account-3 {
+    display: flex;
+    align-items: center;
+    padding-top: 108px;
+
+    &__img {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+    }
+    &__name {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      /* identical to box height */
+
+      color: #000000;
+    }
+  }
+}
+
 .get-started {
   margin-top: 63px;
   display: flex;

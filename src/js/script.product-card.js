@@ -7,6 +7,9 @@ const itemCountImg = document.querySelector('.item__count-img');
 const itemAmount = document.querySelector('.item__amount');
 const itemPackage = document.querySelector('.item__package');
 
+let vitamins = [];
+let productInfo = {};
+
 const getTag = tag => {
   switch (tag) {
     case 'dietary':
@@ -119,6 +122,8 @@ const setSale = (price, sale) => {
         setCounterInfo(data.tag);
 
         setSale(data.price, data.sale);
+
+        productInfo = { ...data };
       });
     } else {
       console.log(response.status);
@@ -207,3 +212,53 @@ window.addEventListener('resize', e => {
 if (window.innerWidth < 608) {
   itemSubscriptionsText.childNodes[0].textContent = 'Deliver every';
 }
+
+// * Add to cart
+
+const btnAddToCart = document.querySelector('.item__btn');
+
+btnAddToCart.addEventListener('click', e => {
+  vitamins = JSON.parse(sessionStorage.getItem('vitamins'));
+  const vitaminsName = [];
+
+  if (vitamins) {
+    vitamins.forEach(elem => vitaminsName.push(elem.name));
+
+    if (vitaminsName.includes(productInfo.name)) {
+      vitaminsName.forEach((elem, index) => {
+        if (elem == productInfo.name) {
+          vitamins[index].count = itemCounter.innerHTML;
+          if (sessionStorage.getItem('isLogined')) {
+            if (document.querySelector('.switch input[type="checkbox"]').checked) {
+              vitamins[index].delivery = itemSelected.childNodes[0].textContent;
+            }
+          }
+        }
+      });
+    } else {
+      productInfo.count = itemCounter.innerHTML;
+
+      if (sessionStorage.getItem('isLogined')) {
+        if (document.querySelector('.switch input[type="checkbox"]').checked) {
+          productInfo.delivery = itemSelected.childNodes[0].textContent;
+        }
+      }
+
+      vitamins.push(productInfo);
+    }
+  } else {
+    vitamins = [];
+    productInfo.count = itemCounter.innerHTML;
+
+    if (sessionStorage.getItem('isLogined')) {
+      if (document.querySelector('.switch input[type="checkbox"]').checked) {
+        productInfo.delivery = itemSelected.childNodes[0].textContent;
+      }
+    }
+
+    vitamins.push(productInfo);
+  }
+  sessionStorage.setItem('vitamins', JSON.stringify(vitamins));
+  refreshCartList();
+  addActiveClassForCartBackDoor();
+});
