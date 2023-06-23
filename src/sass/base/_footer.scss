@@ -285,7 +285,7 @@
     }
   }
 }
-// @media (max-width: 740px) {
+// @media (max-width: 767px) {
 //   .footer {
 //     height: auto;
 //     &__section {
@@ -313,3 +313,232 @@
 //     }
 //   }
 // }
+// @media (max-width: 767px) {
+//   .footer {
+//     flex-direction: column;
+//     height: auto;
+//   }
+
+//   .footer__section--logo {
+//     order: 1;
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+
+//   .footer__section__shop,
+//   .footer__section__information,
+//   .footer__section__contact {
+//     width: 100%;
+//     margin-bottom: 20px;
+//   }
+//   .footer__section__shop {
+//     order: 3;
+//   }
+//   .footer__section__information,
+//   .footer__section--logo,
+//   .footer__section__contact {
+//     flex: 1;
+//   }
+
+//   .footer__section__shop,
+//   .footer__section__information {
+//     order: 2;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+// @media (max-width: 767px) {
+//   .footer {
+//     flex-direction: column;
+//     height: auto;
+//   }
+
+//   .footer__section--logo {
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+
+//   .footer__section__shop,
+//   .footer__section__information,
+//   .footer__section__contact {
+//     width: 100%;
+//     margin-bottom: 20px;
+//   }
+
+//   .footer__section--logo,
+//   .footer__section__shop,
+//   .footer__section__information {
+//     flex: 1;
+//   }
+
+//   .footer__section__shop,
+//   .footer__section__information {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .footer__section--logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer__section__shop,
+  .footer__section__information,
+  .footer__section__contact {
+    width: calc(50% - 10px);
+  }
+
+  .footer__section__contact {
+    margin-top: 0;
+    margin-left: 59px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    &__description {
+      display: none;
+    }
+    &__logo {
+      width: 41px;
+      height: 50px;
+      margin: 20px 8px 0 0px;
+    }
+    &__section__info {
+      top: -31px;
+      margin: 0;
+    }
+    &__section-shop {
+      padding-top: 28px;
+    }
+    &__title-1 {
+      margin-bottom: 10px;
+    }
+    &__list {
+      gap: 11px 20px;
+      &-info {
+        gap: 21px;
+      }
+      &-shop-1 {
+        padding-bottom: 16px;
+      }
+    }
+    &__title {
+      &-2 {
+        margin-bottom: 5px;
+      }
+      &-3 {
+        top: -15px;
+      }
+    }
+  }
+
+  .footer__section--logo {
+    grid-column: 1 / 2;
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__section__shop {
+    grid-column: 1;
+    width: auto;
+    margin: 0 44px 0 0;
+  }
+
+  .footer__section__information {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .footer__section__contact {
+    grid-column: 1 / 3;
+    margin: 22px 0 0 0px;
+  }
+}
+@media (max-width: 370px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    &__description {
+      display: none;
+    }
+    &__logo {
+      width: 41px;
+      height: 50px;
+      margin: 20px 8px 0 0px;
+    }
+    &__section__info {
+      top: -31px;
+      margin: 0;
+    }
+    &__section-shop {
+      padding-top: 28px;
+    }
+    &__title-1 {
+      margin-bottom: 10px;
+    }
+    &__list {
+      gap: 11px 20px;
+      &-info {
+        gap: 16px;
+      }
+      &-shop-1 {
+        padding-bottom: 16px;
+      }
+    }
+    &__title {
+      &-2 {
+        margin-bottom: 5px;
+      }
+      &-3 {
+        top: -15px;
+      }
+    }
+  }
+  .footer__section-information {
+    width: 135px;
+    height: 189px;
+  }
+  .footer__section--logo {
+    grid-column: 1 / 2;
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__section__shop {
+    grid-column: 1;
+    width: auto;
+    margin: 0 18px 0 0;
+  }
+
+  .footer__section__information {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  .footer__section__contact {
+    grid-column: 1 / 3;
+    margin: 22px 0 0 0px;
+  }
+}
