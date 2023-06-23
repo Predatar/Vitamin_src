@@ -237,15 +237,21 @@ const createElement = (elem, index) => {
       select.childNodes[3].classList.toggle('cart__select-list_active');
     });
 
-    for (let index = 0; index < select.childNodes[3].children.length; index++) {
-      select.childNodes[3].children[index].addEventListener('click', () => {
+    for (let i = 0; i < select.childNodes[3].children.length; i++) {
+      select.childNodes[3].children[i].addEventListener('click', () => {
         for (let j = 0; j < select.childNodes[3].children.length; j++) {
           select.childNodes[3].children[j].classList.contains('cart__select-item_active')
             ? select.childNodes[3].children[j].classList.remove('cart__select-item_active')
             : null;
         }
-        select.childNodes[3].children[index].classList.add('cart__select-item_active');
-        select.childNodes[1].childNodes[0].textContent = select.childNodes[3].children[index].innerHTML;
+        select.childNodes[3].children[i].classList.add('cart__select-item_active');
+        select.childNodes[1].childNodes[0].textContent = select.childNodes[3].children[i].innerHTML;
+
+        subscriptions.querySelector('.cart__checkbox').setAttribute('checked', '');
+
+        const vitamins = JSON.parse(sessionStorage.getItem('vitamins'));
+        vitamins[index].delivery = select.childNodes[3].children[i].innerHTML;
+        sessionStorage.setItem('vitamins', JSON.stringify(vitamins));
       });
     }
   }
@@ -293,7 +299,6 @@ const refreshCartList = () => {
   }
 
   if (sessionStorage.getItem('customer') == 'wholesale') {
-    console.log(true);
     cart.classList.add('cart_wholesale');
     cartInfo.classList.add('cart__info_show');
     cartBtn.classList.add('cart__btn_disable');
@@ -348,10 +353,14 @@ function calculationPrice() {
     if (allPrice >= 700) {
       cartBtn.classList.remove('cart__btn_disable');
       cartInfo.classList.remove('cart__info_show');
+      cartBtn.setAttribute('href', 'ordering.html');
     } else {
       cartBtn.classList.add('cart__btn_disable');
       cartInfo.classList.add('cart__info_show');
+      cartBtn.setAttribute('href', '#');
     }
+  } else {
+    cartBtn.setAttribute('href', 'ordering.html');
   }
 }
 
