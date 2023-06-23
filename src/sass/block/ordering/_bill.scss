@@ -78,15 +78,24 @@
   }
 
   &__subtotal,
-  &__shipping,
+  &__discount, &__shipping,
   &__total {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__discount {
+    display: none;
+    &_show {
+      display: flex;
+    }
+  }
+
   &__subtotal-text,
   &__shipping-text,
+  &__discount-text,
+  &__discount-price,
   &__subtotal-price,
   &__shipping-price,
   &__total-text,
@@ -94,6 +103,10 @@
     font-family: 'Open Sans';
     font-size: 16px;
     color: $color-black;
+  }
+
+  &__discount-price {
+    color: $color-red;
   }
 
   &__total-text,
