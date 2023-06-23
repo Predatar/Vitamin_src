@@ -1,0 +1,101 @@
+.biling {
+  margin-top: 59px;
+
+  &__title {
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: $color-black;
+  }
+
+  &__form {
+    margin-top: 43px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  &__input-wrapper {
+    width: 444px;
+    display: flex;
+    flex-direction: column;
+    label {
+      padding-left: 2px;
+      font-family: 'Open Sans';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-black;
+      opacity: 0.5;
+    }
+
+    &:nth-child(2) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__card-number {
+    margin-top: 5px;
+    padding-left: 24px;
+    width: 100%;
+    height: 56px;
+
+    background: $color-bg;
+    border: none;
+    border-radius: 12px;
+
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input-container {
+    width: calc(206px * 100% / 444px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__expiration,
+  &__cvc {
+    margin-top: 5px;
+    padding-left: 24px;
+    width: 100%;
+    height: 56px;
+
+    background: $color-bg;
+    border: none;
+    border-radius: 12px;
+
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__cvc {
+    -webkit-text-security: disc;
+  }
+}
+.warningBiling {
+  margin-top: 4px;
+  height: 17px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-main-orange;
+}
