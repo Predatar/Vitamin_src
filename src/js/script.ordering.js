@@ -285,6 +285,9 @@ const billList = document.querySelector('.bill__list');
 const priceSubtotal = document.querySelector('.bill__subtotal-price');
 const priceTotal = document.querySelector('.bill__total-price');
 const priceShipping = 9.2;
+let priceSale = 0;
+
+const billDiscount = document.querySelector('.bill__discount');
 
 const vitamins = JSON.parse(sessionStorage.getItem('vitamins'));
 
@@ -295,7 +298,12 @@ const setTotalPrice = price => {
 
 const setPrice = elem => {
   if (elem.sale) {
+    billDiscount.classList.add('bill__discount_show');
     const newPrice = elem.price * ((100 - elem.sale) / 100);
+
+    priceSale += (elem.count * (elem.price * elem.sale)) / 100;
+
+    billDiscount.childNodes[1].textContent = '-$' + priceSale.toFixed(2);
     return `<div class="bill__price">
       <div class="bill__price_old">
         $${elem.price}
@@ -412,7 +420,7 @@ const setSubscriptions = () => {
         { method: 'POST', headers: { 'Content-type': 'application/json; charset=UTF-8' }, body: JSON.stringify(elem) }
       ).then(response => {
         if ((response.status = 200)) {
-          response.json().then((document.location.href = 'order-placed.html'));
+          response.json();
         } else {
           console.log(response.status);
         }
@@ -425,8 +433,9 @@ deliveryForm.addEventListener('submit', e => {
   e.preventDefault();
   if (sessionStorage.getItem('isLogined')) {
     updateAccountInfo();
-    setOrders();
-    setSubscriptions();
+    setOrders()
+      .then(setSubscriptions())
+      .then((document.location.href = 'order-placed.html'));
   }
   sessionStorage.removeItem('vitamins');
 });
