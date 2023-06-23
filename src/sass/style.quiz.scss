@@ -20,8 +20,10 @@
       position: absolute;
       width: 42px;
       height: 50px;
-      left: 30px;
-      top: 35px;
+      // left: 30px;
+      // top: 35px;
+      left: 35px;
+      top: 30px;
     }
     &-back {
       cursor: pointer;
@@ -67,21 +69,95 @@
 
     .quiz__right-form {
       text-align: center;
+      margin-left: 74px;
+      border-color: white;
 
       label {
-        display: block;
-        margin-bottom: 10px;
-        color: #fff;
+        margin-bottom: 30px;
+        font-family: 'Open Sans';
+        display: flex;
+        font-weight: 400;
+        size: 18px;
       }
-
+      .input1-1 {
+        font-family: 'Open Sans';
+        display: flex;
+        font-weight: 400;
+        size: 18px;
+      }
       input {
-        width: 200px;
+        border-color: white;
+        width: 496px;
+        height: 105px;
         padding: 5px;
+        border-radius: 16px;
       }
-
-      button {
-        padding: 5px 10px;
+      input[type='text'] {
+        top: -14px;
+        color: #000000;
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24.51;
+        padding: 20px 20px 24px 37px;
+      }
+    }
+    .answer {
+      .yes,
+      .no {
+        display: flex;
+        width: 496px;
+        height: 105px;
+        border-radius: 16px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #ffffff;
+        margin-bottom: 10px;
       }
     }
   }
+}
+.next-button {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  background-color: #ff7d4e;
+  border: none;
+  cursor: pointer;
+}
+.next-button .arrow-symbol {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40.85px;
+  color: #ffffff;
+}
+.question-counter {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40.85px;
+  text-align: right;
+  position: absolute;
+  display: flex;
+  right: 35px;
+  top: 35px;
+}
+.question {
+  display: none;
+}
+
+.question.active {
+  display: block;
+}
+.answer:not(.active) {
+  display: none;
+}
+.answer:first-child {
+  display: block;
 }

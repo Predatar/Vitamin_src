@@ -119,6 +119,9 @@
 .sidebar--open {
   transform: translateX(0);
 }
+// input[type='checkbox'] {
+//   display: none;
+// }
 @media (max-width: 768px) {
   .header {
     border-bottom: 1px solid #c0c9d1;

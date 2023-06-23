@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz - Vitamin</title>
     @@include('html/head.html', {})
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.quiz.min.css" />
   </head>
   <body>
@@ -18,11 +17,11 @@
               <img src="@icons/logo(white).svg" alt="logo" />
             </a>
             <a href="#" class="quiz__left-back">
-              <img src="@img/index/Back_arrow.png" alt="arrow" />
+              <img src="@img/index/Back_arrow.png" alt="arrow" onclick="showPreviousQuestion()" />
               Back
             </a>
             <div class="quiz__left-questions">
-              <div class="question" id="question1">What’s your first name?</div>
+              <div class="question active" id="question1">What’s your first name?</div>
               <div class="question" id="question2">Do you smoke?</div>
               <div class="question" id="question3">What is your eating habits?</div>
               <div class="question" id="question4">How frequently do you consume alcoholic beverages?</div>
@@ -34,10 +33,90 @@
             </div>
           </div>
           <div class="quiz__right">
+            <div class="question-counter">1/9</div>
             <form class="quiz__right-form">
-              <label for="answer">Answer:</label>
-              <input type="text" id="answer" name="answer" />
-              <button type="button" onclick="showNextQuestion()">Submit</button>
+              <div class="answer" id="answer1">
+                <label class="input1-1" for="input1">First Name</label>
+                <input type="text" id="input1" name="answer1" />
+                <button class="next-button" type="button" onclick="showNextQuestion()">
+                  <span class="arrow-symbol">&gt;</span>
+                </button>
+              </div>
+              <div class="answer" id="answer2">
+                <label for="input2">Answer:</label>
+                <div id="input2" name="answer2">
+                  <div class="yes" onclick="showNextQuestion()" value="yes">Yes</div>
+                  <option class="no" onclick="showNextQuestion()" value="no">No</option>
+                </div>
+                <!-- <button type="button" onclick="showNextQuestion()">Next</button> -->
+              </div>
+
+              <div class="answer" id="answer3">
+                <label for="input3">Answer:</label>
+                <select id="input3" name="answer3">
+                  <option value="vegan">Vegan diet</option>
+                  <option value="vegetarian">Vegetarian diet</option>
+                  <option value="protein">
+                    My diet is generally healthy and includes animal protein, fish and veggies
+                  </option>
+                  <option value="unhealthy">My diet includes fast food and soft drinks</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer4">
+                <label for="input4">Answer:</label>
+                <select id="input4" name="answer4">
+                  <option value="time1">≤ 3 times per week</option>
+                  <option value="time2">4 - 7 times per week</option>
+                  <option value="time3">7+ times per week</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer5">
+                <label for="input5">Answer:</label>
+                <select id="input5" name="answer5">
+                  <option value="year1">≤ 2 per year</option>
+                  <option value="year2">3 - 5 times per year</option>
+                  <option value="year3">5+ times per week</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer6">
+                <label for="input6">Answer:</label>
+                <select id="input6" name="answer6">
+                  <option value="relax">I feel calm and relaxed most of the time</option>
+                  <option value="nervous">I get nerevous from time to time</option>
+                  <option value="stress">I’m under a lot of stress most of the time</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer7">
+                <label for="input7">Answer:</label>
+                <select id="input7" name="answer7">
+                  <option value="yes2">Yes</option>
+                  <option value="no2">No</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer8">
+                <label for="input8">Answer:</label>
+                <select id="input8" name="answer8">
+                  <option value="1">Weight managment</option>
+                  <option value="2">Weight managment2</option>
+                  <option value="3">Weight managment3</option>
+                  <option value="4">Weight managment4</option>
+                  <option value="5">Weight managment5</option>
+                  <option value="6">Weight managment6</option>
+                </select>
+                <button type="button" onclick="showNextQuestion()">Next</button>
+              </div>
+              <div class="answer" id="answer9">
+                <label for="input9">Email</label>
+                <select id="text" name="answer9"></select>
+                <button class="next-button" type="button" onclick="showNextQuestion()">
+                  <span class="arrow-symbol">&gt;</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -45,6 +124,5 @@
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="js/script.header.js"></script>
   <script src="js/script.quiz.js"></script>
 </html>
