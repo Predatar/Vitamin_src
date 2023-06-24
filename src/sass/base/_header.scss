@@ -18,9 +18,24 @@
     padding: 0px 30px 0 35px;
   }
 
-  &__logo-img {
-    height: 50px;
-    width: 42px;
+  &__logo {
+    left: -40%;
+    @media (max-width: 1440px) {
+      left: -37%;
+    }
+    @media (max-width: 1150px) {
+      left: -34%;
+    }
+    @media (max-width: 1024px) {
+      left: -30%;
+    }
+    @media (max-width: 768px) {
+      left: 0;
+    }
+    &-img {
+      height: 50px;
+      width: 42px;
+    }
   }
 
   &__actions {

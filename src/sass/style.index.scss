@@ -154,7 +154,7 @@ svg {
   }
 
   &__quiz {
-    margin: 48px 33px 0 0px;
+    margin: 48px 30px 0 0px;
     padding: 20px;
     display: inline-block;
     width: 260px;
@@ -503,7 +503,8 @@ svg {
       z-index: 3;
     }
     &__text-2 {
-      width: 919px;
+      margin: 20px;
+      width: 809px;
       height: 66px;
       font-family: 'Open Sans';
       font-style: normal;
@@ -521,7 +522,7 @@ svg {
       }
     }
     &__button {
-      margin-top: 81px;
+      margin-top: 33px;
       padding: 19px 2px 0 0px;
       width: 260px;
       height: 74px;
@@ -962,7 +963,8 @@ svg {
 }
 @media (width: 1800px) {
   .about-yourself__info__text-1 {
-    padding: 30px 57px 8px 58px;
+    width: 830px;
+    padding: 45px 57px 8px 58px;
   }
 }
 @media (max-width: 540px) {
