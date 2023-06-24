@@ -1,3 +1,16 @@
+const answerElements = document.querySelectorAll('.answer');
+function handleAnswerClick(event) {
+  const answers = document.querySelectorAll('.answer');
+  answers.forEach(answer => answer.classList.remove('active'));
+
+  const selectedAnswer = event.target.closest('.answer');
+  selectedAnswer.classList.add('active');
+}
+
+answerElements.forEach(answer => {
+  answer.addEventListener('click', handleAnswerClick);
+});
+
 let currentQuestion = 1;
 
 function showNextQuestion() {

@@ -43,76 +43,65 @@
                 </button>
               </div>
               <div class="answer" id="answer2">
-                <label for="input2">Answer:</label>
+                <label for="input2"></label>
                 <div id="input2" name="answer2">
                   <div class="yes" onclick="showNextQuestion()" value="yes">Yes</div>
-                  <option class="no" onclick="showNextQuestion()" value="no">No</option>
+                  <div class="no" onclick="showNextQuestion()" value="no">No</div>
                 </div>
-                <!-- <button type="button" onclick="showNextQuestion()">Next</button> -->
               </div>
 
               <div class="answer" id="answer3">
-                <label for="input3">Answer:</label>
-                <select id="input3" name="answer3">
-                  <option value="vegan">Vegan diet</option>
-                  <option value="vegetarian">Vegetarian diet</option>
-                  <option value="protein">
-                    My diet is generally healthy and includes animal protein, fish and veggies
-                  </option>
-                  <option value="unhealthy">My diet includes fast food and soft drinks</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input3"></label>
+                <div class="vegan" onclick="showNextQuestion()" value="vegan">Vegan diet</div>
+                <div class="vegetarian" onclick="showNextQuestion()" value="vegetarian">Vegetarian diet</div>
+                <div class="protein" onclick="showNextQuestion()" value="protein">
+                  My diet is generally healthy and includes animal protein, fish and veggies
+                </div>
+                <div class="unhealthy" onclick="showNextQuestion()" value="unhealthy">
+                  My diet includes fast food and soft drinks
+                </div>
               </div>
               <div class="answer" id="answer4">
-                <label for="input4">Answer:</label>
-                <select id="input4" name="answer4">
-                  <option value="time1">≤ 3 times per week</option>
-                  <option value="time2">4 - 7 times per week</option>
-                  <option value="time3">7+ times per week</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input4"></label>
+                <div class="answer-1" onclick="showNextQuestion()" value="time1">≤ 3 times per week</div>
+                <div class="answer-2" onclick="showNextQuestion()" value="time2">4 - 7 times per week</div>
+                <div class="answer-3" onclick="showNextQuestion()" value="time3">7+ times per week</div>
               </div>
               <div class="answer" id="answer5">
-                <label for="input5">Answer:</label>
-                <select id="input5" name="answer5">
-                  <option value="year1">≤ 2 per year</option>
-                  <option value="year2">3 - 5 times per year</option>
-                  <option value="year3">5+ times per week</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input5"></label>
+                <div class="answer-1" onclick="showNextQuestion()" value="year1">≤ 2 per year</div>
+                <div class="answer-2" onclick="showNextQuestion()" value="year2">3 - 5 times per year</div>
+                <div class="answer-3" onclick="showNextQuestion()" value="year3">5+ times per week</div>
               </div>
               <div class="answer" id="answer6">
-                <label for="input6">Answer:</label>
-                <select id="input6" name="answer6">
-                  <option value="relax">I feel calm and relaxed most of the time</option>
-                  <option value="nervous">I get nerevous from time to time</option>
-                  <option value="stress">I’m under a lot of stress most of the time</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input6"></label>
+                <div class="answer-1" onclick="showNextQuestion()" value="relax">
+                  I feel calm and relaxed most of the time
+                </div>
+                <div class="answer-2" onclick="showNextQuestion()" value="nervous">
+                  I get nerevous from time to time
+                </div>
+                <div class="answer-3" onclick="showNextQuestion()" value="stress">
+                  I’m under a lot of stress most of the time
+                </div>
               </div>
               <div class="answer" id="answer7">
-                <label for="input7">Answer:</label>
-                <select id="input7" name="answer7">
-                  <option value="yes2">Yes</option>
-                  <option value="no2">No</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input7"></label>
+                <div class="yes" onclick="showNextQuestion()" value="yes2">Yes</div>
+                <div class="no" onclick="showNextQuestion()" value="no2">No</div>
               </div>
               <div class="answer" id="answer8">
-                <label for="input8">Answer:</label>
-                <select id="input8" name="answer8">
-                  <option value="1">Weight managment</option>
-                  <option value="2">Weight managment2</option>
-                  <option value="3">Weight managment3</option>
-                  <option value="4">Weight managment4</option>
-                  <option value="5">Weight managment5</option>
-                  <option value="6">Weight managment6</option>
-                </select>
-                <button type="button" onclick="showNextQuestion()">Next</button>
+                <label for="input8"></label>
+                <div class="answer-4" onclick="showNextQuestion()" value="1">Weight managment</div>
+                <div class="answer-4" onclick="showNextQuestion()" value="2">Weight managment2</div>
+                <div class="answer-4" onclick="showNextQuestion()" value="3">Weight managment3</div>
+                <div class="answer-4" onclick="showNextQuestion()" value="4">Weight managment4</div>
+                <div class="answer-4" onclick="showNextQuestion()" value="5">Weight managment5</div>
+                <div class="answer-4" onclick="showNextQuestion()" value="6">Weight managment6</div>
               </div>
               <div class="answer" id="answer9">
                 <label for="input9">Email</label>
-                <select id="text" name="answer9"></select>
+                <input type="text" id="text" name="answer9" />
                 <button class="next-button" type="button" onclick="showNextQuestion()">
                   <span class="arrow-symbol">&gt;</span>
                 </button>
