@@ -1,0 +1,132 @@
+.reviews {
+  margin: 0 auto;
+  margin-top: 65px;
+  width: 1396px;
+
+  &__slider {
+    margin-top: 50px;
+  }
+
+  &__slider-wrapper {
+    gap: 23px;
+  }
+
+  &__slide {
+    padding: 40px 34px 30px 30px;
+    width: 444px;
+
+    background: $color-bg;
+    border-radius: 16px;
+    opacity: 1;
+  }
+
+  &__stars {
+  }
+
+  &__title {
+    // margin-top: 17px;
+    margin-top: 38px;
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-black;
+  }
+
+  &__descr {
+    margin-left: 1px;
+    margin-top: 15px;
+    height: 111px;
+
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color-black;
+  }
+
+  &__account {
+    margin-top: 53px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__name {
+    margin-left: 15px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-black;
+  }
+}
+
+@media (max-width: 1439px) {
+  .reviews {
+    width: 920px;
+  }
+}
+
+@media (max-width: 950px) {
+  .reviews {
+    width: 444px;
+  }
+}
+@media (max-width: 474px) {
+  .reviews {
+    margin-top: 39px;
+    padding-left: 20px;
+    width: 100%;
+    &__caption {
+      margin-left: 0;
+      width: 272px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__slider {
+      margin-top: 30px;
+    }
+    &__slide {
+      padding: 30px 20px 20px;
+      width: 335px;
+    }
+
+    &__title {
+      margin-top: 33px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__descr {
+      margin-left: 0px;
+      margin-top: 14px;
+      height: 111px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__account {
+      margin-top: 83px;
+    }
+    &__name {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .reviews {
+    &__slide {
+      width: 280px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .reviews {
+    margin-top: 57px;
+  }
+}
