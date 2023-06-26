@@ -285,102 +285,7 @@
     }
   }
 }
-// @media (max-width: 767px) {
-//   .footer {
-//     height: auto;
-//     &__section {
-//       width: auto;
-//       &-shop {
-//         padding-top: 48px;
-//         width: auto;
-//       }
-//       &-contact {
-//         padding: 0 0 0 5px;
-//       }
-//     }
-//     &__list {
-//       &-shop {
-//         display: block;
-//         &-1 {
-//         }
-//       }
-//     }
-//     &__item {
-//       &-shop {
-//         &-1 {
-//         }
-//       }
-//     }
-//   }
-// }
-// @media (max-width: 767px) {
-//   .footer {
-//     flex-direction: column;
-//     height: auto;
-//   }
 
-//   .footer__section--logo {
-//     order: 1;
-//     margin-bottom: 20px;
-//     text-align: center;
-//   }
-
-//   .footer__section__shop,
-//   .footer__section__information,
-//   .footer__section__contact {
-//     width: 100%;
-//     margin-bottom: 20px;
-//   }
-//   .footer__section__shop {
-//     order: 3;
-//   }
-//   .footer__section__information,
-//   .footer__section--logo,
-//   .footer__section__contact {
-//     flex: 1;
-//   }
-
-//   .footer__section__shop,
-//   .footer__section__information {
-//     order: 2;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
-// @media (max-width: 767px) {
-//   .footer {
-//     flex-direction: column;
-//     height: auto;
-//   }
-
-//   .footer__section--logo {
-//     margin-bottom: 20px;
-//     text-align: center;
-//   }
-
-//   .footer__section__shop,
-//   .footer__section__information,
-//   .footer__section__contact {
-//     width: 100%;
-//     margin-bottom: 20px;
-//   }
-
-//   .footer__section--logo,
-//   .footer__section__shop,
-//   .footer__section__information {
-//     flex: 1;
-//   }
-
-//   .footer__section__shop,
-//   .footer__section__information {
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//   }
-// }
 @media (max-width: 767px) {
   .footer {
     display: flex;
@@ -467,6 +372,12 @@
   .footer__section__information {
     grid-column: 1;
     margin: 0;
+  }
+  .footer__section-information {
+    width: 175px;
+  }
+  .footer__list-info {
+    gap: 16px;
   }
 
   .footer__section__contact {
