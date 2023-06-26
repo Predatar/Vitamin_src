@@ -3,12 +3,27 @@
 
 .header {
   margin: 0 auto;
+  margin-left: 202px;
   padding-top: 30px;
-  width: 1396px;
   display: flex;
   &__logo {
     width: 42px;
     height: 50px;
+
+    @media (max-width: 768px) {
+      width: 33.6px;
+      height: 40px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    margin-left: 102px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 15px 0;
+    justify-content: center;
   }
 }
 
@@ -23,6 +38,20 @@
   }
   &__form {
     width: 920px;
+  }
+
+  @media (max-width: 1440px) {
+    padding: 0 20px;
+    &__container {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 940px) {
+    margin-top: 0;
+    &__container {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -41,9 +70,28 @@
 
   border-top: 1px solid $color-border-one;
 
+  @media (max-width: 1188px) {
+    margin: 58px auto 0;
+    padding: 30px 0;
+  }
+
+  @media (max-width: 940px) {
+    padding: 30px 0 50px;
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
   &__policy {
     display: flex;
     gap: 30px;
+
+    @media (max-width: 550px) {
+      width: 204px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px 30px;
+    }
   }
 
   &__link {
@@ -64,5 +112,10 @@
   &__img {
     width: 334.78px;
     height: 34px;
+
+    @media (max-width: 350px) {
+      width: 280.001px;
+      height: 28px;
+    }
   }
 }

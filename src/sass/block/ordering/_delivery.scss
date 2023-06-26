@@ -1,5 +1,4 @@
 .delivery {
-
   &__wrapper {
     width: 922px;
     display: flex;
@@ -331,7 +330,7 @@
   color: $color-main-orange;
 }
 
-@media (max-width: 1226px) {
+@media (max-width: 1439px) {
   .delivery {
     &__wrapper {
       width: 100%;
@@ -345,7 +344,7 @@
   }
 }
 
-@media (max-width: 1135px) {
+@media (max-width: 1299px) {
   .delivery {
     &__input-wrapper {
       width: 300px;
@@ -353,7 +352,7 @@
   }
 }
 
-@media (max-width: 935px) {
+@media (max-width: 1070px) {
   .delivery {
     &__form {
       gap: 31px 20px;
@@ -361,6 +360,12 @@
     &__input-wrapper {
       width: 250px;
     }
+  }
+}
+
+@media (max-width: 940px) {
+  .delivery {
+    margin-top: 40px;
   }
 }
 
@@ -416,9 +421,9 @@
   }
 }
 @media (max-width: 360px) {
-    .delivery {
-      &__input-container {
-        width: 131px;
-      }
+  .delivery {
+    &__input-container {
+      width: 131px;
     }
+  }
 }

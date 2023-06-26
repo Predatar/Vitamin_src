@@ -78,7 +78,8 @@
   }
 
   &__subtotal,
-  &__discount, &__shipping,
+  &__discount,
+  &__shipping,
   &__total {
     display: flex;
     align-items: center;
@@ -149,6 +150,25 @@
         background: $color-gray;
         color: $color-white;
       }
+    }
+  }
+}
+
+@media (max-width: 1299px) {
+  .bill {
+    &__container {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .bill {
+    width: 100%;
+    background: $color-bg;
+    &__container {
+      padding: 0 20px;
+      border: none;
     }
   }
 }

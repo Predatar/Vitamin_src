@@ -429,13 +429,15 @@ const setSubscriptions = () => {
   }
 };
 
-deliveryForm.addEventListener('submit', e => {
+deliveryForm.addEventListener('submit', async e => {
   e.preventDefault();
   if (sessionStorage.getItem('isLogined')) {
     updateAccountInfo();
-    setOrders()
+    await setOrders()
       .then(setSubscriptions())
-      .then((document.location.href = 'order-placed.html'));
+      .then(() => {
+        document.location.href = 'order-placed.html';
+      });
   }
   sessionStorage.removeItem('vitamins');
 });
