@@ -19,11 +19,11 @@
 		<div class="main__container">
 			<form class="main__form" id="mainForm">
 				@@include('html/ordering/delivery.html', {})
-				<div style="display: none;">@@include('html/ordering/biling.html', {})</div>
+				@@include('html/ordering/biling.html', {})
 			</form>
 			@@include('html/ordering/bill.html', {})
 		</div>
-
+		<button class="main__btn main__btn_disable" form="mainForm" disabled>Place order</button>
 	</main>
 	<footer class="footer">
 		<div class="footer__policy">

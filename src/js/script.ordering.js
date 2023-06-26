@@ -56,18 +56,23 @@ const validateInput = (event, index, regExp, text) => {
 
 const activeBtn = () => {
   let warningValidate = [];
-  const btn = document.querySelector('.bill__btn');
+  const btnBill = document.querySelector('.bill__btn');
+  const btnMain = document.querySelector('.main__btn');
 
   for (let i = 0; i < warningDelivery.length; i++) {
     warningValidate.push(warningDelivery[i].innerHTML);
   }
 
   if (warningValidate.includesAll('Correctly')) {
-    btn.classList.remove('bill__btn_disable');
-    btn.removeAttribute('disabled');
+    btnBill.classList.remove('bill__btn_disable');
+    btnBill.removeAttribute('disabled');
+    btnMain.classList.remove('main__btn_disable');
+    btnMain.removeAttribute('disabled');
   } else {
-    btn.classList.add('bill__btn_disable');
-    btn.setAttribute('disabled', '');
+    btnBill.classList.add('bill__btn_disable');
+    btnBill.setAttribute('disabled', '');
+    btnMain.classList.add('main__btn_disable');
+    btnMain.setAttribute('disabled', '');
   }
 };
 
@@ -288,11 +293,13 @@ const priceShipping = 9.2;
 let priceSale = 0;
 
 const billDiscount = document.querySelector('.bill__discount');
+const billPrice = document.querySelector('.bill__heading-price');
 
 const vitamins = JSON.parse(sessionStorage.getItem('vitamins'));
 
 const setTotalPrice = price => {
   const totalPrice = price + priceShipping;
+  billPrice.innerHTML = '$' + totalPrice.toFixed(2);
   priceTotal.innerHTML = '$' + totalPrice.toFixed(2);
 };
 
@@ -436,8 +443,39 @@ deliveryForm.addEventListener('submit', async e => {
     await setOrders()
       .then(setSubscriptions())
       .then(() => {
+        sessionStorage.removeItem('vitamins');
+      })
+      .then(() => {
         document.location.href = 'order-placed.html';
       });
+  } else {
+    sessionStorage.removeItem('vitamins');
+    document.location.href = 'order-placed.html';
   }
-  sessionStorage.removeItem('vitamins');
 });
+
+// * Bill
+
+const bill = document.querySelector('.bill');
+const billHeading = document.querySelector('.bill__heading');
+
+billHeading.addEventListener('click', e => {
+  billHeading.classList.toggle('bill__heading_active');
+  billHeading.classList.contains('bill__heading_active')
+    ? (bill.style.height = bill.scrollHeight + 'px')
+    : (bill.style.height = '72px');
+});
+
+window.addEventListener('resize', e => {
+  if (e.target.innerWidth < 960) {
+    bill.style.height = '72px';
+  } else {
+    bill.style.height = 'auto';
+  }
+});
+
+if (window.innerWidth < 960) {
+  bill.style.height = '72px';
+} else {
+  bill.style.height = 'auto';
+}

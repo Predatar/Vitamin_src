@@ -99,3 +99,63 @@
   line-height: 16px;
   color: $color-main-orange;
 }
+
+@media (max-width: 1439px) {
+  .biling {
+    &__wrapper {
+      width: 100%;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__input-wrapper {
+      width: 400px;
+    }
+  }
+}
+
+@media (max-width: 1299px) {
+  .biling {
+    &__input-wrapper {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .biling {
+    &__form {
+      gap: 31px 20px;
+    }
+    &__input-wrapper {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .biling {
+    &__input-wrapper {
+      width: 100%;
+      label {
+        padding-left: 1px;
+      }
+    }
+    &__input-container {
+      width: 159px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .biling {
+    margin-top: 30px;
+    &__title {
+      font-size: 20px;
+    }
+    &__form {
+      margin-top: 24px;
+      gap: 4px;
+    }
+  }
+}
