@@ -73,67 +73,7 @@
     color: #ffffff;
   }
 }
-.sidebar {
-  padding: 24px 24px 77px 22px;
-  width: 80%;
-  height: 100vh;
-  background: $color-white;
-  // position: absolute;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  z-index: $z-index-4;
-  overflow-y: scroll;
-  transition: all 0.4s;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &__wrapper {
-    height: 1000px;
-  }
-
-  &__list {
-    margin-top: 22px;
-  }
-
-  &__list-item {
-    margin-bottom: 16px;
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    text-transform: uppercase;
-  }
-
-  &__list-link {
-    color: #fff;
-  }
-
-  &__info {
-    padding: 16px 0 22px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  &__link {
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: black;
-  }
-
-  &_active {
-    left: 0;
-  }
-}
-.sidebar--open {
-  left: 0;
-}
-.sidebar--open {
-  transform: translateX(0);
-}
 input[type='checkbox'] {
   display: none;
 }
