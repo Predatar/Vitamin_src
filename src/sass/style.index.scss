@@ -1,6 +1,7 @@
 @import 'base/variable';
 @import 'base/fonts';
 @import 'base/header';
+@import 'block/menu/menu';
 @import 'base/footer';
 
 body {
@@ -1414,7 +1415,7 @@ svg {
   .about-yourself {
     &__info {
       &__text-1 {
-        padding-top: 25px;
+        padding: 25px 15px 0 15px;
       }
     }
   }
@@ -1436,7 +1437,7 @@ svg {
     &__slide-1,
     &__slide-2 {
       height: 352px;
-      width: 311px;
+      width: 337px;
     }
 
     &__img-1,
@@ -1511,12 +1512,14 @@ svg {
         height: 56px;
       }
       &__text-1 {
+        text-align: center;
         font-weight: 500;
         font-size: 20px;
         line-height: 24px;
-        margin: 31px 59px 0 73px;
+        margin: 31px 59px 0 59px;
       }
       &__text-2 {
+        text-align: center;
         font-weight: 400;
         font-size: 14px;
         line-height: 22.42px;
@@ -1541,7 +1544,7 @@ svg {
     margin-bottom: 56px;
 
     &__img {
-      margin: 61px 21px 27px 5px;
+      margin: 5px 21px 27px 5px;
       width: 50px;
     }
     &__info {
