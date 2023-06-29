@@ -314,7 +314,8 @@
   display: none;
 }
 .answer:first-child {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 1100px) {
   .quiz {

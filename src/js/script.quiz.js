@@ -30,7 +30,8 @@ function showNextQuestion() {
   let nextQuestion = document.getElementById('question' + currentQuestion);
   nextQuestion.classList.add('active');
   let nextAnswer = document.getElementById('answer' + currentQuestion);
-  nextAnswer.style.display = 'block';
+  nextAnswer.style.display = 'flex';
+  nextAnswer.style.flexDirection = 'column';
 }
 
 function showPreviousQuestion() {
