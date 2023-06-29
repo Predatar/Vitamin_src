@@ -1,0 +1,145 @@
+.figure {
+  position: absolute;
+}
+.figure1 {
+  left: -31.5%;
+  top: -145%;
+  @media (max-width: 1650px) {
+    left: -11.5%;
+  }
+  @media (max-width: 1650px) {
+    left: 1%;
+  }
+}
+.figure2 {
+  right: -39%;
+  top: 124%;
+  @media (max-width: 1100px) {
+    top: 142%;
+  }
+  @media (max-width: 768px) {
+    top: 141.5%;
+    right: -69%;
+  }
+}
+.figure3 {
+  right: 5.7%;
+  top: 203%;
+  @media (max-width: 1100px) {
+    right: 15.7%;
+    top: 238%;
+  }
+}
+.figure4 {
+  top: -60%;
+  left: -26.3%;
+  @media (max-width: 1650px) {
+    left: -11.5%;
+  }
+  @media (max-width: 1250px) {
+    left: -0.5%;
+  }
+  @media (max-width: 1050px) {
+    left: 10.5%;
+  }
+}
+.figure5 {
+  right: -21.3%;
+  top: 122%;
+  @media (max-width: 1650px) {
+    right: -10.3%;
+  }
+  @media (max-width: 1050px) {
+    right: 10.3%;
+  }
+}
+.figure6 {
+  right: -13.8%;
+  top: -10%;
+}
+
+.figure7 {
+  top: 80%;
+  left: -23%;
+  @media (max-width: 1480px) {
+    left: 0%;
+  }
+}
+.figure8 {
+  top: -56%;
+  right: -17%;
+  // @media (max-width: 1480px) {
+  // //   left: 0%;
+  // // }
+}
+.figure9 {
+  top: 89%;
+  left: -20%;
+  @media (max-width: 1480px) {
+    left: 0%;
+  }
+}
+.figure10 {
+  top: -22%;
+  left: -26%;
+  @media (max-width: 1550px) {
+    left: -10%;
+  }
+  @media (max-width: 1230px) {
+    left: 0%;
+  }
+}
+.figure11 {
+  top: 44.7%;
+  right: -41%;
+}
+.figure12 {
+  top: 98.7%;
+  left: -31%;
+  @media (max-width: 1600px) {
+    left: -20%;
+  }
+  @media (max-width: 1400px) {
+    left: -10%;
+  }
+  @media (max-width: 1200px) {
+    left: 0%;
+  }
+}
+.figure13 {
+  top: -14.3%;
+  right: -18%;
+}
+.figure14 {
+  top: 130%;
+  left: -20%;
+  @media (max-width: 1600px) {
+    left: -10%;
+  }
+  @media (max-width: 1400px) {
+    left: 0%;
+  }
+  @media (max-width: 1200px) {
+    left: 0%;
+  }
+}
+.figure15 {
+  top: -62.3%;
+  right: -41%;
+}
+.figure16 {
+  top: -24.7%;
+  left: 38px;
+  @media (max-width: 1400px) {
+    top: 1.3%;
+    left: 38px;
+  }
+}
+
+.figure17 {
+  top: 110%;
+  right: 6.5%;
+  @media (max-width: 1400px) {
+    top: 80.3%;
+  }
+}
