@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   sidemenu.classList.add('sidebar_active');
   // });
 
-  var menuIcon = document.querySelector('.burger');
+  /* var menuIcon = document.querySelector('.burger');
   var sidebar = document.querySelector('.sidebar');
 
   menuIcon.addEventListener('click', function () {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isClickInsideSidebar && !isClickInsideMenuIcon) {
       sidebar.classList.remove('sidebar--open');
     }
-  });
+  }); */
 
   // * Profile link
 
