@@ -112,17 +112,104 @@
             </form>
           </div>
         </div>
-        <div class="quiz-mob">
-          <div class="question" id="mob-question1">What’s your first name?</div>
-          <div class="question" id="mob-question2">Do you smoke?</div>
-          <div class="question" id="mob-question3">What is your eating habits?</div>
-          <div class="question" id="mob-question4">How frequently do you consume alcoholic beverages?</div>
-          <div class="question" id="mob-question5">How frequently do you have cold/flu symptoms?</div>
-          <div class="question" id="mob-question6">Describe your stress level</div>
-          <div class="question" id="mob-question7">Have you ever been diagnosed with high blood glucose level?</div>
-          <div class="question" id="mob-question8">Tell us what you want to focus on</div>
-          <div class="question" id="mob-question9">What’s your email address?</div>
-        </div>
+        <!-- <div class="quiz-mob">
+          <a href="@html/index.html" class="quiz-logo">
+            <img src="@icons/logo(white).svg" alt="logo" />
+          </a>
+          <a href="#" class="quiz-back">
+            <img src="@img/index/Back_arrow.png" alt="arrow" onclick="showPreviousQuestion()" />
+            Back
+          </a>
+          <div class="question-counter">1/9</div>
+          <div class="question-mob active" id="question1">
+            What’s your first name?
+            <div class="answers" id="answers-1">
+              <input type="text" name="answer1" />
+              <button onclick="showNextQuestion()">Next</button>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question2">
+            Do you smoke?
+            <div class="answers" id="answers-2">
+              <input type="radio" name="answer2" value="Yes" /> Yes <input type="radio" name="answer2" value="No" /> No
+              <button onclick="showNextQuestion()">Next</button>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question3">
+            What is your eating habits?
+            <div class="answers" id="answers3">
+              <div class="vegan" onclick="showNextQuestion()" value="vegan">Vegan diet</div>
+              <div class="vegetarian" onclick="showNextQuestion()" value="vegetarian">Vegetarian diet</div>
+              <div class="protein" onclick="showNextQuestion()" value="protein">
+                My diet is generally healthy and includes animal protein, fish and veggies
+              </div>
+              <div class="unhealthy" onclick="showNextQuestion()" value="unhealthy">
+                My diet includes fast food and soft drinks
+              </div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question4">
+            How frequently do you consume alcoholic beverages?
+            <div class="answers" id="answers4">
+              <div class="answers-1" onclick="showNextQuestion()" value="time1">≤ 3 times per week</div>
+              <div class="answers-2" onclick="showNextQuestion()" value="time2">4 - 7 times per week</div>
+              <div class="answers-3" onclick="showNextQuestion()" value="time3">7+ times per week</div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question5">
+            How frequently do you have cold/flu symptoms?
+            <div class="answers" id="answers5">
+              <div class="answers-1" onclick="showNextQuestion()" value="year1">≤ 2 per year</div>
+              <div class="answers-2" onclick="showNextQuestion()" value="year2">3 - 5 times per year</div>
+              <div class="answers-3" onclick="showNextQuestion()" value="year3">5+ times per week</div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question6">
+            Describe your stress level
+            <div class="answers" id="answers6">
+              <div class="answer-1" onclick="showNextQuestion()" value="relax">
+                I feel calm and relaxed most of the time
+              </div>
+              <div class="answer-2" onclick="showNextQuestion()" value="nervous">I get nerevous from time to time</div>
+              <div class="answer-3" onclick="showNextQuestion()" value="stress">
+                I’m under a lot of stress most of the time
+              </div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question7">
+            Have you ever been diagnosed with high blood glucose level?
+            <div class="answers" id="answers7">
+              <label for="input7"></label>
+              <div class="yes" onclick="showNextQuestion()" value="yes2">Yes</div>
+              <div class="no" onclick="showNextQuestion()" value="no2">No</div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question8">
+            Tell us what you want to focus on
+            <div class="answers" id="answers8">
+              <div class="answers-options">
+                <div class="answer-4" onclick="showNextQuestion()" value="1">Weight managment</div>
+                <div class="answer-5" onclick="showNextQuestion()" value="2">Stress relief</div>
+                <div class="answer-6" onclick="showNextQuestion()" value="3">Immune boost</div>
+                <div class="answer-7" onclick="showNextQuestion()" value="4">Need to solve a sprcific problem</div>
+                <div class="answer-8" onclick="showNextQuestion()" value="5">
+                  I need a bassic kit for a daily intake
+                </div>
+                <div class="answer-9" onclick="showNextQuestion()" value="6">All in one</div>
+              </div>
+            </div>
+          </div>
+          <div class="question-mob" id="mob-question9">
+            What’s your email address?
+            <div class="answers" id="answers9">
+              <label for="input9">Email</label>
+              <input type="text" id="text" name="answer9" />
+              <button class="next-button" type="button" onclick="showNextQuestion()">
+                <span class="arrow-symbol">&gt;</span>
+              </button>
+            </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </body>
