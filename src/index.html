@@ -16,6 +16,7 @@
 
 <body>
   @@include('html/header.html', {})
+  @@include('html/cart.html', {})
   @@include('html/menu/menu.html', {})
   <main class="main">
     <section class="vitamins">
@@ -330,8 +331,9 @@
   @@include('html/footer.html', {})
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script src="js/script.header.js"></script>
-<script src="js/script.menu.js"></script>
-<script src="js/script.index.js"></script>
+<script src="js/script.header.js" defer></script>
+<script src="js/script.menu.js" defer></script>
+<script src="js/script.cart.js" defer></script>
+<script src="js/script.index.js" defer></script>
 
 </html>

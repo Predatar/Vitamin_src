@@ -13,6 +13,7 @@
 <body>
 	@@include('html/header.html', {})
 	@@include('html/cart.html', {})
+	@@include('html/menu/menu.html', {})
 
 	<div class="main">
 		@@include('html/catalogue/poster.html', {})
@@ -196,9 +197,10 @@
 		</div>
 	</div>
 
-	<!-- @@include('html/footer.html', {}) -->
+	@@include('html/footer.html', {})
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js" defer></script>
 	<script src="js/script.header.js"></script>
+	<script src="js/script.menu.js" defer></script>
 	<script src="js/script.cart.js" defer></script>
 	<script src="js/script.catalogue.js" defer></script>
 </body>

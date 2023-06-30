@@ -112,7 +112,7 @@ const setSale = (price, sale) => {
         document.title = data.name + ' - Vitamins';
 
         mainImg.classList.add(data.tag);
-        mainImg.childNodes[0].innerHTML = `<picture><source srcset="img/vitamins/${data.imgName}.webp" type="image/webp"><img src="img/vitamins/${data.imgName}.png" alt="vitamin"></picture>`;
+        mainImg.childNodes[0].innerHTML = `<img src="img/vitamins__svg/${data.imgName}.svg" alt="vit">`;
 
         itemTag.classList.add(data.tag);
         itemTag.innerHTML = getTag(data.tag);
