@@ -1541,10 +1541,10 @@ svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
 
     &__img {
-      margin: 5px 21px 27px 5px;
+      margin: 0px 21px 27px 5px;
       width: 50px;
     }
     &__info {
@@ -1946,6 +1946,7 @@ svg {
     }
   }
   .get-started {
+    margin-top: 0px;
     margin-bottom: 38px;
     &__img {
       margin: 42px 7px 26px 5px;
