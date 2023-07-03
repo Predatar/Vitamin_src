@@ -12,12 +12,14 @@
 <body>
 	@@include('html/header.html', {})
 	@@include('html/cart.html', {})
+	@@include('html/menu/menu.html', {})
 
 
 	<main class="main">
 		<div class="main__container">
 			<div class="main__wrapper">
 				<div class="main__img">
+
 				</div>
 				<div class="main__bg-img">
 					<img src="@icons/product-card/ellipse-bg.svg" alt="ellipse-bg">
@@ -201,9 +203,10 @@
 		</div>
 	</main>
 
-	<!-- @@include('html/footer.html', {}) -->
+	@@include('html/footer.html', {})
 
 	<script src="js/script.header.js" defer></script>
+	<script src="js/script.menu.js" defer></script>
 	<script src="js/script.cart.js" defer></script>
 	<script src="js/script.product-card.js" defer></script>
 </body>
