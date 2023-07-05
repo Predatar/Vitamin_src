@@ -10,7 +10,18 @@ body {
 .main {
 }
 
-svg {
+.svg-1,
+.svg-2,
+.svg-3,
+.svg-4,
+.svg-5,
+.svg-6,
+.svg-7,
+.svg-8,
+.svg-9,
+.svg-10,
+.svg-11,
+.svg-12 {
   display: flex;
   position: absolute;
   z-index: $z-index-1;
@@ -572,7 +583,7 @@ svg {
     z-index: $z-index-2;
     @media (max-width: 1024px) {
       margin: 450px auto;
-      width: 70%;
+      width: 55%;
     }
     @media (max-width: 736px) {
       margin: 450px 0 0px 20px;
@@ -582,7 +593,7 @@ svg {
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
-    gap: 33px;
+    // gap: 33px;
     // overflow: hidden;
   }
 
@@ -749,7 +760,7 @@ svg {
     }
     &__swiper {
       margin: 490px auto;
-      width: 50%;
+      width: 85%;
     }
     br {
       display: none;
@@ -763,6 +774,19 @@ svg {
       }
     }
   }
+  // @media (max-width: 1024px) {
+  //   &__swiper {
+  //     margin: 490px auto;
+  //     width: 80%;
+  //   }
+  //   &__slide-1,
+  //   &__slide-2 {
+  //     flex-shrink: 0;
+  //     width: 375px;
+  //     height: 494px;
+  //     border-radius: 16px;
+  //   }
+  // }
 }
 
 .hapy-dais {
@@ -834,7 +858,8 @@ svg {
   }
 }
 
-@import 'block/index/reviews';
+// @import 'block/index/reviews';
+@import 'block/catalogue/reviews';
 .get-started {
   margin-top: 62px;
   display: flex;
@@ -1293,7 +1318,7 @@ svg {
     &__swiper-wrapper {
       display: flex;
       transition: transform 0.3s ease;
-      gap: 33px;
+      // gap: 33px;
     }
 
     &__slide-1,
@@ -1432,7 +1457,7 @@ svg {
     &__swiper-wrapper {
       display: flex;
       transition: transform 0.3s ease;
-      gap: 33px;
+      //   gap: 33px;
     }
 
     &__slide-1,
@@ -1542,10 +1567,10 @@ svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
 
     &__img {
-      margin: 5px 21px 27px 5px;
+      margin: 0px 21px 27px 5px;
       width: 50px;
     }
     &__info {
@@ -1898,22 +1923,18 @@ svg {
   }
   .products {
     &__swiper {
-      margin: 271px auto;
-      width: 88%;
-    }
-    &__swiper-wrapper {
-      gap: 33px;
+      margin: 271px 0 0 20px;
+      width: 100%;
     }
 
     &__slide-1,
     &__slide-2 {
       height: 367px;
-      width: 335px;
+      width: 280px;
     }
 
     &__img-1,
     &__img-2 {
-      right: 27px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1947,6 +1968,7 @@ svg {
     }
   }
   .get-started {
+    margin-top: 0px;
     margin-bottom: 38px;
     &__img {
       margin: 42px 7px 26px 5px;

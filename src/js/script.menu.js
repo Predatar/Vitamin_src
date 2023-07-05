@@ -7,9 +7,11 @@ const menu = document.querySelector('.menu');
 
 const addActiveClassForMenu = () => {
   menu.classList.add('menu_active');
+  document.body.style.overflow = 'hidden';
 };
 const removeActiveClassForMenu = () => {
   menu.classList.remove('menu_active');
+  document.body.style.overflow = 'scroll';
 };
 
 burger.addEventListener('click', e => {
