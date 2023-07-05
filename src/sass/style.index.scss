@@ -690,6 +690,9 @@ body {
       z-index: $z-index-2;
 
       margin: 234px 0px 0 254px;
+      @media (max-width: 1024px) {
+        margin: 234px 0px 0 370px;
+      }
     }
     &__choose {
       width: 444px;
@@ -858,8 +861,8 @@ body {
   }
 }
 
-// @import 'block/index/reviews';
-@import 'block/catalogue/reviews';
+@import 'block/index/reviews';
+// @import 'block/catalogue/reviews';
 .get-started {
   margin-top: 62px;
   display: flex;
