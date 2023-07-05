@@ -1,4 +1,4 @@
-Array.prototype.includesAll = function (props) {
+фArray.prototype.includesAll = function (props) {
   let validate = 0;
 
   this.forEach(elem => {
