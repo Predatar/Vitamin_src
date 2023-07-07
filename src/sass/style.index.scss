@@ -864,7 +864,7 @@ body {
 @import 'block/index/reviews';
 // @import 'block/catalogue/reviews';
 .get-started {
-  margin-top: 62px;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1566,6 +1566,7 @@ body {
     }
   }
   .get-started {
+    margin-top: 61px;
     display: flex;
     flex-direction: column;
     align-items: center;
