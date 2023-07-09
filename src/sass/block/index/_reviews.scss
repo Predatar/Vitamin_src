@@ -1,17 +1,24 @@
 .reviews {
   margin: 0 auto;
-  margin-top: 65px;
+  margin-top: 64px;
   width: 1396px;
+
+  &__caption {
+    margin-left: -2px;
+    width: 446px;
+
+    font-family: 'Effra';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    color: $color-black;
+  }
 
   &__slider {
     margin-top: 50px;
   }
 
   &__slider-wrapper {
-    gap: 23px;
-    @media (max-width: 1024px) {
-      gap: 10px;
-    }
   }
 
   &__slide {
@@ -21,20 +28,13 @@
     background: $color-bg;
     border-radius: 16px;
     opacity: 1;
-    @media (max-width: 1439px) {
-      width: 410px;
-    }
-    @media (max-width: 1024px) {
-      width: 390px;
-    }
   }
 
   &__stars {
   }
 
   &__title {
-    // margin-top: 17px;
-    margin-top: 38px;
+    margin-top: 14px;
     font-family: 'Effra';
     font-weight: 500;
     font-size: 20px;
@@ -43,7 +43,6 @@
   }
 
   &__descr {
-    margin-left: 1px;
     margin-top: 15px;
     height: 111px;
 
@@ -109,7 +108,7 @@
     }
 
     &__title {
-      margin-top: 33px;
+      margin-top: 10px;
       font-size: 16px;
       line-height: 19px;
     }

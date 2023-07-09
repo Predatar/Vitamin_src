@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev'
     },
     breakpoints: {
+      1800: {
+        spaceBetween: 32
+      },
       1024: {
         grabCursor: true
       },
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const reviewsSlider = new Swiper('.reviews__slider', {
     slidesPerView: 'auto',
-    spaceBetween: 10,
+    spaceBetween: 32,
     breakpoints: {
       1024: {
         grabCursor: true,
