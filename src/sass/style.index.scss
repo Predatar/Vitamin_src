@@ -987,7 +987,7 @@ body {
     }
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 710px) {
   .make-easy .pill-pack__groop-item-1:nth-child(1) {
     width: 260px;
     height: 250px;
@@ -1034,7 +1034,9 @@ body {
 
     &__text {
       flex-basis: auto;
-      // padding: 116px 29px 0px 29px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 116px 0px 0 0px;
     }
     &__image {
@@ -1075,7 +1077,8 @@ body {
     &__quiz {
       width: 154px;
       height: 50px;
-      margin: 0px 0px 0 111px;
+      // margin: 0px 0px 0 111px;
+      margin: 0;
       padding: 15px;
       font-family: 'Effra';
       font-style: normal;
@@ -1084,19 +1087,23 @@ body {
       line-height: 19px;
     }
     &__link {
-      width: 193px;
+      display: flex;
+      justify-content: center;
+      // width: 193px;
+      width: 100%;
       height: 17px;
       font-family: 'Effra';
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      margin: 18px 0 0 134px;
+      // margin: 18px 0 0 134px;
+      margin: 18px 15px 0 0;
       &-arrow {
         right: auto;
         width: 7px;
         height: 10px;
-        margin-left: 5px;
+        margin-left: 109px;
       }
     }
   }
@@ -1711,7 +1718,7 @@ body {
     &__quiz {
       width: 154px;
       height: 50px;
-      margin: 23px 0 0 83px;
+      margin: 23px 0 0 0px;
       padding: 15px;
       font-family: 'Effra';
       font-style: normal;
@@ -1720,20 +1727,20 @@ body {
       line-height: 19px;
     }
     &__link {
-      width: 135px;
+      width: 100%;
       height: 17px;
       font-family: 'Effra';
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      margin: 18px 0 0 106px;
+      margin: 18px 17px 0 0px;
 
       &-arrow {
         right: auto;
         width: 7px;
         height: 10px;
-        margin-left: 5px;
+        margin-left: 109px;
       }
     }
   }
@@ -1931,7 +1938,7 @@ body {
     }
     &__info {
       &__text-1 {
-        padding: 25px 15px 0 15px;
+        padding: 26px 15px 0 15px;
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
@@ -2004,7 +2011,7 @@ body {
   }
   .get-started {
     margin-top: 0px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     &__img {
       margin: 42px 7px 26px 5px;
       width: 50px;
