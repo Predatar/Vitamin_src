@@ -1,9 +1,10 @@
 .vitamins {
-  max-width: 1039px;
+  max-width: 1069px;
 
   &__group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
 
     overflow: hidden;
@@ -184,7 +185,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 330px) {
   .vitamins {
     &__item {
       width: 100%;
