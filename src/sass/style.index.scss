@@ -180,7 +180,7 @@ body {
       width: auto;
       margin-bottom: 75px;
     }
-    @media (max-width: 690px) {
+    @media (max-width: 720px) {
       font-size: 40px;
     }
     .color-word {
@@ -202,7 +202,7 @@ body {
     @media (max-width: 1024px) {
       width: auto;
     }
-    @media (max-width: 690px) {
+    @media (max-width: 720px) {
       margin: 0 0 20px 0px;
     }
   }
@@ -555,7 +555,7 @@ body {
       text-align: center;
 
       color: #000000;
-      z-index: 3;
+      z-index: 2;
     }
     &__text-2 {
       margin: 20px;
@@ -629,7 +629,7 @@ body {
     }
     @media (max-width: 736px) {
       margin: 450px 0 0px 20px;
-      width: 100%;
+      width: 80%;
     }
   }
   &__swiper-wrapper {
@@ -865,9 +865,10 @@ body {
       margin: 31px 0 0 2px;
       @media (max-width: 900px) {
         width: auto;
+        height: auto;
       }
       @media (max-width: 690px) {
-        margin: 100px 0 0 2px;
+        margin: 40px 0 20px 2px;
       }
     }
   }
@@ -918,7 +919,7 @@ body {
       text-align: center;
 
       color: #000000;
-      z-index: 3;
+      z-index: 2;
     }
     &__text-2 {
       width: 918px;
@@ -987,7 +988,7 @@ body {
     }
   }
 }
-@media (max-width: 710px) {
+@media (max-width: 720px) {
   .make-easy .pill-pack__groop-item-1:nth-child(1) {
     width: 260px;
     height: 250px;
@@ -1031,7 +1032,7 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     height: auto;
-
+    justify-content: center;
     &__text {
       flex-basis: auto;
       display: flex;
@@ -1098,7 +1099,7 @@ body {
       font-size: 14px;
       line-height: 17px;
       // margin: 18px 0 0 134px;
-      margin: 18px 15px 0 0;
+      margin: 18px 0px 0 0;
       &-arrow {
         right: auto;
         width: 7px;
@@ -1353,8 +1354,8 @@ body {
     margin-top: 60px;
 
     &__swiper {
-      margin: 250px auto;
-      width: 90%;
+      margin: 250px 0 0 10px;
+      width: 100%;
     }
     &__swiper-wrapper {
       display: flex;
@@ -1492,8 +1493,8 @@ body {
     margin-top: 60px;
 
     &__swiper {
-      margin: 250px auto;
-      width: 90%;
+      margin: 250px 0 0 20px;
+      width: 100%;
     }
     &__swiper-wrapper {
       display: flex;
@@ -1504,7 +1505,7 @@ body {
     &__slide-1,
     &__slide-2 {
       height: 352px;
-      width: 337px;
+      width: 335px;
     }
 
     &__img-1,
@@ -1576,7 +1577,7 @@ body {
 
       &__img {
         width: 50px;
-        height: 56px;
+        height: 57px;
       }
       &__text-1 {
         text-align: center;
@@ -1628,7 +1629,7 @@ body {
         text-align: center;
 
         color: #000000;
-        z-index: 3;
+        z-index: 2;
       }
       &__text-2 {
         font-family: 'Open Sans';
@@ -1734,7 +1735,7 @@ body {
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      margin: 18px 17px 0 0px;
+      margin: 18px 0px 0 0px;
 
       &-arrow {
         right: auto;

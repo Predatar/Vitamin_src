@@ -13,9 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
       1024: {
         grabCursor: true
       },
-      540: {},
+
+      375: {
+        spaceBetween: 10
+      },
       370: {
-        spaceBetween: 20
+        spaceBetween: 10
+      },
+      375: {
+        spaceBetween: 10
       }
     }
   });
