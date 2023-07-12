@@ -21,7 +21,10 @@ body {
 .svg-9,
 .svg-10,
 .svg-11,
-.svg-12 {
+.svg-12,
+.svg-13,
+.svg-14,
+.svg-15 {
   display: flex;
   position: absolute;
   z-index: $z-index-1;
@@ -91,19 +94,57 @@ body {
 .svg-9 {
   right: 0%;
   top: -19.3%;
-  z-index: $z-index-2;
+  z-index: $z-index-1;
 }
 .svg-10 {
   left: 6.8%;
   top: 24.3%;
+  @media (max-width: 375px) {
+    display: none;
+  }
 }
 .svg-11 {
   right: 0;
   top: 2.6%;
+  @media (max-width: 375px) {
+    display: none;
+  }
 }
 .svg-12 {
   right: 0;
   top: 19.3%;
+}
+.svg-13 {
+  display: none;
+  @media (max-width: 375px) {
+    display: flex;
+    left: 0;
+    top: -4.7%;
+  }
+  @media (max-width: 335px) {
+    left: -8px;
+    top: 7.3%;
+  }
+}
+.svg-14 {
+  display: none;
+  @media (max-width: 375px) {
+    display: flex;
+    right: 0;
+    top: 111.3%;
+  }
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+.svg-15 {
+  display: none;
+
+  @media (max-width: 320px) {
+    display: flex;
+    right: 0;
+    top: 104.9%;
+  }
 }
 
 .vitamins {
@@ -381,7 +422,7 @@ body {
     flex-wrap: wrap;
     align-content: stretch;
     @media (max-width: 1200px) {
-      height: 780px;
+      height: 900px;
       justify-content: flex-start;
     }
 
@@ -410,7 +451,8 @@ body {
           width: auto;
         }
         @media (max-width: 690px) {
-          font-size: 20px;
+          font-size: 15px;
+          height: 100px;
         }
       }
     }
@@ -579,7 +621,7 @@ body {
     margin: 151px 0 0 203px;
     display: flex;
     width: 833px;
-    // overflow: visible;
+
     z-index: $z-index-2;
     @media (max-width: 1024px) {
       margin: 450px auto;
@@ -593,8 +635,6 @@ body {
   &__swiper-wrapper {
     display: flex;
     transition: transform 0.3s ease;
-    // gap: 33px;
-    // overflow: hidden;
   }
 
   &__slide-1,
@@ -691,7 +731,7 @@ body {
 
       margin: 234px 0px 0 254px;
       @media (max-width: 1024px) {
-        margin: 234px 0px 0 370px;
+        margin: 125px 50px;
       }
     }
     &__choose {
@@ -777,19 +817,6 @@ body {
       }
     }
   }
-  // @media (max-width: 1024px) {
-  //   &__swiper {
-  //     margin: 490px auto;
-  //     width: 80%;
-  //   }
-  //   &__slide-1,
-  //   &__slide-2 {
-  //     flex-shrink: 0;
-  //     width: 375px;
-  //     height: 494px;
-  //     border-radius: 16px;
-  //   }
-  // }
 }
 
 .hapy-dais {
@@ -960,7 +987,7 @@ body {
     }
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 710px) {
   .make-easy .pill-pack__groop-item-1:nth-child(1) {
     width: 260px;
     height: 250px;
@@ -1007,7 +1034,9 @@ body {
 
     &__text {
       flex-basis: auto;
-      // padding: 116px 29px 0px 29px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 116px 0px 0 0px;
     }
     &__image {
@@ -1048,7 +1077,8 @@ body {
     &__quiz {
       width: 154px;
       height: 50px;
-      margin: 0px 0px 0 111px;
+      // margin: 0px 0px 0 111px;
+      margin: 0;
       padding: 15px;
       font-family: 'Effra';
       font-style: normal;
@@ -1057,19 +1087,23 @@ body {
       line-height: 19px;
     }
     &__link {
-      width: 193px;
+      display: flex;
+      justify-content: center;
+      // width: 193px;
+      width: 100%;
       height: 17px;
       font-family: 'Effra';
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      margin: 18px 0 0 134px;
+      // margin: 18px 0 0 134px;
+      margin: 18px 15px 0 0;
       &-arrow {
         right: auto;
         width: 7px;
         height: 10px;
-        margin-left: 5px;
+        margin-left: 109px;
       }
     }
   }
@@ -1094,6 +1128,7 @@ body {
       }
     }
     &__right {
+      height: 580px;
       .pills {
         display: none;
       }
@@ -1118,6 +1153,7 @@ body {
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
+          height: 73px;
         }
       }
       .group-2 {
@@ -1135,6 +1171,7 @@ body {
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
+          height: 73px;
         }
       }
       .group-3 {
@@ -1152,6 +1189,7 @@ body {
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
+          height: 72px;
         }
       }
     }
@@ -1605,7 +1643,7 @@ body {
         padding: 0 23px 0 23px;
       }
       &__button {
-        margin-top: 24px;
+        margin-top: 25px;
         padding: 15px 1px 0 0px;
         width: 154px;
         height: 50px;
@@ -1639,7 +1677,7 @@ body {
         font-size: 14px;
         line-height: 16.88px;
         color: $color-goods_orange-text;
-        margin: 20px 13px 0 41px;
+        margin: 21px 13px 0 41px;
         z-index: 3;
       }
       &__link-arrow {
@@ -1680,7 +1718,7 @@ body {
     &__quiz {
       width: 154px;
       height: 50px;
-      margin: 23px 0 0 83px;
+      margin: 23px 0 0 0px;
       padding: 15px;
       font-family: 'Effra';
       font-style: normal;
@@ -1689,20 +1727,20 @@ body {
       line-height: 19px;
     }
     &__link {
-      width: 135px;
+      width: 100%;
       height: 17px;
       font-family: 'Effra';
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
-      margin: 18px 0 0 106px;
+      margin: 18px 17px 0 0px;
 
       &-arrow {
         right: auto;
         width: 7px;
         height: 10px;
-        margin-left: 5px;
+        margin-left: 109px;
       }
     }
   }
@@ -1900,12 +1938,12 @@ body {
     }
     &__info {
       &__text-1 {
-        padding: 25px 15px 0 15px;
+        padding: 26px 15px 0 15px;
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
         text-align: center;
-        z-index: 3;
+        z-index: 2;
       }
       &__text-2 {
         margin: 14px 21px 8px 21px;
@@ -1959,7 +1997,7 @@ body {
   }
   .hapy-dais {
     &__info {
-      margin: 70px 10px 0 10px;
+      margin: 71px 10px 0 10px;
 
       &__text-1 {
         text-align: center;
@@ -1973,14 +2011,19 @@ body {
   }
   .get-started {
     margin-top: 0px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     &__img {
       margin: 42px 7px 26px 5px;
       width: 50px;
     }
     &__info {
+      &__text {
+        &-2 {
+          margin-top: 16px;
+        }
+      }
       &__button {
-        margin-top: 48px;
+        margin-top: 46px;
       }
     }
   }
