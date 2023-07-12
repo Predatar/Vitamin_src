@@ -13,24 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
       1024: {
         grabCursor: true
       },
-      540: {},
+
+      375: {
+        spaceBetween: 10
+      },
       370: {
-        spaceBetween: 20
+        spaceBetween: 10
+      },
+      375: {
+        spaceBetween: 10
       }
     }
-    // breakpoints: {
-    //   1800: {
-    //     slidesPerView: 2
-    //   }
-    // },
-    // breakpoints: {
-    //   540: {
-    //     slidesPerView: 1,
-    //     width: 335,
-    //     height: 352,
-    //     enabled: true
-    //   }
-    // }
   });
 
   const reviewsSlider = new Swiper('.reviews__slider', {
